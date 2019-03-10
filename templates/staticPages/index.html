@@ -1,0 +1,245 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block content %}
+            <div  id="landing-hero" class="hero is-relative ">
+
+            <div id="main-hero" class="hero-body ">
+                <div class="container">
+                    <div class="columns is-vcentered is-tablet-portrait">
+
+                        <div class="column is-5 header-caption has-text-left">
+                            <h1 class="landing-title">
+                                Комплексный интернет маркетинг
+                            </h1>
+                            <h2 class="subtitle is-5">
+                               Приводим новых клиентов для вашего бизнеса из поисковых систем и социальных сетей.
+                            </h2>
+                            <br>
+                            <p  class="pt-10 pb-10 ">
+                             <a class="button button-cta gradient_btn raised modal-trigger is-hidden-mobile" data-modal="callBack_modal">Получить клиентов</a>
+                            </p>
+                        </div>
+
+                        <div class="column is-7 ">
+                            <figure class="image is-hidden-mobile">
+                                <img src="{% static '/images/home_1.jpg' %}" alt="">
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p  align="center" style="position: relative; top: -80px;" class="pt-10 pb-10 is-hidden-desktop is-hidden-tablet ">
+            <a class="button button-cta gradient_btn raised modal-trigger " data-modal="callBack_modal">Получить клиентов</a>
+        </p>
+    <section style="padding-top: 0 !important;" class="section  is-relative ">
+            <div class="container has-text-centered">
+                <div class="columns ">
+                    <div class="column is-4">
+                        <!-- Side icon box -->
+                        <div class="content content-flex">
+                            <div class="dark-text">
+                               <i  class="material-icons promo_number">looks_one</i>
+                            </div>
+                            <div class="dark-text has-text-left ml-30">
+                                <h5 class="text-bold">Контекстная реклама</h5>
+                                Контекстная реклама - это тип интернет-рекламы, которую видит пользователь поисковой системы при вводе поискового запроса. Введя запрос в Яндекс или Google, кроме результатов поиска, человек получает рекламные блоки с объявлениями на тему своего запроса.
+                                <br><br>
+                                <a href="#product" class="button button-cta btn-align raised  gradient_btn">
+                                   Заказать услугу
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="column is-4">
+                        <div class="content content-flex">
+                            <div class="dark-text">
+                             <i  class="material-icons promo_number">looks_two</i>
+                            </div>
+                            <div class="dark-text has-text-left ml-30">
+                                <h5 class="text-bold">Продвижение сайтов</h5>
+                                Продвижение сайтов – это не просто работа над позициями сайта.
+                                Сейчас, чтобы продвижение было успешным, важно работать по всем направлениям развития сайта.
+                                <br><br>
+                                       <a href="#product" class="button button-cta btn-align raised  gradient_btn">
+                                   Заказать услугу
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="column is-4">
+                        <!-- Side icon box -->
+                        <div  class="content content-flex">
+                            <div class="dark-text">
+                             <i  class="material-icons promo_number">looks_3</i>
+                            </div>
+                            <div class="dark-text has-text-left ml-30">
+                                <h5 class="text-bold">Таргетированная реклама</h5>
+                                Таргетированная реклама в социальных сетях — это современный инструмент для продвижения товаров и услуг,
+                                который позволяет максимально точечно и прицельно настраивать рекламу на различные сегменты аудитории.
+                                <br><br>
+                                       <a href="#product" class="button button-cta btn-align raised  gradient_btn">
+                                   Заказать услугу
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section style="padding-bottom: 0;"  class="section">
+<div class="container">
+  <div class=" content-wrapper">
+                    <div class="columns">
+                        {% for case in showCases %}
+                        <div class="column is-4">
+                            <!-- Event Card -->
+                            <div class="event-card is-wavy">
+                                <div class="img-container">
+                                    <img src="{{ case.image.url }}" alt="" data-demo-src="{{ case.image.url }}">
+                                </div>
+                                <div class="card-text">
+                                    <div class="text text-container">
+                                        <div class="text text-header">
+                                            <h2 class="text text-title">{{ case.caseName }}</h2>
+
+                                        </div>
+                                        <div class="text text-details">
+                                            <p class="text text-description">
+                                                {{ case.showcaseInfo }}
+                                            </p>
+                                            <a href="#" class="button btn-align btn-more is-link color-accent mt-10 mb-10">
+                                                СМОТРЕТЬ ПРОЕКТ <i class="sl sl-icon-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     {% endfor %}
+                    </div>
+                </div>
+                <div class="has-text-centered pt-40 pb-40">
+                        <a href="#" class="button button-cta gradient_btn raised">Другие проекты</a>
+                    </div>
+</div>
+
+</section>
+<section style="padding: 0;" class="section ">
+            <div  style="padding: 0;" class="container">
+
+                <div class="content-wrapper">
+                    <div class="columns is-vcentered">
+                        <div class="column">
+                            <div class="image-carousel">
+                                <div class="carousel-item">
+                                    <div class="image-wrapper">
+                                        <img src="https://via.placeholder.com/400x300" alt=""
+                                            data-demo-src="{% static 'images/sample1.png' %}">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="image-wrapper">
+                                        <img src="https://via.placeholder.com/400x300" alt=""
+                                           data-demo-src="{% static 'images/sample2.png' %}">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="image-wrapper">
+                                        <img src="https://via.placeholder.com/400x300" alt=""
+                                            data-demo-src="{% static 'images/sample1.png' %}">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="image-wrapper">
+                                        <img src="https://via.placeholder.com/400x300" alt=""
+                                            data-demo-src="{% static 'images/sample2.png' %}">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="image-wrapper">
+                                        <img src="https://via.placeholder.com/400x300" alt=""
+                                           data-demo-src="{% static 'images/sample1.png' %}">
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="image-wrapper">
+                                        <img src="https://via.placeholder.com/400x300" alt=""
+                                            data-demo-src="{% static 'images/sample2.png' %}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                      <div class="has-text-centered pt-40 pb-40">
+                        <a href="#" class="button button-cta gradient_btn raised">Смотреть все отзывы</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section style="background-color: #F35D19;" class="hero is-medium">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 style="color: #fff;" class="title">
+       Сделаем бесплатный аудит вашего интернет маркетинга
+
+      </h1>
+      <div class="content-wrapper ">
+                    <form  id="callBackForm" onsubmit="callBack_home(event);" >
+                        <div class="columns">
+                            <div class="column is-8 is-offset-2">
+                                <div class="columns is-vcentered">
+                                    <div class="column is-3">
+                                        <!-- Form field -->
+                                        <div class="control-material is-accent">
+                                            <input class="material-input" id="callBackHome_name" type="text" required="">
+                                            <span class="material-highlight"></span>
+                                            <span class="bar"></span>
+                                            <label>Ваше имя *</label>
+                                        </div>
+                                        <!-- /Form field -->
+                                    </div>
+                                    <div class="column is-3">
+                                        <!-- /Form field -->
+                                        <div class="control-material is-accent">
+                                            <input class="material-input" type="text" id="callBackHome_email" required="">
+                                            <span class="material-highlight"></span>
+                                            <span class="bar"></span>
+                                            <label>Email *</label>
+                                        </div>
+                                        <!-- /Form field -->
+                                    </div>
+                                    <div class="column is-3">
+                                        <!-- Form field -->
+                                        <div class="control-material is-accent">
+                                            <input class="material-input" type="text" id="callBackHome_phone" required="">
+                                            <span class="material-highlight"></span>
+                                            <span class="bar"></span>
+                                            <label>Сотовый номер *</label>
+                                        </div>
+                                        <!-- /Form field -->
+                                    </div>
+                                    <div class="column is-3">
+                                        <button id="homeSubmit"  style="border-color: #fff;" type="submit" class="button button-cta btn-align  btn-outlined gradient_btn  raised no-lh">Отправить</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+           <p style="color: #fff; font-size: x-large; display: none;" id="callBackHome_done">Ваш запрос отправлен. Ожидайте звонка.</p>
+                </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block js %}
+      <script src="{% static 'js/components-modals.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,64 @@
+ {% load static %}
+ <div id="navbar-fade" class="hero">
+   <nav style="padding: 50px;" class="navbar navbar-wrapper is-transparent is-static">
+                <div class="container">
+                    <!-- Brand -->
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="/">
+                            <img style="max-height: 60px !important; height: 60px !important;" class="light-logo" src="{% static '/images/logo-astra.jpg' %}" alt="">
+                        </a>
+                        <div class="custom-burger" data-target="">
+                            <a id="" class="responsive-btn" href="javascript:void(0);">
+                                <span class="menu-toggle">
+                                    <span class="icon-box-toggle">
+                                        <span class="rotate">
+                                            <i class="icon-line-top"></i>
+                                            <i class="icon-line-center"></i>
+                                            <i class="icon-line-bottom"></i>
+                                        </span>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-menu">
+                        <div class="navbar-start">
+                        </div>
+                        <div class="navbar-end">
+                            <a class="navbar-item is-slide" href="{% url 'about' %}">
+                                О КОМПАНИИ
+                            </a>
+                            <div class="navbar-item has-dropdown is-hoverable ">
+                                <a class="navbar-link" href="#demos">
+                                    УСЛУГИ
+                                </a>
+                                <div class="navbar-dropdown is-boxed is-medium">
+                                    <a class="navbar-item is-menu" href="/agency/index.html">
+                                        <i class="material-icons">dvr</i>
+                                        <span>Контекстная реклама</span>
+                                    </a>
+                                    <a class="navbar-item is-menu" href="/startup/index.html">
+                                        <i class="material-icons">trending_up</i>
+                                        <span>Продвижение сайтов</span>
+                                    </a>
+                                    <a class="navbar-item is-menu" href="/landing-kits/kit-1/index.html">
+                                        <i class="material-icons">gps_fixed</i>
+                                        <span>Таргетированная реклама</span>
+                                    </a>
+                                    <a class="navbar-item is-menu" href="/landing-kits/kit-2/index.html">
+                                        <i class="material-icons">youtube_searched_for</i>
+                                        <span>Прочие услуги</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <a class="navbar-item is-slide" href="landing-pricing.html">
+                                КЕЙСЫ
+                            </a>
+                            <a class="navbar-item is-slide" href="landing-login.html">
+                                КОНТАКТЫ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+ </div>

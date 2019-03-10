@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{ title }}</title>
+        <meta name="description" content="{{ description }}"/>
+        <meta name="keywords" content= "{{ keywords }}" />
+        <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+
+        <link rel="stylesheet" href="{% static 'css/bulma.css' %}">
+        <link rel="stylesheet" href="{% static 'css/app.css' %}">
+        <link rel="stylesheet" href="{% static 'css/core.css' %}">
+
+    </head>
+    <body>
+     <form id="dummy_form">{% csrf_token %}</form>
+{#        <div class="pageloader"></div>#}
+{#        <div class="infraloader is-active"></div>        #}
+{% include 'header.html' %}
+       {% block content %}
+{% endblock %}
+{% include 'footer.html' %}
+
+        <script src="{% static 'js/app.js' %}"></script>
+        <script src="{% static 'js/landing.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+     <script src="{% static 'js/forms.js' %}"></script>
+{% block js %}
+{% endblock %}
+
+    </body>
+</html>
