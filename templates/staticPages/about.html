@@ -6,11 +6,11 @@
 
 
             <!-- Hero caption -->
-            <div id="main-hero" class="hero-body ">
+            <div style="padding-bottom: 0px !important;" id="main-hero" class="hero-body ">
                 <div class="container">
                     <div class="columns is-vcentered is-tablet-portrait">
                         <!-- Caption -->
-                        <div class="column is-6 header-caption has-text-left">
+                        <div class="column is-5 header-caption has-text-left is-offset-1">
                             <h1 class="landing-title">
                                 О компании
                             </h1>
@@ -81,37 +81,39 @@
                 </div>
             </div>
         </div>
-                            <p class="pt-10 pb-10">
-                                <a href="#services" class="button button-cta btn-align btn-outlined is-bold light-btn rounded z-index-2">
-                                    Get Started
-                                </a>
-                            </p>
+
                         </div>
                         <!-- UI Mockup -->
-                        <div class="column is-6 ">
+                        <div class="column is-5  ">
                           <div style="background-color: #f25a1a;"  class="flex-card light-bordered light-raised">
                         <div class="content has-text-centered mt-20">
-                            <h3>Форма заказа</h3>
+                            <h3 style="color: #fff;">Форма заказа</h3>
                         </div>
                         <div class="card-body">
                             <form class="padding-20">
-                                <div class="control-material is-primary">
+                                <div class="control-material ">
                                     <input class="material-input " type="text" required="">
                                     <span class="material-highlight"></span>
                                     <span class="bar"></span>
-                                    <label>Full name *</label>
+                                    <label>Ваше имя *</label>
                                 </div>
-                                <div class="control-material is-primary">
+                                <div class="control-material ">
+                                    <input class="material-input " type="text" required="">
+                                    <span class="material-highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Контактный телефон *</label>
+                                </div>
+                                 <div class="control-material ">
+                                    <input class="material-input " type="text" required="">
+                                    <span class="material-highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Адрес сайта *</label>
+                                </div>
+                                 <div class="control-material ">
                                     <input class="material-input " type="email" required="">
                                     <span class="material-highlight"></span>
                                     <span class="bar"></span>
-                                    <label>Email *</label>
-                                </div>
-                                <div class="control-material is-primary">
-                                    <textarea rows="5"></textarea>
-                                    <span class="material-highlight"></span>
-                                    <span class="bar"></span>
-                                    <label>Message *</label>
+                                    <label>E-MAIL *</label>
                                 </div>
                                 <div class="mt-20 has-text-right">
                                     <button type="submit" class="button button-cta btn-align  btn-outlined gradient_btn  raised no-lh">Отправить</button>
@@ -133,10 +135,10 @@
         <!-- /Services section -->
 
         <!-- Features section -->
-        <section class="section section-feature-grey is-medium">
+        <section style="padding-top: 0 !important;" class="section section-feature-grey">
             <div class="container">
 
-                <div class="content-wrapper">
+
                     <div class="columns is-vcentered ">
                         <div class="column is-4 is-offset-1">
                             <!-- Title -->
@@ -219,26 +221,35 @@
                     </div>
 
 
-                </div>
-            </div>
-        </section>
-        <!-- /Features section -->
-
-        <!-- Phone scroller section 1 -->
-        <section id="first-feature" class="section no-margin has-border-top">
-            <div class="container">
-                <div class="flex-card light-bordered hover-inset">
-            <div class="card-body">
-                <div class="content">
-                    <h2 class="no-margin title-bold">Card title</h2>
-                    <p class="pt-10">Lorem ipsum dolor sit amet, has vero libris melius ea, omnis velit comprehensam duo an, meis ornatus eam ad. Ius ut labores scaevola.</p>
-                </div>
-            </div>
-        </div>
 
             </div>
         </section>
-     
+  <section id="business-types" class="section is-medium section-secondary is-small is-skewed-sm is-relative huge-pb">
+            <div class="container slanted-container is-reverse-skewed-sm">
+                <div class="columns is-vcentered">
+                    <!-- Content -->
+                    <div class="column is-5 is-offset-4 ">
+                        <div class="content padding-20">
+                            <h2 class="parallax-title light-text text-bold">Реквизиты</h2>
+                            <p class="light-text">
+
+ООО "Астра-Промо"<br>
+Юридический адрес: 454139, г. Челябинск, ул. Магнитогорская 91, кв. 21<br>
+Фактический адрес: 454084, г. Челябинск, пр. Победы 160, офис 503<br>
+ИНН 7452117790<br>
+КПП 744901001<br>
+ОГРН 1147452004292<br>
+р/с 40702810890960003226 ПАО «ЧЕЛЯБИНВЕСТБАНК» г. Челябинск<br>
+БИК 047501779<br>
+к/с 30101810400000000779
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 {% endblock %}
 
 {% block js %}
