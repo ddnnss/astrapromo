@@ -1,64 +1,32 @@
  {% load static %}
- <div id="navbar-fade" class="hero">
-   <nav style="padding: 50px;" class="navbar navbar-wrapper is-transparent is-static">
-                <div class="container">
-                    <!-- Brand -->
-                    <div class="navbar-brand">
-                        <a class="navbar-item" href="/">
-                            <img style="max-height: 60px !important; height: 60px !important;" class="light-logo" src="{% static '/images/logo-astra.jpg' %}" alt="">
-                        </a>
-                        <div class="custom-burger" data-target="">
-                            <a id="" class="responsive-btn" href="javascript:void(0);">
-                                <span class="menu-toggle">
-                                    <span class="icon-box-toggle">
-                                        <span class="rotate">
-                                            <i class="icon-line-top"></i>
-                                            <i class="icon-line-center"></i>
-                                            <i class="icon-line-bottom"></i>
-                                        </span>
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="navbar-menu">
-                        <div class="navbar-start">
-                        </div>
-                        <div class="navbar-end">
-                            <a class="navbar-item is-slide" href="{% url 'about' %}">
-                                О КОМПАНИИ
-                            </a>
-                            <div class="navbar-item has-dropdown is-hoverable ">
-                                <a class="navbar-link" href="#demos">
-                                    УСЛУГИ
-                                </a>
-                                <div class="navbar-dropdown is-boxed is-medium">
-                                    <a class="navbar-item is-menu" href="/agency/index.html">
-                                        <i class="material-icons">dvr</i>
-                                        <span>Контекстная реклама</span>
-                                    </a>
-                                    <a class="navbar-item is-menu" href="/startup/index.html">
-                                        <i class="material-icons">trending_up</i>
-                                        <span>Продвижение сайтов</span>
-                                    </a>
-                                    <a class="navbar-item is-menu" href="/landing-kits/kit-1/index.html">
-                                        <i class="material-icons">gps_fixed</i>
-                                        <span>Таргетированная реклама</span>
-                                    </a>
-                                    <a class="navbar-item is-menu" href="/landing-kits/kit-2/index.html">
-                                        <i class="material-icons">youtube_searched_for</i>
-                                        <span>Прочие услуги</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <a class="navbar-item is-slide" href="landing-pricing.html">
-                                КЕЙСЫ
-                            </a>
-                            <a class="navbar-item is-slide" href="landing-login.html">
-                                КОНТАКТЫ
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+ <div class="container">
+     <header>
+         <nav class="navbar  navbar-expand-sm py-4">
+             <a class="navbar-brand" href="#">
+                 <img src="{% static 'images/logo-astra.jpg'%}" height="60" alt="logo">
+             </a>
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-5">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse" id="navbar-list-5">
+                 <ul class="navbar-nav ml-auto">
+                     <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">О КОМПАНИИ</a></li>
+                     <li class="nav-item dropdown">
+                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             УСЛУГИ
+                         </a>
+                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                             <a class="dropdown-item" href="#">КОНТЕКСТНАЯ РЕКЛАМА</a>
+                             <a class="dropdown-item" href="#">ПРОДВИЖЕНИЕ САЙТОВ</a>
+                             <a class="dropdown-item" href="#">ТАРГЕТИРОВАННАЯ РЕКЛАМА</a>
+                             <a class="dropdown-item" href="#">ПРОЧИЕ УСЛУГИ</a>
+                         </div>
+                     </li>
+                     <li class="nav-item"><a class="nav-link" href="#">КЕЙСЫ</a></li>
+                     <li class="nav-item"><a class="nav-link" href="#">КОНТАКТЫ</a>
+                     </li>
+                 </ul>
+             </div>
+         </nav>
+     </header>
  </div>

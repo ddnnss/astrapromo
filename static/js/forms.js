@@ -6,15 +6,21 @@ function modalCallback() {
     $('.phoneError').css('display','none');
     if (client_name == ''){
         console.log('name empty');
-        $('#modalSubmit').removeClass('is-loading');
+        $('#callBackModal').removeClass('input-error');
         $('.nameError').css('display','block');
+        setTimeout(function(){
+          $('#callBackModal').addClass('input-error');
+        },500);
 
         return;
     }
      if (client_phone == ''){
         console.log('phone empty');
-         $('#modalSubmit').removeClass('is-loading');
-          $('.phoneError').css('display','block');
+        $('#callBackModal').removeClass('input-error');
+        $('.phoneError').css('display','block');
+        setTimeout(function(){
+            $('#callBackModal').addClass('input-error');
+        },500);
         return;
     }
     csrfmiddlewaretoken = document.getElementsByName("csrfmiddlewaretoken")[0].value;

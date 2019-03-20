@@ -1,36 +1,62 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{{ title }}</title>
-        <meta name="description" content="{{ description }}"/>
-        <meta name="keywords" content= "{{ keywords }}" />
-        <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
-        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}"/>
+    <meta name="keywords" content= "{{ keywords }}" />
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" rel="stylesheet" />
+    <link href="https://mreq.github.io/slick-lightbox/dist/slick-lightbox.css" rel="stylesheet" />
+    <link href="https://mreq.github.io/slick-lightbox/gh-pages/bower_components/slick-carousel/slick/slick-theme.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-        <link rel="stylesheet" href="{% static 'css/bulma.css' %}">
-        <link rel="stylesheet" href="{% static 'css/app.css' %}">
-        <link rel="stylesheet" href="{% static 'css/core.css' %}">
+</head>
+<body>
+    <form id="dummy_form">{% csrf_token %}</form>
 
-    </head>
-    <body>
-     <form id="dummy_form">{% csrf_token %}</form>
-{#        <div class="pageloader"></div>#}
-{#        <div class="infraloader is-active"></div>        #}
-{% include 'header.html' %}
-       {% block content %}
-{% endblock %}
-{% include 'footer.html' %}
+    {% include 'header.html' %}
+    {% block content %}
+    {% endblock %}
+    {% include 'footer.html' %}
 
-        <script src="{% static 'js/app.js' %}"></script>
-        <script src="{% static 'js/landing.js' %}"></script>
-        <script src="{% static 'js/main.js' %}"></script>
-     <script src="{% static 'js/forms.js' %}"></script>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script src="https://mreq.github.io/slick-lightbox/dist/slick-lightbox.js"></script>
+    <script src="{% static 'js/forms.js' %}"></script>
+      <script src="{% static 'js/inputMask.js' %}"></script>
+<script>
+    $('.portfolio-slides').slick({
+        infinite        : true,
+        slidesToShow    : 5,
+        slidesToScroll  : 1,
+        mobileFirst     : true
+    });
+
+
+    $('.portfolio-slides').slickLightbox({
+        itemSelector        : 'a',
+        navigateByKeyboard  : true
+    });
+
+    jQuery(function($){
+   $("#callBackHome_phone").mask("+7 (999) 999-99-99");
+    });
+ jQuery(function($){
+   $("#callBack_phone").mask("+7 (999) 999-99-99");
+    });
+</script>
 {% block js %}
 {% endblock %}
 
-    </body>
+</body>
 </html>
