@@ -397,7 +397,7 @@ color:#f37022 !important;
  .contacts-part1 div{
      position: relative;
      left: 278px;
-     width: 380px;
+
      padding-top: 80px;
  }
 .contacts-part1 span{
@@ -653,6 +653,23 @@ transition: all .2s ease;
     }
     .features p{
         min-height: 0;
+    }
+    .contacts {
+    height: 800px;
+    }
+
+    .contacts-part1 div{
+     position: relative;
+     left: 10px;
+
+     padding-top: 20px;
+    }
+    .contacts-part2{
+    height: 480px;
+    padding-left: 26px;
+    }
+    .map{
+            padding-top: 30px;
     }
 }
 
