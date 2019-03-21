@@ -19,6 +19,7 @@ def index(request):
     return render(request, 'staticPages/index.html', locals())
 
 def about(request):
+    active_about ='item-active'
     return render(request, 'staticPages/about.html', locals())
 
 

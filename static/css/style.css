@@ -103,6 +103,35 @@ input[type="text"]
     min-height: 155px;
 }
 
+/*главное меню*/
+.navbar ul li a{
+    color: #000;
+    font-size: 14px;
+    transition: all 0.5s;
+
+}
+.navbar ul li a:hover{
+
+    color: #f35d19;
+
+}
+.dropdown-menu a{
+    font-size: 13px !important;
+}
+
+.navbar-toggler{
+    border: 1px solid #f35d19;
+}
+
+.item-active{
+    color: #f35d19 !important;
+}
+
+
+
+
+/*--------------------главное меню*/
+
 /*карточка на главной*/
 .hovereffect {
   width: 100%;
@@ -238,7 +267,7 @@ input[type="text"]
 }
 
 .nav-link{
-        padding-right: 30px !important;
+    padding-right: 30px !important;
     color: #000;
     font-size: 15px;
 }
@@ -384,26 +413,31 @@ color:#f37022 !important;
 .team-foto p{
     font-weight: 700;
 }
-.team-foto p:after{
-    content:' ';
-    display:block;
-    margin-top: 8px;
-    border: 1px solid #f35d19;
-    width: 7%;
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
-    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
-    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+.team-name-1{
+    border-bottom: 1px solid #f35d19;
+    width: 182px;
+}
+.team-name-2{
+    border-bottom: 1px solid #f35d19;
+    width: 182px;
+}
+.team-name-3{
+    border-bottom: 1px solid #f35d19;
+    width: 182px;
+}
+.team-name-4{
+    border-bottom: 1px solid #f35d19;
+    width: 182px;
 }
 
 .team-foto span{
     font-size: 14px;
+    position: relative;
+    top: -15px;
 
 }
 .team-foto div{
-    line-height: 0px;
+    /*line-height: 0px;*/
     margin-bottom: 40px;
 
 }
@@ -420,23 +454,29 @@ color:#f37022 !important;
 .about-us ul{
     margin-bottom: 40px;
 }
-.about-us h3:after {
-    content:' ';
-    display:block;
-    margin-top: 2px;
-    border: 2px solid #f35d19;
-    width: 3%;
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
-    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
-    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
-
+.about-head-1{
+    border-bottom: 2px solid #f35d19;
+    width: 182px;
+}
+.about-head-2{
+    border-bottom: 2px solid #f35d19;
+    width: 234px;
+}
+.about-head-3{
+    border-bottom: 2px solid #f35d19;
+    width: 130px;
+}
+.about-head-4{
+    border-bottom: 2px solid #f35d19;
+    width: 315px;
+}
+.about-head-5{
+    border-bottom: 2px solid #f35d19;
+    width: 163px;
 }
 /*---------------*/
 @media (max-width: 544px) {
     .form_container{
-        height: 540px;
+        height: 600px;
     }
 }
