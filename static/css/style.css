@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic');
 
 body{
-
+    user-select: none;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -57,8 +57,8 @@ input[type="text"]
 
 
 .btn-1 {
-    display: block;
-    margin: 0 auto;
+    /*display: block;*/
+    /*margin: 0 auto;*/
     font-weight: 600;
     background-image: linear-gradient(to right, #F57D14 0%, #F25A1A 100%);
 }
@@ -74,9 +74,23 @@ input[type="text"]
     background-color: white;
 }
 .btn-2:hover{
+    color: #f35d19;
 
      box-shadow: 0 0 20px #f5f5ef;
 }
+
+.btn-3 {
+    padding: 5px !important;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #fff;
+   background-image: linear-gradient(to right, #F57D14 0%, #F25A1A 100%);
+}
+.btn-3:hover{
+    color: #fff;
+    box-shadow: 0 0 20px #F57D14;
+}
+
 
 .features span{
     line-height: 25px;
@@ -132,115 +146,7 @@ input[type="text"]
 
 /*--------------------главное меню*/
 
-/*карточка на главной*/
-.hovereffect {
-  width: 100%;
-  height: 100%;
-  float: left;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  cursor: default;
-}
 
-.hovereffect .overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  top: 70px;
-  left: 0;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  background-color: rgba(0,0,0,0.5);
-  -webkit-transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
-  transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
-}
-
-.hovereffect img {
-  display: block;
-  position: relative;
-  -webkit-transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
-  transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
-}
-
-.hovereffect h2 {
-  text-transform: uppercase;
-    margin-bottom: 50px;
-  color: #fff;
-  text-align: center;
-  position: relative;
-  font-size: 17px;
-    font-weight: 700;
-  background: rgba(0,0,0,0.6);
-  -webkit-transform: translatey(-100px);
-  -ms-transform: translatey(-100px);
-  transform: translatey(-100px);
-  -webkit-transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
-  transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
-  padding: 10px;
-}
-
-.hovereffect .text {
-  text-transform: uppercase;
-  color: #fff;
-  text-align: center;
-  position: relative;
-    display: contents;
-  font-size: 17px;
-  background: rgba(0,0,0,0.6);
-  -webkit-transform: translatey(-100px);
-  -ms-transform: translatey(-100px);
-  transform: translatey(-100px);
-  -webkit-transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
-  transition: all 0.4s cubic-bezier(0.88,-0.99, 0, 1.81);
-  padding: 10px;
-}
-
-.hovereffect a.info {
-  text-decoration: none;
-  display: inline-block;
-  text-transform: uppercase;
-  color: #fff;
-  border: 1px solid #f35d19;
-    border-radius: 4px;
-  background-color: #f35d19;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  margin: 50px 0 0;
-  padding: 7px 14px;
-}
-
-.hovereffect a.info:hover {
-  box-shadow: 0 0 20px #F57D14;
-}
-
-.hovereffect:hover img {
-  -ms-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
-
-.hovereffect:hover .overlay {
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-
-.hovereffect:hover h2,.hovereffect:hover a.info {
-  opacity: 1;
-  filter: alpha(opacity=100);
-  -ms-transform: translatey(0);
-  -webkit-transform: translatey(0);
-  transform: translatey(0);
-}
-
-.hovereffect:hover a.info {
-  -webkit-transition-delay: .2s;
-  transition-delay: .2s;
-}
-/*-------------------*/
 
 .form_container{
 
@@ -475,8 +381,184 @@ color:#f37022 !important;
     width: 163px;
 }
 /*---------------*/
+
+/*seo*/
+.seo-h1{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+.seo-list{
+    list-style: none;
+}
+.seo-feature{
+    line-height: 10px;
+}
+.seo-feature-head{
+    color: #F47D13;
+}
+.seo-feature-number{
+    font-size: 40px;
+    font-weight: 700;
+    color: #F47D13;
+}
+.seo-feature-info{
+    font-size: 11px;
+}
+.seo-work-plan img{
+    display: block;
+    margin: 0 auto;
+}
+.seo-work-plan div{
+    padding-top: 15px;
+    display: inline-flex;
+    line-height: 11px;
+}
+.seo-work-plan-number{
+    font-size: 40px;
+    font-weight: 700;
+    color: #F47D13;
+    float: left;
+}
+.seo-work-plan-info{
+    font-size: 12px;
+    text-align: left !important;
+    padding-left: 3px;
+}
+.seo-up{
+    background-image: url('../images/seo0.png');
+    height: 202px;
+}
+.seo-up-1{
+    position: relative;
+    font-size: 12px;
+    line-height: 11px;
+    width: 125px;
+    top: 110px;
+    left: 120px;
+}
+.seo-up-2{
+    position: relative;
+    font-size: 12px;
+    line-height: 11px;
+    width: 125px;
+    left: 290px;
+}
+.seo-up-3{
+    position: relative;
+    font-size: 12px;
+    line-height: 11px;
+    width: 125px;
+    left: 517px;
+    top: -48px;
+}
+.seo-up-4{
+    position: relative;
+    font-size: 12px;
+    line-height: 11px;
+    width: 125px;
+    left: 727px;
+    top: -113px;
+}
+
+.seo-team img{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.seo-team p{
+    font-size: 14px;
+}
+
+/*---------------seo*/
+/*overlay*/
+[class^='imghvr-'], [class*=' imghvr-'] {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    max-width: 100%;
+    background-color: rgb(10, 10, 10);
+
+    color: #fff;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translateZ(0);
+}
+
+[class^='imghvr-'] > img, [class*=' imghvr-'] > img {
+    vertical-align: top;
+    max-width: 100%;
+}
+
+[class^='imghvr-'] figcaption, [class*=' imghvr-'] figcaption {
+    background-color: rgba(10, 10, 10, 0.78);
+    opacity: 0.5;
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+}
+
+[class^='imghvr-'] figcaption h1, [class^='imghvr-'] figcaption h2, [class^='imghvr-'] figcaption h3, [class^='imghvr-'] figcaption h4, [class^='imghvr-'] figcaption h5, [class^='imghvr-'] figcaption h6, [class*=' imghvr-'] figcaption h1, [class*=' imghvr-'] figcaption h2, [class*=' imghvr-'] figcaption h3, [class*=' imghvr-'] figcaption h4, [class*=' imghvr-'] figcaption h5, [class*=' imghvr-'] figcaption h6 {
+    color: #ffffff;
+}
+
+[class^='imghvr-'] figcaption h3{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 20px;
+}
+
+[class^='imghvr-'] figcaption p{
+    font-size: 14px;
+    padding-top: 20px;
+}
+
+/*[class^='imghvr-'] a, [class*=' imghvr-'] a {*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*z-index: 1;*/
+/*}*/
+
+[class^='imghvr-'], [class*=' imghvr-'], [class^='imghvr-']:before,
+[class^='imghvr-']:after, [class*=' imghvr-']:before, [class*=' imghvr-']:after,
+[class^='imghvr-'] *, [class*=' imghvr-'] *, [class^='imghvr-'] *:before,
+[class^='imghvr-'] *:after, [class*=' imghvr-'] *:before, [class*=' imghvr-'] *:after {
+    box-sizing: border-box;
+    transition: all .35s ease;
+}
+.imghvr-blur figcaption {
+    opacity: 0;
+}
+
+.imghvr-blur:hover > img {
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 0.7;
+}
+
+.imghvr-blur:hover figcaption {
+    opacity: 1;
+    transition-delay: 0.21s;
+}
+/*--------overlay*/
 @media (max-width: 544px) {
     .form_container{
         height: 600px;
     }
+    .features p{
+        min-height: 0;
+    }
 }
+

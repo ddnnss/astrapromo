@@ -10,6 +10,7 @@
              </button>
              <div class="collapse navbar-collapse" id="navbar-list-5">
                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item"><a class="nav-link {{ active_home }}" href="{% url 'index' %}">ГЛАВНАЯ</a></li>
                      <li class="nav-item"><a class="nav-link {{ active_about }}" href="{% url 'about' %}">О КОМПАНИИ</a></li>
                      <li class="nav-item dropdown">
                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -17,7 +18,7 @@
                          </a>
                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                              <a class="dropdown-item" href="#">КОНТЕКСТНАЯ РЕКЛАМА</a>
-                             <a class="dropdown-item" href="#">ПРОДВИЖЕНИЕ САЙТОВ</a>
+                             <a class="dropdown-item" href="{% url 'seo' %}">ПРОДВИЖЕНИЕ САЙТОВ</a>
                              <a class="dropdown-item" href="#">ТАРГЕТИРОВАННАЯ РЕКЛАМА</a>
                              <a class="dropdown-item" href="#">ПРОЧИЕ УСЛУГИ</a>
                          </div>

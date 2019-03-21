@@ -11,6 +11,7 @@ def sitemap(request):
 
 
 def index(request):
+    active_home ='item-active'
     title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
     description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
     keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
@@ -21,5 +22,9 @@ def index(request):
 def about(request):
     active_about ='item-active'
     return render(request, 'staticPages/about.html', locals())
+
+def seo(request):
+    active_seo ='item-active'
+    return render(request, 'staticPages/seo.html', locals())
 
 

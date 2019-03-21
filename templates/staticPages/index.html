@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container">
         <div class="row align-items-center mb-4 py-4">
-            <div class="col-md-4 order-md-1 offset-md-1">
+            <div class="col-md-4 order-md-1 offset-md-1 mb-4">
                <h1>Комплексный интернет маркетинг</h1>
                 <p>Приводим новых клиентом для вашего бизнеса из поисковых систем и социальных сетей.</p>
 
@@ -17,28 +17,28 @@
 
 
 <div class="row features ">
-    <div class="col-md-1 ">
+    <div class="col-md-1 mb-4">
         <span>1</span>
     </div>
-     <div class="col-md-3">
+     <div class="col-md-3 mb-4">
         <h3>Контекстная реклама</h3>
          <p>Контекстная реклама - это тип интернет-рекламы, которую видит пользователь поисковой системы при вводе поискового запроса.
          Введя запрос в Яндекс или Google, кроме результатов поиска, человек получает рекламные блоки с объявлениями на тему своего запроса.</p>
         <a class="btn btn-1" href="#">заказать услугу</a>
     </div>
-     <div class="col-md-1">
+     <div class="col-md-1 mb-4">
        <span>2</span>
     </div>
-     <div class="col-md-3">
+     <div class="col-md-3 mb-4">
          <h3>Продвижение сайтов</h3>
          <p>Продвижение сайтов – это не просто работа над позициями сайта. Сейчас, чтобы продвижение было успешным, важно работать по всем направлениям развития сайта.</p>
         <a class="btn btn-1" href="#">заказать услугу</a>
 
      </div>
-     <div class="col-md-1 text">
+     <div class="col-md-1 mb-4">
         <span>3</span>
     </div>
-     <div class="col-md-3">
+     <div class="col-md-3 mb-4">
          <h3>Таргетированная реклама</h3>
          <p>Таргетированная реклама в социальных сетях — это современный инструмент для продвижения товаров и услуг,
          который позволяет максимально точечно и прицельно настраивать рекламу на различные сегменты аудитории. </p>
@@ -52,19 +52,20 @@
     <div class="gap-60"></div>
 <div class="row">
 
+
          {% for case in showCases %}
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="hovereffect mb-4">
-                        <img class="img-responsive" src="{{ case.image.url }}" alt="">
-                            <div class="overlay">
-                                <h2>{{ case.caseName }}</h2>
-                               <span class="text"> {{ case.showcaseInfo }}</span>
-                                <p>
-                                   <a class="info" href="#">СМОТРЕТЬ ПРОЕКТ</a>
-                                </p>
-                            </div>
-                    </div>
-                </div>
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+         <figure class="imghvr-blur"><img src="{{ case.image.url }}" alt="example-image">
+            <figcaption>
+              <h3>{{ case.caseName }}</h3>
+              <p>{{ case.showcaseInfo }}</p>
+                 <a class="btn btn-3" href="#">СМОТРЕТЬ ПРОЕКТ</a>
+            </figcaption><a href="javascript:;"></a>
+          </figure>
+
+
+        </div>
+
          {% endfor %}
 </div>
     <div class="gap-40"></div>
