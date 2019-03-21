@@ -13,7 +13,7 @@
                      <li class="nav-item"><a class="nav-link {{ active_home }}" href="{% url 'index' %}">ГЛАВНАЯ</a></li>
                      <li class="nav-item"><a class="nav-link {{ active_about }}" href="{% url 'about' %}">О КОМПАНИИ</a></li>
                      <li class="nav-item dropdown">
-                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         <a class="nav-link dropdown-toggle {{ active_uslug }}" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                              УСЛУГИ
                          </a>
                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -25,7 +25,7 @@
                          </div>
                      </li>
                      <li class="nav-item"><a class="nav-link" href="#">КЕЙСЫ</a></li>
-                     <li class="nav-item"><a class="nav-link" href="#">КОНТАКТЫ</a>
+                     <li class="nav-item"><a class="nav-link {{ active_contacts }}" href="{% url 'contacts' %}">КОНТАКТЫ</a>
                      </li>
                  </ul>
              </div>

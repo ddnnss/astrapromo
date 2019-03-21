@@ -24,9 +24,15 @@ def about(request):
     return render(request, 'staticPages/about.html', locals())
 
 def seo(request):
+    active_uslug='item-active'
     active_seo ='item-active'
     return render(request, 'staticPages/seo.html', locals())
 
 def sites(request):
+    active_uslug='item-active'
     active_sites ='item-active'
     return render(request, 'staticPages/sites.html', locals())
+
+def contacts(request):
+    active_contacts ='item-active'
+    return render(request, 'staticPages/contacts.html', locals())

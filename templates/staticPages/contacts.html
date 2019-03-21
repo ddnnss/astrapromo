@@ -1,0 +1,55 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="row contacts py-4">
+        <div class="col-md-5 contacts-part1">
+            <div>
+               <h3>Мы на связи!</h3>
+
+            <p>Свяжитесь с нами самостоятельно</p>
+            <span >+7 351 248 30 67</span> Пн-Пт с 9:00 до 22:00<br><br>
+            <a href="mailto:igor@astrapromo.ru">igor@astrapromo.ru</a>
+
+            <p>ул. Пушкина, дом 15, офис 20</p>
+            </div>
+
+        </div>
+        <div  class="col-md-7 contacts-part2">
+          <h3>Готовы сделать заказ?</h3>
+            <p>Заполните форму, и мы свяжемся с вами</p>
+        <form  id="callBackForm" onsubmit="callBack_home(event);" autocomplete="off" >
+        <div class="row">
+
+                <div class="col-md-3 col-sm-12 mb-4"> <input type="text" id="callBackHome_name" required="required" placeholder="Ваше имя"></div>
+
+                <div class="col-md-3 col-sm-12  mb-4"><input type="text" id="callBackHome_email" required="required" placeholder="Email"></div>
+
+                <div class="col-md-3 col-sm-12 mb-4"><input type="text" id="callBackHome_phone" required="required" placeholder="Сотовый номер"></div>
+
+
+        </div>
+             <button id="homeSubmit"  type="submit" class="btn btn-2">Отправить</button>
+</form>
+<p style="color: #fff; font-size: x-large; display: none;" id="callBackHome_done">Ваш запрос отправлен. Ожидайте звонка.</p>
+
+        </div>
+    </div>
+<div class="container">
+<div class="gap-40"></div>
+<div class="row">
+    <div class="col-md-12">
+        <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=wV4KUfd1FmMqhVPKqMoHVGlhhUwzBOoD&height=400"></script>
+
+
+    </div>
+</div>
+</div>
+
+<div class="gap-60"></div>
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}
+

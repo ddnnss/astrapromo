@@ -315,6 +315,9 @@ color:#f37022 !important;
 
 .team-foto img{
     margin-bottom: 40px;
+    -webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 }
 .team-foto p{
     font-weight: 700;
@@ -381,7 +384,50 @@ color:#f37022 !important;
     width: 163px;
 }
 /*---------------*/
+/*contacts*/
+.contacts{
+    height: 510px;
+}
+ .contacts-part1{
+    background-color: #33B3DF;
 
+    color: #fff;
+}
+
+ .contacts-part1 div{
+     position: relative;
+     left: 278px;
+     width: 380px;
+     padding-top: 80px;
+ }
+.contacts-part1 span{
+    font-size: 25px;
+    font-weight: 700;
+
+}
+.contacts-part1 h3{
+    margin-bottom: 10px;
+}
+.contacts-part1 p{
+    padding: 20px 0 10px 0;
+}
+
+.contacts-part1 a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.contacts-part2{
+    background-color: #F35D19;
+    color: #fff;
+    padding-left: 60px;
+}
+.contacts-part2 h3{
+    padding: 80px 0 10px 0;
+}
+.contacts-part2 button{
+    float: left !important;
+}
+/*----------contacts*/
 /*seo*/
 .seo-h1{
     font-size: 20px;
@@ -501,6 +547,9 @@ color:#f37022 !important;
 }
 .portfolio img{
     margin-bottom: 40px;
+    -webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 }
 /*-----------sites page*/
 
