@@ -27,4 +27,6 @@ def seo(request):
     active_seo ='item-active'
     return render(request, 'staticPages/seo.html', locals())
 
-
+def sites(request):
+    active_sites ='item-active'
+    return render(request, 'staticPages/sites.html', locals())

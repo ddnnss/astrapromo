@@ -2,7 +2,7 @@
  <div class="container">
      <header>
          <nav class="navbar  navbar-expand-sm py-4">
-             <a class="navbar-brand" href="#">
+             <a class="navbar-brand" href="/">
                  <img src="{% static 'images/logo-astra.jpg'%}" height="60" alt="logo">
              </a>
              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-5">
@@ -19,6 +19,7 @@
                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                              <a class="dropdown-item" href="#">КОНТЕКСТНАЯ РЕКЛАМА</a>
                              <a class="dropdown-item" href="{% url 'seo' %}">ПРОДВИЖЕНИЕ САЙТОВ</a>
+                             <a class="dropdown-item" href="{% url 'sites' %}">СОЗДАНИЕ САЙТОВ</a>
                              <a class="dropdown-item" href="#">ТАРГЕТИРОВАННАЯ РЕКЛАМА</a>
                              <a class="dropdown-item" href="#">ПРОЧИЕ УСЛУГИ</a>
                          </div>
