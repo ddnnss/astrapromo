@@ -114,7 +114,7 @@ input[type="text"]
 .features p{
 
     font-size: 13px;
-    min-height: 155px;
+    /*min-height: 155px;*/
 }
 
 /*главное меню*/
