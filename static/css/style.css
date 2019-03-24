@@ -114,7 +114,7 @@ input[type="text"]
 .features p{
 
     font-size: 13px;
-    /*min-height: 155px;*/
+    min-height: 120px;
 }
 
 /*главное меню*/
@@ -142,8 +142,9 @@ input[type="text"]
 }
 
 .home-h1{
-    line-height: 35px;
+    line-height: 40px;
     font-weight: 700;
+    margin-bottom: 40px;
 }
 
 
@@ -418,7 +419,7 @@ color:#f37022 !important;
 
  .contacts-part1 div{
      position: relative;
-     left: 278px;
+     left: 420px;
 
      padding-top: 80px;
  }
