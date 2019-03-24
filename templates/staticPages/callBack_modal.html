@@ -1,0 +1,32 @@
+ <div class="modal fade" id="callBackModal" tabindex="-1" role="dialog" aria-labelledby="callBackModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content callBackModal">
+        <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h2 style="color: #fff;" class="mb-4">Заказать звонок</h2>
+            <div id="callBack_send">
+                <input  id="callBack_name" type="text" placeholder="Ваше имя" required>
+                <div style="display: none;" class="nameError">
+                    <small  class="validation-error">Это поле обязательно</small>
+                </div>
+                <div class="gap-20"></div>
+                <input  type="text" id="callBack_phone" placeholder="Ваш телефон" required>
+                <div style="display: none;"  class="phoneError">
+                    <small class="validation-error">Это поле обязательно</small>
+                </div>
+                <div class="gap-20"></div>
+                <p style="color: #fff; text-align: center; font-size: x-small;">
+                    Нажимая на кнопку, вы даете согласие на обработку своих персональных данных - Пользовательское соглашение
+                </p>
+                <button onclick="modalCallback();" id="modalSubmit"  class="btn btn-2">ОТПРАВИТЬ</button>
+            </div>
+            <div style="display: none;" id="callBack_done">
+                <h2 style="color: #fff;" class="title is-3 no-margin">ЗАПРОС ОТПРАВЛЕН!</h2>
+                <p style="color: #fff;" class="pt-20">Ожидайте звонка.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>

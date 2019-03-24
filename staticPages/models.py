@@ -1,5 +1,6 @@
 from django.db import models
 from pytils.translit import slugify
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class showCase(models.Model):
@@ -8,6 +9,7 @@ class showCase(models.Model):
     siteUrl = models.CharField('Адрес сайта', max_length=255, blank=False)
     image = models.ImageField('Картинка', upload_to='showcases/', blank=False)
     showcaseInfo = models.CharField('Краткое описание', max_length=255, blank=False)
+    showcaseFullInfo = RichTextUploadingField ('Полное описание ', blank=True, null=True)
     showInHomePage = models.BooleanField('Отображать на главной', default=False)
     is_active = models.BooleanField('Активный кейс?', default=False)
 

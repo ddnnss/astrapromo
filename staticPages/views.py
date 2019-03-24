@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from django.shortcuts import render
 from .models import showCase, review
 def robots(request):
@@ -36,3 +37,17 @@ def sites(request):
 def contacts(request):
     active_contacts ='item-active'
     return render(request, 'staticPages/contacts.html', locals())
+
+def showcase(request):
+    active_showcase ='item-active'
+    showCases = showCase.objects.filter(is_active=True)
+    return render(request, 'staticPages/showcase.html', locals())
+
+def caseinfo(request):
+    return_dict = {}
+    caseId = request.POST.get('caseId')
+    case = showCase.objects.get(id=caseId)
+    return_dict['caseImg']=case.image.url
+    return_dict['caseName'] = case.caseName
+    return_dict['caseInfo'] = case.showcaseFullInfo
+    return JsonResponse(return_dict)

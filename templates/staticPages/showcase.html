@@ -1,0 +1,84 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+<p> ЧТО ТУТ НАПИСАТЬ?</p>
+
+    <div class="row">
+    {% for case in showCases %}
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
+         <figure class="imghvr-blur"><img src="{{ case.image.url }}" alt="example-image">
+            <figcaption>
+              <h3>{{ case.caseName }}</h3>
+              <p>{{ case.showcaseInfo }}</p>
+                 <a class="btn btn-3" href="javascript:void(0);" onclick="getCaseInfo({{ case.id }})" >СМОТРЕТЬ ПРОЕКТ</a>
+            </figcaption>
+          </figure>
+
+
+        </div>
+
+         {% endfor %}
+</div>
+    </div>
+
+
+<div class="gap-60"></div>
+    {% include 'staticPages/big_form.html' %}
+    <div class="gap-60"></div>
+    <div class="modal" id="showCase">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+
+        <div class="modal-body">
+            <img style="float: right;" class="img-fluid" id="caseImg" src="" alt="">
+            <div id="caseInfo"></div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+<script>
+function getCaseInfo(c_id) {
+    console.log(c_id);
+    caseId = c_id;
+    csrfmiddlewaretoken = document.getElementsByName("csrfmiddlewaretoken")[0].value;
+        $.ajax({
+            type:"POST",
+            url:'/caseinfo/',
+            dataType: "json",
+            data:{
+                'csrfmiddlewaretoken': csrfmiddlewaretoken,
+                'caseId':caseId,
+            },
+            success : function(data){
+                console.log(data);
+                $('.modal-title').html(data.caseName);
+                $('#caseInfo').html(data.caseInfo);
+                $('#caseImg').attr('src',data.caseImg)
+                $('#showCase').modal('show');
+
+            }
+        });
+
+}
+
+</script>
+
+{% endblock %}
+
+
+
+{% block js %}
+
+{% endblock %}
+
