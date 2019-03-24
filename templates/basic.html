@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
-<body ondragstart="return false;" ondrop="return false;" oncontextmenu="return false">
+{#ondragstart="return false;" ondrop="return false;" oncontextmenu="return false"#}
+<body >
     <form id="dummy_form">{% csrf_token %}</form>
 
     {% include 'header.html' %}
