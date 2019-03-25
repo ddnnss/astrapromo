@@ -17,9 +17,9 @@
                              УСЛУГИ
                          </a>
                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                             <a class="dropdown-item" href="#">КОНТЕКСТНАЯ РЕКЛАМА</a>
-                             <a class="dropdown-item" href="{% url 'seo' %}">ПРОДВИЖЕНИЕ САЙТОВ</a>
-                             <a class="dropdown-item" href="{% url 'sites' %}">СОЗДАНИЕ САЙТОВ</a>
+                             <a class="dropdown-item {{ active_context }}" href="{% url 'context' %}">КОНТЕКСТНАЯ РЕКЛАМА</a>
+                             <a class="dropdown-item {{ active_seo }}" href="{% url 'seo' %}">ПРОДВИЖЕНИЕ САЙТОВ</a>
+                             <a class="dropdown-item {{ active_sites }}" href="{% url 'sites' %}">СОЗДАНИЕ САЙТОВ</a>
                              <a class="dropdown-item" href="#">ТАРГЕТИРОВАННАЯ РЕКЛАМА</a>
                              <a class="dropdown-item" href="#">ПРОЧИЕ УСЛУГИ</a>
                          </div>

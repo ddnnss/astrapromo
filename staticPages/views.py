@@ -26,12 +26,12 @@ def about(request):
 
 def seo(request):
     active_uslug='item-active'
-    active_seo ='item-active'
+    active_seo ='drop-item-active'
     return render(request, 'staticPages/seo.html', locals())
 
 def sites(request):
     active_uslug='item-active'
-    active_sites ='item-active'
+    active_sites ='drop-item-active'
     return render(request, 'staticPages/sites.html', locals())
 
 def contacts(request):
@@ -42,6 +42,13 @@ def showcase(request):
     active_showcase ='item-active'
     showCases = showCase.objects.filter(is_active=True)
     return render(request, 'staticPages/showcase.html', locals())
+
+def context(request):
+    active_uslug = 'item-active'
+    active_context = 'drop-item-active'
+
+    return render(request, 'staticPages/context.html', locals())
+
 
 def caseinfo(request):
     return_dict = {}
