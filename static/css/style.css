@@ -262,9 +262,9 @@ input[type="text"]
 
 .navbar ul li a{
     color: #000;
-    font-size: 14px;
+    font-size: 16px;
     transition: all 0.5s;
-    font-family: 'SF UI Display Light';
+    font-family: 'SF UI Regular';
     letter-spacing: 1px;
 }
 
