@@ -9,6 +9,7 @@ urlpatterns = [
     path('catalog/sozdanie-sajtov-v-chelyabinske/', views.sites, name='sites'),
     path('contacts/', views.contacts, name='contacts'),
     path('context/', views.context, name='context'),
+    path('target/', views.target, name='target'),
     path('caseinfo/', views.caseinfo, name='caseinfo'),
 
 

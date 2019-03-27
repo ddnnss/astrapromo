@@ -57,7 +57,7 @@
             <figcaption>
               <h3>{{ case.caseName }}</h3>
               <p>{{ case.showcaseInfo }}</p>
-                 <a class="btn btn-3" href="#">СМОТРЕТЬ ПРОЕКТ</a>
+                 <a class="btn btn-3" href="javascript:void(0);" onclick="getCaseInfo({{ case.id }})">СМОТРЕТЬ ПРОЕКТ</a>
             </figcaption><a href="javascript:;"></a>
           </figure>
 
@@ -107,7 +107,7 @@
 {% include 'staticPages/big_form_buttons.html' %}
 <div class="gap-60"></div>
 {% include 'staticPages/callBack_modal.html' %}
-
+{% include 'staticPages/case_modal.html' %}
 
 {% endblock %}
 

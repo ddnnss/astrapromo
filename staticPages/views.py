@@ -49,6 +49,13 @@ def context(request):
 
     return render(request, 'staticPages/context.html', locals())
 
+def target(request):
+    active_uslug = 'item-active'
+    active_target = 'drop-item-active'
+    showCases = showCase.objects.filter(is_active=True, showInHomePage=True)
+
+    return render(request, 'staticPages/target.html', locals())
+
 
 def caseinfo(request):
     return_dict = {}
