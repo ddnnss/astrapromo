@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic');
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic');*/
 
 @font-face {
 font-family: 'SF UI Display Ultralight';
@@ -63,14 +63,25 @@ font-weight: normal;
 src: local('SF UI Display Black'), url('../fonts/sf-ui-display-black-58646a6b80d5a.woff') format('woff');
 }
 
+@font-face {
+font-family: 'SF UI Regular';
+font-style: normal;
+font-weight: normal;
+src: local('SF UI Regular '), url('../fonts/SFUIDisplay-Regular.ttf');
+}
+
 
 
 body{
-    font-family: 'SF UI Display Medium';
+    font-family: 'SF UI Regular';
+    -webkit-font-smoothing: subpixel-antialiased !important;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
 }
-.container{
-    padding: 0 !important;
-}
+/*.container{*/
+    /*padding: 0 !important;*/
+/*}*/
 .color-blue{
     color: #00b4e7;
 }
@@ -143,6 +154,8 @@ input[type="text"]
     color: white;
     transition: box-shadow .3s;
     border-radius:6px;
+    font-family: 'SF UI Display Bold';
+    letter-spacing: 1px;
 }
 
 
@@ -239,6 +252,7 @@ input[type="text"]
 /*главное меню*/
 .navbar{
     padding: 0;
+    font-family: 'SF UI Regular';
 }
 
 .navbar ul li a{
@@ -246,6 +260,7 @@ input[type="text"]
     font-size: 16px;
     transition: all 0.5s;
     font-family: 'SF UI Display Light';
+    letter-spacing: 1px;
 }
 
 .navbar ul li a:hover{
@@ -299,11 +314,14 @@ input[type="text"]
 
 .home-h1{
     line-height: 40px;
-   font-family: 'SF UI Display Light';
+   font-family: 'SF UI Display Thin';
     margin-bottom: 70px;
     font-size: 36px;
 }
 
+.cool-text{
+    font-family: 'SF UI Display Bold';
+}
 
 
 .form_container{
