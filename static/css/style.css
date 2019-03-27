@@ -262,7 +262,7 @@ input[type="text"]
 }
 
 .navbar ul li a{
-    color: #000;
+    color: #3e454b;
     font-size: 16px;
     transition: all 0.5s;
     font-family: 'SF UI Regular';
@@ -451,7 +451,7 @@ color:#f37022 !important;
 }
 .footer_phone p a{
     text-decoration: none;
-    color: #000;
+    color: #3e454b;
 }
 .footer_phone span{
     font-size: 13px;
