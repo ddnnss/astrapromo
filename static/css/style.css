@@ -156,10 +156,10 @@ input[type="text"]
     transition: box-shadow .3s;
     border-radius:6px;
     /*font-family: 'SF UI Display Bold';*/
-    font-weight: bold;
+    /*font-weight: bold;*/
     font-size: 16px;
     letter-spacing: 1px;
-    font-family: "SF UI Regular";
+    font-family: "SF UI Display Semibold";
 }
 
 
