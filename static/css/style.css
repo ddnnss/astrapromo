@@ -163,7 +163,15 @@ input[type="text"]
 
 }
 
-
+.btn-outlinee{
+    border: 1px solid  #f57d14;
+    background-color: transparent;
+    color: #f57d14;
+}
+.btn-outlinee:hover {
+    border: 1px solid #f25a1a;
+    color: #f25a1a;
+}
 .btn-1 {
     /*display: block;*/
     /*margin: 0 auto;*/
