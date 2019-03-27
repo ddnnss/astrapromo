@@ -911,7 +911,7 @@ transition: all .2s ease;
 [class^='imghvr-'] *, [class*=' imghvr-'] *, [class^='imghvr-'] *:before,
 [class^='imghvr-'] *:after, [class*=' imghvr-'] *:before, [class*=' imghvr-'] *:after {
     box-sizing: border-box;
-    transition: all .35s ease;
+    transition: all .1s ease;
 }
 .imghvr-blur figcaption {
     opacity: 0;
