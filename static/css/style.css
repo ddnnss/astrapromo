@@ -159,7 +159,8 @@ input[type="text"]
     /*font-weight: bold;*/
     font-size: 16px;
     letter-spacing: 1px;
-    font-family: "SF UI Display Semibold";
+    font-family: "SF UI Display Medium";
+
 }
 
 
@@ -220,7 +221,7 @@ input[type="text"]
 }
 .features p{
 
-    font-size: 13px;
+    font-size: 14px;
     min-height: 120px;
 }
 
@@ -261,7 +262,7 @@ input[type="text"]
 
 .navbar ul li a{
     color: #000;
-    font-size: 16px;
+    font-size: 14px;
     transition: all 0.5s;
     font-family: 'SF UI Display Light';
     letter-spacing: 1px;
