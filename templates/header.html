@@ -10,11 +10,10 @@
              </button>
              <div class="collapse navbar-collapse" id="navbar-list-5">
                  <ul class="navbar-nav ml-auto">
-                     <li class="nav-item"><a class="nav-link {{ active_home }}" href="{% url 'index' %}">ГЛАВНАЯ</a></li>
-                     <li class="nav-item"><a class="nav-link {{ active_about }}" href="{% url 'about' %}">О КОМПАНИИ</a></li>
+                     <li class="nav-item"><a class="nav-link {{ active_home }}" href="{% url 'index' %}">Главная</a></li>
                      <li class="nav-item dropdown">
                          <a class="nav-link dropdown-toggle {{ active_uslug }}" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                             УСЛУГИ
+                             Услуги
                          </a>
                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                              <a class="dropdown-item {{ active_context }}" href="{% url 'context' %}">КОНТЕКСТНАЯ РЕКЛАМА</a>
@@ -24,8 +23,9 @@
                              <a class="dropdown-item" href="#">ПРОЧИЕ УСЛУГИ</a>
                          </div>
                      </li>
-                     <li class="nav-item"><a class="nav-link {{ active_showcase }}" href="{% url 'showcase' %}">КЕЙСЫ</a></li>
-                     <li class="nav-item"><a class="nav-link {{ active_contacts }}" href="{% url 'contacts' %}">КОНТАКТЫ</a>
+                     <li class="nav-item"><a class="nav-link {{ active_showcase }}" href="{% url 'showcase' %}">Кейсы</a></li>
+                     <li class="nav-item"><a class="nav-link {{ active_contacts }}" href="{% url 'contacts' %}">Контакты</a>
+                     <li class="nav-item"><a class="nav-link {{ active_about }}" href="{% url 'about' %}">О компании</a></li>
                      </li>
                  </ul>
              </div>
