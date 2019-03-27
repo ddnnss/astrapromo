@@ -78,6 +78,7 @@ body{
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility:    hidden;
   -ms-backface-visibility:     hidden;
+    color: #3e454b;
 }
 /*.container{*/
     /*padding: 0 !important;*/
