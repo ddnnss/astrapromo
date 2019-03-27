@@ -430,13 +430,14 @@ color:#f37022 !important;
 .slick-overlay img {
     opacity: .5;
     transition: all 0.5s;
+
 }
 
 .slick-overlay img:hover {
     opacity: 1;
 }
 .slick-overlay{
-   background-color: #00000070;
+   background-color: rgba(0, 0, 0, 0.31);
    width: 90%;
 }
 
