@@ -3,7 +3,7 @@
      <header>
          <nav class="navbar  navbar-expand-sm py-4">
              <a class="navbar-brand" href="/">
-                 <img src="{% static 'images/logo-astra.jpg'%}" height="60" alt="logo">
+                 <img src="{% static 'images/logo.png'%}"  alt="logo">
              </a>
              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-5">
                  <i class="fa fa-bars" aria-hidden="true"></i>
@@ -16,11 +16,11 @@
                              Услуги
                          </a>
                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                             <a class="dropdown-item {{ active_context }}" href="{% url 'context' %}">КОНТЕКСТНАЯ РЕКЛАМА</a>
-                             <a class="dropdown-item {{ active_seo }}" href="{% url 'seo' %}">ПРОДВИЖЕНИЕ САЙТОВ</a>
-                             <a class="dropdown-item {{ active_sites }}" href="{% url 'sites' %}">СОЗДАНИЕ САЙТОВ</a>
-                             <a class="dropdown-item {{ active_target }}" href="{% url 'target' %}">ТАРГЕТИРОВАННАЯ РЕКЛАМА</a>
-                             <a class="dropdown-item" href="#">ПРОЧИЕ УСЛУГИ</a>
+                             <a class="dropdown-item {{ active_context }}" href="{% url 'context' %}">Контекстная реклама</a>
+                             <a class="dropdown-item {{ active_seo }}" href="{% url 'seo' %}">Продвижение сайтов</a>
+                             <a class="dropdown-item {{ active_sites }}" href="{% url 'sites' %}">Создание сайтов</a>
+                             <a class="dropdown-item {{ active_target }}" href="{% url 'target' %}">Таргетированная реклама</a>
+                             <a class="dropdown-item" href="#">Прочие услуги</a>
                          </div>
                      </li>
                      <li class="nav-item"><a class="nav-link {{ active_showcase }}" href="{% url 'showcase' %}">Кейсы</a></li>
