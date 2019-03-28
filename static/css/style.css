@@ -511,7 +511,7 @@ color:#f37022 !important;
 
 .footer_phone{
     margin: 50px 0 50px 0;
-    line-height: 18px;
+    line-height: 23px;
 }
 .footer_phone p{
     font-size: 30px;
@@ -993,10 +993,12 @@ transition: all .1s ease;
 /*quizModal*/
 #quizModal .modal-content{
     border-radius: 0;
+    min-height: 412px;
 
 }
 #quizModal .row{
     margin: 0;
+    min-height: 412px;
 
 }
 
