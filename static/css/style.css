@@ -547,7 +547,7 @@ color:#f37022 !important;
 }
 
 .social-icon{
-    opacity: .8;
+    opacity: .6;
     cursor: pointer;
     margin-right: 34px;
     width: 27px;
@@ -625,7 +625,7 @@ color:#f37022 !important;
 	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 }
 .team-foto p{
-    font-weight: 700;
+    font-family: "SF UI Display Bold";
 }
 .team-name-1{
     border-bottom: 1px solid #f57d14;
@@ -646,8 +646,8 @@ color:#f37022 !important;
 
 .team-foto span{
     font-size: 14px;
-    position: relative;
-    top: -15px;
+    /*position: relative;*/
+    /*top: -15px;*/
 
 }
 .team-foto div{
@@ -656,7 +656,7 @@ color:#f37022 !important;
 
 }
 .about-us h3 {
-    font-weight: 700;
+    font-family: "SF UI Display Bold";
     margin-bottom: 40px;
 }
 .about-us p {
@@ -701,13 +701,14 @@ color:#f37022 !important;
 
  .contacts-part1 div{
      position: relative;
-     left: 420px;
+     left: 400px;
 
      padding-top: 80px;
  }
 .contacts-part1 span{
     font-size: 25px;
-    font-weight: 700;
+    font-family: "SF UI Display Bold";
+
 
 }
 .contacts-part1 h3{
