@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-from customUser.models import callBack
+from customUser.models import callBack, quizForm
 
 # Create your views here.
 def callback(request):
@@ -19,3 +19,19 @@ def callback(request):
         return_dict['result'] = 'ok'
         return JsonResponse(return_dict)
 
+
+def quiz(request):
+    if request.POST:
+        return_dict = {}
+        step0 = request.POST.get('step0')
+        step1 = request.POST.get('step1')
+        step2 = request.POST.get('step2')
+        step3 = request.POST.get('step3')
+        step4 = request.POST.get('step4')
+        quizForm.objects.create(step0=step0,
+                                step1=step1,
+                                step2=step2,
+                                step3=step3,
+                                step4=step4)
+        return_dict['result'] = 'ok'
+        return JsonResponse(return_dict)

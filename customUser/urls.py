@@ -20,6 +20,7 @@ from . import views
 
 urlpatterns = [
     path('callback/', views.callback, name='callback'),
+    path('quiz/', views.quiz, name='quiz'),
 
 
 ]

@@ -108,8 +108,9 @@ p{
     padding: 15px;
     border-radius: 8px;
 }
-input[type="text"]
-{font: 15px/24px 'Open Sans', sans-serif;
+input[type="text"]{
+    /*font: 15px/24px 'Open Sans', sans-serif;*/
+    font-family: "SF UI Display Light";
     color: white;
     box-sizing: border-box;
     letter-spacing: 1px;
@@ -163,7 +164,11 @@ input[type="text"]
     /*font-weight: bold;*/
     font-size: 16px;
     letter-spacing: 1px;
-    font-family: "SF UI Display Medium";
+    /*font-family: "SF UI Display Medium";*/
+     /*-webkit-transition-duration: 0.3s;*/
+  /*transition-duration: 0.3s;*/
+  /*-webkit-transition-property: transform;*/
+  /*transition-property: transform;*/
 
 }
 
@@ -175,6 +180,7 @@ input[type="text"]
 .btn-outlinee:hover {
     border: 1px solid #f25a1a;
     color: #f25a1a;
+
 }
 .btn-1 {
     /*display: block;*/
@@ -186,10 +192,15 @@ input[type="text"]
      color: white;
      /*box-shadow: 0 0 20px #F57D14;*/
     box-shadow: 0px 0px 0px rgba(0,0,0,0.25), 0px 3px 2px rgba(0,0,0,0.22);
+    /*transform: translateY(-2px);*/
+    /*-webkit-transition-duration: 0.3s;*/
+  /*transition-duration: 0.3s;*/
+  /*-webkit-transition-property: transform;*/
+  /*transition-property: transform;*/
 }
 .btn-2 {
     float: right;
-    margin-top: 40px;
+    font-family: 'SF UI Display Semibold';
     font-weight: 600;
     color: #f57d14;
     background-color: white;
@@ -218,7 +229,8 @@ input[type="text"]
     line-height: 25px;
     font-size: 30px;
     color: #F57D14;
-    font-weight: 700;
+    /*font-weight: 700;*/
+    font-family: 'SF UI Display Semibold';
 }
 .features .col-md-3{
     text-align: justify;
@@ -357,7 +369,7 @@ input[type="text"]
     font-size: 30px;
     text-align: center;
     color: white;
-    font-weight: 700;
+    /*font-weight: 700;*/
 }
 .form-inline {
     display: grid;
@@ -375,7 +387,7 @@ input[type="text"]
     font-size: 30px;
     /*text-align: center;*/
     color: white;
-    font-weight: 700;
+    font-family: 'SF UI Display Semibold';
 }
 .form_buttons_inner_container a{
     float: left;
@@ -427,18 +439,60 @@ content: "\2039";
 color:#f37022 !important;
 }
 
-.slick-overlay img {
-    opacity: .5;
-    transition: all 0.5s;
+/*.slick-overlay img {*/
+    /*opacity: .5;*/
+    /*transition: all 0.5s;*/
 
+/*}*/
+
+/*.slick-overlay img:hover {*/
+    /*opacity: 1;*/
+/*}*/
+/*.slick-overlay{*/
+   /*background-color: rgba(0, 0, 0, 0.31);*/
+   /*width: 90%;*/
+/*}*/
+
+.carousel-wrapper {
+    /*background-color: rgb(235, 235, 235);*/
+    position: relative;
 }
 
-.slick-overlay img:hover {
+.carousel-wrapper a {
+  position: relative;
+  display: inline-block;
+}
+
+.slick-img {
+  /*background-color: black;*/
+    /*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
+}
+
+.slick-slide {
+    text-align: center !important;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width:100%;
+    top: 0;
+    left: 0;
+    background: rgba(1, 1, 1, .35);
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.carousel-wrapper a:hover .overlay {
+    z-index: 99999;
     opacity: 1;
 }
-.slick-overlay{
-   background-color: rgba(0, 0, 0, 0.31);
-   width: 90%;
+
+.overlay-content {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
 
 
@@ -952,6 +1006,12 @@ transition: all .1s ease;
 
 #quizModal h3{
     color: #f57d14;
+    padding: 15px 0 0 10px;
+}
+
+.quiz-arrows{
+    top: 82%;
+    position: relative;
 }
 
 #quizModal .quiz-info span{
@@ -959,7 +1019,7 @@ transition: all .1s ease;
     margin-left: 5px;
 }
 #quizModal .quiz-info p{
-    font-weight:700;
+    font-family: "SF UI Display Semibold";
 }
 #quizModal .quiz-small-txt{
     margin: 20px 0 20px 0;
@@ -982,13 +1042,27 @@ transition: all .1s ease;
 }
 
 #quizModal form {
-  padding: 0 16px;
+  /*padding: 0 16px;*/
   max-width: 550px;
-  margin: 50px auto;
+  margin: 20px 0 0 20px;
   font-size: 18px;
-  font-weight: 600;
+  /*font-weight: 600;*/
   line-height: 36px;
 }
+
+.quiz-input{
+    margin-top: 40px;
+
+    color: #3e454b !important;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    border: 0;
+    padding: 7px 0;
+    border-bottom: 1px solid #f57d14 !important;
+    background-color: #fff !important;
+    width: 100%;
+}
+
 
 .inputGroup {
   background-color: #fff;

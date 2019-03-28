@@ -79,3 +79,19 @@ class callBack(models.Model):
     class Meta:
         verbose_name = "Заявка на обратный звонок"
         verbose_name_plural = "Заявки на обратный звонок"
+
+class quizForm(models.Model):
+    step0 = models.CharField('Сколько заявок?', max_length=30, blank=True, null=True)
+    step1 = models.CharField('Какой бюджет?', max_length=30, blank=True, null=True)
+    step2 = models.CharField('Название сайта/Группы', max_length=255, blank=True, null=True)
+    step3 = models.CharField('Какие услуги интересны?', max_length=50, blank=True, null=True)
+    step4 = models.CharField('Сфера деятельности', max_length=255, blank=True, null=True)
+    is_done = models.BooleanField('Заявка отработана ?', default=False)
+    created_at = models.DateTimeField('Создана', auto_now_add=True)
+
+    def __str__(self):
+        return '{} - Квиз форма. Отработана :{}'.format(self.created_at, self.is_done)
+
+    class Meta:
+        verbose_name = "Квиз форма"
+        verbose_name_plural = "Квиз формы"
