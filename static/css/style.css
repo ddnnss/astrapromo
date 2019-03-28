@@ -439,20 +439,25 @@ content: "\2039";
 color:#f37022 !important;
 }
 
-/*.slick-overlay img {*/
-    /*opacity: .5;*/
-    /*transition: all 0.5s;*/
+.slick-overlay img {
+    opacity: .5;
+    transition: all 0.5s;
 
-/*}*/
+}
 
-/*.slick-overlay img:hover {*/
-    /*opacity: 1;*/
-/*}*/
-/*.slick-overlay{*/
-   /*background-color: rgba(0, 0, 0, 0.31);*/
-   /*width: 90%;*/
-/*}*/
-
+.slick-overlay img:hover {
+    opacity: 1;
+}
+.slick-overlay{
+   background-color: rgba(0, 0, 0, 0.31);
+   width: 200px;
+}
+.slick-dots li.slick-active button:before {
+    color: #f57d14 !important;
+}
+.slick-dots li button:before {
+    color: #f57d14 !important;
+}
 .carousel-wrapper {
     /*background-color: rgb(235, 235, 235);*/
     position: relative;
@@ -537,9 +542,36 @@ color:#f37022 !important;
     text-decoration: none;
 
 }
-.footer-social  i:hover{
+.footer-social {
+    display: flex;
+}
 
-    color: #f37022;
+.social-icon{
+    opacity: .8;
+    cursor: pointer;
+    margin-right: 34px;
+    width: 27px;
+    height: 27px;
+    background-image: url("/static/images/icons.png");
+     transition: all 0.5s;
+
+}
+.icon-vk{
+    background-position-x: 0;
+}
+.icon-inst{
+    background-position-x: 151px;
+}
+.icon-be{
+    background-position-x: 239px;
+}
+.icon-dr{
+    background-position-x: 301px;
+}
+
+.social-icon:hover{
+     transition: all 0.5s;
+    opacity: 1;
 }
 /*---------------------*/
 
@@ -918,7 +950,7 @@ color:#f37022 !important;
 }
 
 [class^='imghvr-'] figcaption, [class*=' imghvr-'] figcaption {
-    background-color: rgba(49, 53, 57, 0.9);
+    background-color: rgba(49, 53, 57, 0.95);
     opacity: 0.5;
     padding: 30px 0 0 50px;
     position: absolute;
@@ -977,11 +1009,11 @@ transition: all .1s ease;
 }
 
 .imghvr-blur:hover > img {
-    -webkit-filter: blur(10px);
-            filter: blur(10px);
+    /*-webkit-filter: blur(10px);*/
+            /*filter: blur(10px);*/
     /*-webkit-transform: scale(1.2);*/
             /*transform: scale(1.2);*/
-    opacity: 0.7;
+    /*opacity: 0.7;*/
 }
 
 .imghvr-blur:hover figcaption {
