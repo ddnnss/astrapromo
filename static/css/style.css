@@ -182,6 +182,18 @@ input[type="text"]{
     color: #f25a1a;
 
 }
+.btn-outline-white{
+    border: 1px solid  #fff;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #fff;
+}
+.btn-outline-white:hover {
+    border: 1px solid #b5b5b5;
+    color: #fff;
+
+}
+
 .btn-1 {
     /*display: block;*/
     /*margin: 0 auto;*/
@@ -354,20 +366,37 @@ input[type="text"]{
     font-family: 'SF UI Display Bold';
 }
 
+.button-form-long-div{
+    padding: 40px;
+    height: 530px;
+    background-color: #f57d14;
+    position: relative;
+    top: -30px;
+}
+.button-form-long-div span{
+    color: #fff;
+}
+
+.button-form-long-div p{
+    font-family: 'SF UI Display Bold';
+    font-size: 30px;
+    margin-top: 50px;
+}
 
 .form_container{
 
-    background-color: #f57d14;
+    background-color: #00b4e7;
+    height: 470px;
 
 }
 .form_inner_container{
 
     height: 400px;
 }
-.form_inner_container p{
-    padding: 50px 0 50px 0;
+.form_buttons_inner_container h3{
+    padding: 100px 0 0 0;
     font-size: 30px;
-    text-align: center;
+    /*text-align: center;*/
     color: white;
     /*font-weight: 700;*/
 }
@@ -383,15 +412,16 @@ input[type="text"]{
     height: 300px;
 }
 .form_buttons_inner_container p{
-    padding: 50px 0 50px 0;
-    font-size: 30px;
+    /*padding: 50px 0 50px 0;*/
+    /*font-size: 16px;*/
     /*text-align: center;*/
     color: white;
-    font-family: 'SF UI Display Semibold';
+    margin-bottom: 60px;
+    /*font-family: 'SF UI Display Semibold';*/
 }
 .form_buttons_inner_container a{
     float: left;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 /*мини слайдер*/
 .slick-prev
