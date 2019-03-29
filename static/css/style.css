@@ -367,7 +367,7 @@ input[type="text"]{
 }
 
 .button-form-long-div{
-    padding: 40px;
+    padding: 50px 70px 70px 50px;
     height: 530px;
     background-color: #f57d14;
     position: relative;
@@ -375,12 +375,14 @@ input[type="text"]{
 }
 .button-form-long-div span{
     color: #fff;
+
+
 }
 
 .button-form-long-div p{
     font-family: 'SF UI Display Bold';
-    font-size: 30px;
-    margin-top: 50px;
+    font-size: 26px;
+    margin-top: 20px;
 }
 
 .form_container{
@@ -394,11 +396,13 @@ input[type="text"]{
     height: 400px;
 }
 .form_buttons_inner_container h3{
-    padding: 100px 0 0 0;
-    font-size: 30px;
+    padding: 93px 0 0 0;
+    font-size: 24px;
     /*text-align: center;*/
     color: white;
+    font-family: "SF UI Display Bold";
     /*font-weight: 700;*/
+    margin-bottom: 20px;
 }
 .form-inline {
     display: grid;
@@ -419,9 +423,18 @@ input[type="text"]{
     margin-bottom: 60px;
     /*font-family: 'SF UI Display Semibold';*/
 }
+
+.form_buttons_inner_container h4{
+    font-size: 16px;
+    font-family: "SF UI Regular";
+    color: #dff3ff;
+    margin-bottom: 55px;
+}
+
 .form_buttons_inner_container a{
     float: left;
-    margin-top: 20px;
+    margin-top: 25px;
+    font-size: 14px;
 }
 /*мини слайдер*/
 .slick-prev
