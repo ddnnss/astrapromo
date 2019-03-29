@@ -574,12 +574,13 @@ color:#f37022 !important;
 }
 .footer-social {
     display: flex;
+    float: right;
 }
 
 .social-icon{
     opacity: .6;
     cursor: pointer;
-    margin-right: 34px;
+    margin-left: 34px;
     width: 27px;
     height: 27px;
     background-image: url("/static/images/icons.png");
