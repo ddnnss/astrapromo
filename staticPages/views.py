@@ -47,7 +47,7 @@ def context(request):
     active_uslug = 'item-active'
     active_context = 'drop-item-active'
 
-    return render(request, 'staticPages/context.html', locals())
+    return render(request, 'staticPages/context1.html', locals())
 
 def target(request):
     active_uslug = 'item-active'
