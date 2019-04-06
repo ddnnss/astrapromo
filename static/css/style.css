@@ -70,7 +70,10 @@ font-weight: normal;
 src: local('SF UI Regular '), url('../fonts/SFUIDisplay-Regular.ttf');
 }
 
-
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none;
+}
 
 body{
     font-family: 'SF UI Regular';
@@ -258,6 +261,8 @@ input[type="text"]{
     font-size: 14px;
     min-height: 120px;
 }
+
+
 
 .features_target span{
     font-size: 130px;
@@ -900,11 +905,37 @@ color:#f37022 !important;
 /*-----------sites page*/
 
 /*context*/
-.context-how-it-works span{
+.context-head p{
+    font-size: 18px;
+    font-family: "SF UI Regular";
+
+}
+
+
+.context-h1{
+    font-family: "SF UI Display Medium";
+    font-size: 30px;
+}
+
+.context-feature p:nth-child(1){
+    font-family: "SF UI Display Semibold";
+    font-size: 16px;
+}
+
+.context-feature p:nth-child(2){
+    font-family: "SF UI Regular";
+    font-size: 14px;
+}
+
+
+
+
+.block-border .big-orange-number{
     background-color: #f57d14;
+    font-size: 12px;
+    font-family: "SF UI Display Medium";
     color: #fff;
     padding: 5px 10px 5px 10px;
-    top: 9px;
     z-index: 1;
     position: relative;
     right: 5px;
@@ -923,6 +954,10 @@ color:#f37022 !important;
 
 }
 
+.block-border{
+    border: 1px solid #f6f6f6;
+    padding: 25px 18px;
+}
 
 
 .context-bottom img{
@@ -930,6 +965,26 @@ color:#f37022 !important;
     margin: 5px 10px 0 0;;
 }
 
+.block-border span{
+    font-family: "SF UI Display Medium";
+    font-size: 30px;
+    color: #f57d14;
+}
+
+.block-border p{
+    font-family: "SF UI Regular";
+    font-size: 14px;
+    min-height: 124px;
+}
+
+.block-border span:nth-child(2){
+    font-family: "SF UI Regular";
+    font-size: 14px;
+
+    color: #3e454b;
+    display: block;
+    margin-top: 45px
+}
 
 
 
