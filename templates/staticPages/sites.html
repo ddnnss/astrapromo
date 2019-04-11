@@ -1,117 +1,240 @@
 {% extends 'basic.html' %}
 {% load static %}
-
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-9 sites-main">
-            <h1>Создание сайтов любой сложности</h1>
-            <p>
-                По мимо услуг продвижения сайтов, мы так же профессионально занимаемся созданием сайтов. Если вы хотите получить реально работающий сайт, то вы на правильном пути.
-            </p>
-            <div class="row py-4 align-items-center">
-
-                <div class="col-md-4 text-center mb-4 py-4">
-                    <img src="{% static 'images/sites1.jpg' %}">
-                </div>
-                <div class="col-md-6 mb-4 py-4">
-                  <h3>Создание сайтов для всех</h3>
-                       <div class="gap-20"></div>
-                     • Сайт-визитка<br>
-                     • Корпоративный портал<br>
-                     • Интернет магазин<br>
-                     • Лендинг-пэйдж<br>
-                </div>
-
-                <div class="col-md-6 mb-4 py-4">
-                    <h3> В стоимость создания сайта входит:</h3>
-                       <div class="gap-20"></div>
-                     • Разработка технического задания<br>
-                     • Изготовление дизайна сайта<br>
-                     • Разработка сайта<br>
-                     • Написание уникального контента для сайта<br>
-                     • Наполнение сайта<br>
-                     • Домен и хостинг на год<br>
-                </div>
-
-                <div class="col-md-4 text-center mb-4 py-4">
-                    <img src="{% static 'images/sites2.jpg' %}">
-                </div>
-
-                 <div class="col-md-4 text-center mb-4 py-4">
-                    <img src="{% static 'images/sites3.jpg' %}">
-                </div>
-                <div class="col-md-6 mb-4 py-4">
-                  <h3>Заказывая изготовление сайта в нашей компании Вы можете быть уверены, что:</h3>
-                       <div class="gap-20"></div>
-                    • Сайт будет выполнен в срок<br>
-                    • Сайт будет полностью завершён и готов к выполнению своих функций<br>
-                    • Сайт будет наполнен и готов к дальнейшему продвижению в поисковых системах
-                </div>
-
-                 <div class="col-md-6 mb-4 py-4">
-                    <h3>Этапы создания сайта</h3>
-                     <div class="gap-20"></div>
-                    1. Определение концепции будущего сайта<br>
-                    2. Подписание договора<br>
-                    3. Разработка технического задания на создание сайта<br>
-                    4. Изготовление макета будущего сайта<br>
-                    5. Разработка сайта<br>
-                    6. Наполнение сайта<br>
-                    7. Демонстрация готового сайта и консультация по управлению сайтом
+    <div class="container">
+        <div class="row align-items-center context-head">
+            <div class="col-md-6 order-md-1 mb-4 ">
+                <h1 class="home-h1">Создание сайтов и лендингов <span class="color-orange cool-text"><strong>любой сложности</strong></span></h1>
+                <p class="mb-4">По мимо услуг продвижения сайтов, мы так же профессионально занимаемся созданием сайтов</p>
+                <a style="" class="btn btn-1 " data-toggle="modal" data-target="#callBackModal" href="#">заказать настройку</a>
+            </div>
+            <div class="col-md-6  order-md-2 mb-4">
+                <img class="img-fluid" src="{% static 'images/sites-head.jpg' %}" alt="">
+            </div>
+        </div>
+        <h3 class="context-h1 ">Создание сайтов для всех</h3>
+        <div class="gap-60"></div>
+        <div class="row sites-for-all align-items-center" >
+            <div class="col-md-3">
+                <span class="color-orange">•</span><span>Сайт-визитка</span>
+            </div>
+            <div class="col-md-3">
+                <span class="color-orange">•</span><span>Корпоративный портал</span>
+            </div>
+            <div class="col-md-3">
+                <span class="color-orange">•</span><span>Интернет магазин</span>
+            </div>
+            <div class="col-md-3">
+                <span class="color-orange">•</span><span>Лендинг-пэйдж</span>
+            </div>
+        </div>
+        <div class="gap-60"></div>
+        <div class="gap-60"></div>
+        <h3 class="context-h1 ">В стоимость создания сайта входит</h3>
+        <div class="gap-60"></div>
+        <div class="row  align-items-center">
+            <div class="col-md-4 context-features mb-4">
+                <div class="block-border ">
+                    <div class="row ">
+                        <div class="col-md-1 ">
+                            <span class="big-orange-number">1</span>
+                        </div>
+                        <div class="col-md-10 ">
+                            <p>
+                                Разработка технического задания
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-md-4 text-center mb-4 py-4">
-                    <img src="{% static 'images/sites4.jpg' %}">
+            </div>
+            <div class="col-md-4 context-features mb-4">
+                <div class="block-border ">
+                    <div class="row ">
+                        <div class="col-md-1 ">
+                            <span class="big-orange-number">2</span>
+                        </div>
+                        <div class="col-md-10 ">
+                            <p>
+                                Изготовление дизайна сайта
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-md-4 text-center mb-4 py-4">
-                    <img src="{% static 'images/sites5.jpg' %}">
+            </div>
+            <div class="col-md-4 context-features mb-4">
+                <div class="block-border ">
+                    <div class="row ">
+                        <div class="col-md-1 ">
+                            <span class="big-orange-number">3</span>
+                        </div>
+                        <div class="col-md-10 ">
+                            <p>
+                                Разработка сайта
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 mb-4 py-4">
-                  <h3>Стоимость разработки сайтов</h3>
-                       <div class="gap-20"></div>
-                    Цены на создание сайта в нашей компании начинаются<br>
-                    <strong>от 49 000 рублей</strong> и оговариваются индивидуально в зависимости от сложности поставленной задачи и требуемого функционала.
+
+            </div>
+            <div class="col-md-4 context-features mb-4">
+                <div class="block-border ">
+                    <div class="row ">
+                        <div class="col-md-1 ">
+                            <span class="big-orange-number">4</span>
+                        </div>
+                        <div class="col-md-10 ">
+                            <p>
+                                Написание уникального контента для сайта
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 context-features mb-4">
+                <div class="block-border ">
+                    <div class="row ">
+                        <div class="col-md-1 ">
+                            <span class="big-orange-number">5</span>
+                        </div>
+                        <div class="col-md-10 ">
+                            <p>
+                                Наполнение сайта
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 context-features mb-4">
+                <div class="block-border ">
+                    <div class="row ">
+                        <div class="col-md-1 ">
+                            <span class="big-orange-number">6</span>
+                        </div>
+                        <div class="col-md-10 ">
+                            <p>
+                                Домен и хостинг на год
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
-        <div  class="col-md-3 portfolio">
-            <img src="{% static 'images/foto.png' %}">
-            <div>
-                <a  href="#">Название проекта</a>
+
+        <div class="gap-60"></div>
+        <div class="gap-20"></div>
+
+        <h3 class="context-h1 ">Что будет, если вы закажите сайт у нас</h3>
+
+        <div class="gap-60"></div>
+        <div class="row  align-items-center">
+            <div class="col-md-4 seo-features mb-4 text-center">
+                <img src="{% static '/images/sites-num1.png' %}" alt="">
+                <span style="display: block;margin-top: 20px;     min-height: 50px; font-size: 14px;">Сайт будет выполнен в срок</span>
+            </div>
+            <div class="col-md-4 seo-features mb-4 text-center">
+                <img src="{% static '/images/sites-num2.png' %}" alt="">
+                <span style="display: block;margin-top: 20px; font-size: 14px;">Сайт будет полностью завершён и
+готов к выполнению своих функций</span>
+            </div>
+            <div class="col-md-4 seo-features mb-4 text-center">
+                <img src="{% static '/images/sites-num3.png' %}" alt="">
+                <span style="display: block;margin-top: 20px; font-size: 14px;">Сайт будет наполнен и готов к дальнейшему
+продвижению в поисковых системах</span>
             </div>
 
-            <img src="{% static 'images/foto.png' %}">
-            <div>
-                 <a  href="#">Название проекта</a>
-            </div>
-
-            <img src="{% static 'images/foto.png' %}">
-            <div>
-                 <a  href="#">Название проекта</a>
-            </div>
-
-            <img src="{% static 'images/foto.png' %}">
-            <div>
-                 <a  href="#">Название проекта</a>
-            </div>
 
 
         </div>
+
+        <div class="gap-60"></div>
+        <h3 class="context-h1 ">Этапы создания сайта</h3>
+        <div class="gap-60"></div>
+        <div class="row  align-items-center">
+            <div class="col-md-3 context-features mb-4">
+                <div class="block-border ">
+                    <h4 class="color-orange cool-text">1</h4>
+                    <span>
+                        Определение концепции будущего сайта
+                        </span>
+                </div>
+            </div>
+            <div class="col-md-3 context-features mb-4">
+                <div class="block-border ">
+                    <h4 class="color-orange cool-text">2</h4>
+                    <span>
+                        Подписание договора
+                        </span>
+                </div>
+            </div>
+            <div class="col-md-3 context-features mb-4">
+                <div class="block-border ">
+                    <h4 class="color-orange cool-text">3</h4>
+                    <span>
+                        Разработка технического задания на создание сайта
+                        </span>
+                </div>
+            </div>
+            <div class="col-md-3 context-features mb-4">
+                <div class="block-border ">
+                    <h4 class="color-orange cool-text">4</h4>
+                    <span>
+                        Изготовление макета будущего сайта
+                        </span>
+                </div>
+            </div>
+            <div class="col-md-3 context-features mb-4">
+                <div class="block-border ">
+                    <h4 class="color-orange cool-text">5</h4>
+                    <span>
+                        Разработка сайта
+                        </span>
+                </div>
+            </div>
+            <div class="col-md-3 context-features mb-4">
+                <div class="block-border ">
+                    <h4 class="color-orange cool-text">6</h4>
+                    <span>
+                        Наполнение сайта
+                        </span>
+                </div>
+            </div>
+            <div class="col-md-3 context-features mb-4">
+                <div class="block-border ">
+                    <h4 class="color-orange cool-text">7</h4>
+                    <span>
+                        Демонстрация готового сайта и консультация по управлению
+                        </span>
+                </div>
+            </div>
+        </div>
+        <div class="gap-60"></div>
+        <div class="gap-20"></div>
+        <div class="row  ">
+            <div class="col-md-6  context-bottom ">
+                <div class="row align-items-center">
+                    <div class="col-2"> <img  src="{% static 'images/context5.png' %}"></div>
+                    <div class="col-10">Цены на создание сайта в нашей компании<br>
+                        начинаются от 49 000 рублей и оговариваются<br>
+                        индивидуально в зависимости от сложности<br>
+                        поставленной задачи и требуемого функционала</div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
+    <div class="gap-60"></div>
+    {% include 'staticPages/big_form_buttons.html' %}
+    <div class="gap-60"></div>
 
-    <div class="row">
-        <div class="col-md-1 offset-md-5">
-            <a class="btn btn-1" href="#">Заказать сайт</a>
-        </div>
-    </div>
-<div class="gap-60"></div>
-</div>
-{% include 'staticPages/big_form_buttons.html' %}
-<div class="gap-60"></div>
 {% endblock %}
+
+
 
 {% block js %}
 

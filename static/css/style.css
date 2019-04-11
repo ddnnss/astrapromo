@@ -788,19 +788,15 @@ color:#f37022 !important;
 .seo-list{
     list-style: none;
 }
-.seo-feature{
-    line-height: 10px;
+.seo-features h4{
+    font-size: 16px;
+    font-family: "SF UI Display Bold";
+    margin: 45px 0 27px 0;
 }
-.seo-feature-head{
-    color: #F47D13;
-}
-.seo-feature-number{
-    font-size: 40px;
-    font-weight: 700;
-    color: #F47D13;
-}
-.seo-feature-info{
-    font-size: 11px;
+
+.seo-features p{
+    font-size: 14px;
+    font-family: "SF UI Regular";
 }
 .seo-work-plan img{
     display: block;
@@ -903,6 +899,14 @@ color:#f37022 !important;
 	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 }
 /*-----------sites page*/
+.sites-for-all span:first-child{
+    font-size: 19px;
+    margin-right: 10px;
+}
+.sites-for-all span:last-child{
+    font-size: 16px;
+    font-family: "SF UI Regular";
+}
 
 /*context*/
 .context-head p{
@@ -927,15 +931,20 @@ color:#f37022 !important;
     font-size: 14px;
 }
 
+.block-border{
+    height: 170px;
+}
 
-
+.block-border-p{
+    margin-top: 50px;
+}
 
 .block-border .big-orange-number{
     background-color: #f57d14;
     font-size: 12px;
     font-family: "SF UI Display Medium";
     color: #fff;
-    padding: 5px 10px 5px 10px;
+    padding: 5px 9px 5px 9px;
     z-index: 1;
     position: relative;
     right: 5px;
