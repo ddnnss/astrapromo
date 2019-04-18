@@ -1,0 +1,41 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+<p> ЧТО ТУТ НАПИСАТЬ?</p>
+
+    <div class="row">
+    {% for service in services %}
+         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
+         <figure class="imghvr-blur"><img src="{{ service.serviceImage.url }}" alt="example-image">
+            <figcaption>
+                <div>
+                    <h3>{{ service.serviceName }}<span style=" position: relative; left: 30%;">{{ service.servicePrice }}</span></h3>
+                    <h4>{{ service.serviceNameSmall }}</h4>
+                </div>
+
+
+              <p>{{ service.serviceInfo }}</p>
+                 <a class="btn btn-3" href="javascript:void(0);" onclick="getCaseInfo({{ service.id }})" >ЗАКАЗАТЬ УСЛУГУ</a>
+            </figcaption>
+          </figure>
+
+
+        </div>
+
+         {% endfor %}
+</div>
+    </div>
+
+
+<div class="gap-60"></div>
+    {% include 'staticPages/big_form_buttons.html' %}
+    <div class="gap-60"></div>
+
+{% include 'staticPages/case_modal.html' %}
+
+
+{% endblock %}
+
+
+

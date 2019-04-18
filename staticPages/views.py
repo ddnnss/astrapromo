@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 from django.shortcuts import render
-from .models import showCase, review
+from .models import showCase, review, allServices
 def robots(request):
     pass
     # return render(request, 'page/robots.txt')
@@ -56,6 +56,11 @@ def target(request):
 
     return render(request, 'staticPages/target.html', locals())
 
+def services(request):
+    active_uslug = 'item-active'
+    active_services = 'drop-item-active'
+    services = allServices.objects.filter(is_active=True)
+    return render(request, 'staticPages/other_services.html', locals())
 
 def caseinfo(request):
     return_dict = {}

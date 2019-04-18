@@ -38,3 +38,22 @@ class review(models.Model):
     class Meta:
         verbose_name = "Отзыв"
         verbose_name_plural = "Отзывы"
+
+class allServices(models.Model):
+    serviceName = models.CharField('Заголовок услуги', max_length=255, blank=False)
+    serviceNameSmall = models.CharField('Подзаголовок услуги', max_length=255, blank=False)
+
+    serviceImage = models.ImageField('Картинка', upload_to='services/', blank=False)
+    serviceInfo = models.CharField('Краткое описание', max_length=255, blank=False)
+    servicePrice = models.CharField('Стоимость', max_length=255, blank=False, default='')
+
+    is_active = models.BooleanField('Показывать услугу?', default=False)
+
+
+
+    def __str__(self):
+        return '{}'.format(self.serviceName)
+
+    class Meta:
+        verbose_name = "Услуга"
+        verbose_name_plural = "Услуги"
