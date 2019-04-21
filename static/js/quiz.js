@@ -8,18 +8,18 @@ var step_4 = true
 $('#next_btn').click(function(e) {
     e.preventDefault();
     step_val =$(this).data('step');
-     if (step_val + 1 == 4){
+     if (step_val + 1 == 5){
           console.log('asdsad');
-       $('#next_img').css('opacity','.5');
+     //  $('#next_img').css('opacity','.5');
 
     }
-if (step_val != 4) {
+if (step_val != 5) {
     console.log('step val=', step_val);
     $('#step-' + $(this).data('step')).css('display', 'none');
     $(this).data('step', parseInt($(this).data('step')) + 1);
     console.log($(this).data('step'));
     $('#step-' + $(this).data('step')).css('display', 'block');
-    $('#prev_img').css('opacity', '1');
+ //   $('#prev_img').css('opacity', '1');
 
 }
   });
@@ -41,12 +41,12 @@ $('#prev_btn').click(function(e) {
 
         console.log('block step-=', step_val - 1);
         console.log($('#next_btn').data('step'));
-         $('#next_img').css('opacity','1');
+    //     $('#next_img').css('opacity','1');
 
     }
     else{
         $('#next_btn').data('step',0);
-        $('#prev_img').css('opacity','.5');
+     //   $('#prev_img').css('opacity','.5');
         $('#step-0').css('display','block');
         $('#step-1').css('display','none');
 

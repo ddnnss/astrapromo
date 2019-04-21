@@ -52,48 +52,54 @@
             <div class="row">
                 <div class="col-md-8">
                     <h3>Ответьте на 5 вопросов и получите скидку!</h3>
-                    <hr>
+
+                    <div class="quiz-slider">
+                        <div class="slider-inner">
+
+                        </div>
+
+                    </div>
 
                     <form id="step-0">
 
                         <div class="step-0">
-                          <p id="question">Сколько вам необходимо заявок в месяц?</p>
-                             <div class="inputGroup">
+                          <p class="question">Сколько вам необходимо заявок в месяц?</p>
+                             <div class="">
                                 <input id="radio1" name="radio" value="до 15"  type="radio"/>
-                                <label for="radio1">до 15</label>
+                                <label for="radio1"><span></span>до 15</label>
                               </div>
-                              <div class="inputGroup">
+                              <div class="">
                                 <input id="radio2" name="radio" value="до 30"  type="radio"/>
-                                <label for="radio2">до 30</label>
+                                <label for="radio2"><span></span>до 30</label>
                               </div>
-                             <div class="inputGroup">
+                             <div class="">
                                 <input id="radio3" name="radio" value="до 50"  type="radio"/>
-                                <label for="radio3">до 50</label>
+                                <label for="radio3"><span></span>до 50</label>
                               </div>
-                              <div class="inputGroup">
+                              <div class="">
                                 <input id="radio4" name="radio" value="более 50"  type="radio"/>
-                                <label for="radio4">более 50</label>
+                                <label for="radio4"><span></span>более 50</label>
                               </div>
                         </div>
                     </form>
                     <form style="display: none" id="step-1">
                           <div  class="step-1">
-                             <p id="question">Какой бюджет планируете выделить на рекламу?</p>
-                             <div class="inputGroup">
+                             <p class="question">Какой бюджет планируете выделить на рекламу?</p>
+                             <div class="">
                                 <input id="radio5" name="radio"  value="до 10 000"  type="radio"/>
-                                <label for="radio5">до 10 000</label>
+                                <label for="radio5"><span></span>до 10 000</label>
                               </div>
-                              <div class="inputGroup">
+                              <div class="">
                                 <input id="radio6" name="radio" value="до 20 000"  type="radio"/>
-                                <label for="radio6">до 20 000</label>
+                                <label for="radio6"><span></span>до 20 000</label>
                               </div>
-                             <div class="inputGroup">
+                             <div class="">
                                 <input id="radio7" name="radio" value="до 30 000"  type="radio"/>
-                                <label for="radio7">до 30 000</label>
+                                <label for="radio7"><span></span>до 30 000</label>
                               </div>
-                              <div class="inputGroup">
+                              <div class="">
                                 <input id="radio8" name="radio" value="от 50 000"  type="radio"/>
-                                <label for="radio8">от 50 000</label>
+                                <label for="radio8"><span></span>от 50 000</label>
                               </div>
 
                         </div>
@@ -102,7 +108,7 @@
                     </form>
                      <form style="display: none" id="step-2">
                           <div  class="step-2">
-                             <p id="question">Напишите название своего сайта, либо группы в соцсетях</p>
+                             <p class="question">Напишите название своего сайта, либо группы в соцсетях</p>
                               <input id="site-name" class="quiz-input" name="site-name" value=""  type="text"/>
 
                         </div>
@@ -111,22 +117,23 @@
                     </form>
                      <form style="display: none" id="step-3">
                           <div  class="step-3">
-                             <p id="question">Какие услуги Вам еще могут быть интересны?</p>
-                              <div class="inputGroup">
+                             <p class="question">Какие услуги Вам еще могут быть интересны?</p>
+                              <div class="">
                                 <input id="radio9" name="radio"  value="мобильная версия сайта"  type="radio"/>
-                                <label for="radio9">мобильная версия сайта</label>
+                                <label for="radio9"><span></span>мобильная версия сайта</label>
                               </div>
-                              <div class="inputGroup">
+                              <div class="">
                                 <input id="radio10" name="radio" value="дизайн сайта/группы"  type="radio"/>
-                                <label for="radio10">дизайн сайта/группы</label>
+                                <label for="radio10"><span></span>дизайн сайта/группы</label>
                               </div>
-                             <div class="inputGroup">
+                             <div class="">
                                 <input id="radio11" name="radio" value="техническая поддержка сайта"  type="radio"/>
-                                <label for="radio11">техническая поддержка сайта</label>
+                                <label for="radio11"><span></span>техническая поддержка сайта</label>
                               </div>
-                              <div class="inputGroup">
+                              <div class="">
                                 <input id="radio12" name="radio" value="написание текстов для сайта/группы"  type="radio"/>
-                                <label for="radio12">написание текстов для сайта/группы</label>
+
+                                <label for="radio12"><span></span>написание текстов для сайта/группы</label>
                               </div>
 
                         </div>
@@ -135,29 +142,38 @@
                     </form>
                       <form style="display: none" id="step-4">
                           <div  class="step-4">
-                             <p id="question">Укажите пожалуйста сферу Вашей деятельности</p>
+                             <p class="question">Укажите пожалуйста сферу Вашей деятельности</p>
                               <input id="work-with" class="quiz-input" name="work-with" value=""  type="text"/>
 
                         </div>
 
 
                     </form>
+                       <form style="display: none" id="step-5">
+                          <div  class="step-4">
+                             <p class="question">Укажите пожалуйста сферу Вашей деятельности</p>
+                               <a href="#" id="quiz-complete"  class="btn btn-1">ОТПРАВИТЬ</a>
+
+                        </div>
+
+
+                    </form>
+
 
                 </div>
                 <div style="padding: 0;" class="col-md-1 ">
                     <div class="quiz-arrows">
-                         <a  href="#"  id="prev_btn"  ><img id="prev_img" style="opacity: .5;" src="{% static '/images/arrow-right.png' %}"></a>
+                         <a  href="#"  id="prev_btn" style="margin-right: 10px;" ><img id="prev_img"  src="{% static '/images/arrow-right.png' %}"></a>
                     <a href="#" data-step="0" id="next_btn" ><img id="next_img" src="{% static '/images/arrow-left.png' %}"></a>
 
                     </div>
 
                 </div>
                 <div style="background-color: #F7F7F7" class="col-md-3 quiz-info">
-                    <a href="#" id="quiz-complete" class="btn btn-1">ваша скидка <span id="discount">0</span> %</a>
-                    <img src="{% static '/images/quiz_photo.jpg' %}" alt="">
-                    <p>Игорь Дубин</p>
-                    <img src="{% static '/images/dot.png' %}" alt=""><span>Директор отдела</span>
-                    <p class="quiz-small-txt">За каждый ответ вы получаете скидку</p>
+                    <a href="#"  class="btn btn-1">ваша скидка <span id="discount">0</span> %</a>
+
+                    <p class="quiz-small-txt">За каждый ответ вы получаете скидку в размере <strong>5%</strong> <br><br>
+                        Ответьте на все вопросы и получите скидку в <strong>30%</strong> попутно подобрав наилучий пакет услуг для себя</p>
 
                 </div>
             </div>
