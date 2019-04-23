@@ -2,7 +2,9 @@ var step_0 = true
 var step_1 = true
 var step_2 = true
 var step_3 = true
-var step_4 = true
+var step_4_name = true
+var step_4_email = true
+var step_4_phone = true
 
 
 $('#next_btn').click(function(e) {
@@ -14,6 +16,9 @@ $('#next_btn').click(function(e) {
 
     }
 if (step_val != 5) {
+
+         $('.slider-inner').css('left',(step_val + 1) * 100)
+
     console.log('step val=', step_val);
     $('#step-' + $(this).data('step')).css('display', 'none');
     $(this).data('step', parseInt($(this).data('step')) + 1);
@@ -31,6 +36,7 @@ $('#prev_btn').click(function(e) {
     e.preventDefault();
 
     if (step_val - 1 > 0 ) {
+         $('.slider-inner').css('left',(step_val-1)  * 100)
         console.log('none step-=', step_val);
         // $('#step-' + step_val).css('display','none');
         document.getElementById('step-' + $('#next_btn').data('step')).style.display='none';
@@ -45,6 +51,7 @@ $('#prev_btn').click(function(e) {
 
     }
     else{
+        $('.slider-inner').css('left',0)
         $('#next_btn').data('step',0);
      //   $('#prev_img').css('opacity','.5');
         $('#step-0').css('display','block');
@@ -58,7 +65,7 @@ $('#prev_btn').click(function(e) {
 $('.step-0').click(function () {
     if (step_0){
         discount = parseInt($('#discount').html());
-    $('#discount').html(discount + 2);
+    $('#discount').html(discount + 6);
     step_0 = false;
     }
 
@@ -68,7 +75,7 @@ $('.step-0').click(function () {
 $('.step-1').click(function () {
     if (step_1){
         discount = parseInt($('#discount').html());
-    $('#discount').html(discount + 2);
+    $('#discount').html(discount + 6);
     step_1 = false;
     }
 
@@ -78,7 +85,7 @@ $('.step-1').click(function () {
 $('.step-3').click(function () {
     if (step_3){
         discount = parseInt($('#discount').html());
-    $('#discount').html(discount + 2);
+    $('#discount').html(discount + 6);
     step_3 = false;
     }
 
@@ -88,29 +95,40 @@ $('.step-3').click(function () {
 $('#site-name').on('input', function  () {
     if (step_2){
         discount = parseInt($('#discount').html());
-    $('#discount').html(discount + 2);
+    $('#discount').html(discount + 6);
     step_2 = false;
     }
 
 
 })
-$('#work-with').on('input', function  () {
-    if (step_4){
+$('#step-4-name').on('input', function  () {
+    if (step_4_name ){
         discount = parseInt($('#discount').html());
-    $('#discount').html(discount + 2);
-    step_4 = false;
+  //  $('#discount').html(discount + 2);
+    step_4_name = false;
     }
-
-
 })
-
+$('#step-4-phone').on('input', function  () {
+    if (step_4_phone ){
+        discount = parseInt($('#discount').html());
+  //  $('#discount').html(discount + 2);
+    step_4_phone = false;
+    }
+})
+$('#step-4-email').on('input', function  () {
+    if (step_4_email && !step_4_name && !step_4_phone){
+        discount = parseInt($('#discount').html());
+    $('#discount').html(discount + 6);
+    step_4_email = false;
+    }
+})
 $('#quiz-complete').click(function (e) {
   e.preventDefault();
   step0 = $("#step-0").find("input[name=radio]:checked").attr('value');
   step1 = $("#step-1").find("input[name=radio]:checked").attr('value');
   step2 = $("#step-2").find("input").val();
   step3 = $("#step-3").find("input[name=radio]:checked").attr('value');
-  step4 = $("#step-4").find("input").val();
+  step4 = $("#step-4-name").val() + ' ' + $("#step-4-phone").val() + ' ' + $("#step-4-email").val();
   csrfmiddlewaretoken = document.getElementsByName("csrfmiddlewaretoken")[0].value;
   console.log(step0,step1,step2,step3,step4);
 
@@ -129,6 +147,9 @@ $('#quiz-complete').click(function (e) {
             },
             success : function(data){
                 console.log(data);
+                $('#quiz-complete-txt').css('display','block')
+                $('#quiz-complete').css('display','none')
+                $('.quiz-arrows').css('display','none')
 
             }
         });
