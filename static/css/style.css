@@ -1143,9 +1143,9 @@ transition: all .1s ease;
     font-family: "SF UI Display";
 }
 #quizModal .quiz-small-txt{
-    margin: 50px 0 20px 0;
+    margin: 34px 0 20px 0;
     font-size: 16px;
-    max-width: 220px;
+    max-width: 230px;
 }
 #quizModal .quiz-info a{
     width: 200px;
@@ -1230,7 +1230,9 @@ input[type="radio"]:checked + label span {
     background-position: 3px 4px;
 }
 
-
+form label{
+    text-transform: capitalize;
+}
 
 /*-------------quizModal*/
 
