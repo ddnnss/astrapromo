@@ -95,6 +95,9 @@ body{
     font-size: 16px;
 }
 
+#caseInfo p{
+    margin-bottom: 10px;
+}
 
 .color-blue{
     color: #00b4e7;
@@ -198,9 +201,22 @@ input[type="text"]{
     color: #fff;
 }
 .btn-outline-white:hover {
-    border: 1px solid #b5b5b5;
-    color: #fff;
+    background: #fff;
+    /*border: 1px solid #b5b5b5;*/
+    color: #00b4e7 !important;
+}
 
+.btn-outline-orange{
+    border: 1px solid  #fff;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #fff;
+}
+
+.btn-outline-orange:hover {
+    background: #fff;
+    /*border: 1px solid #b5b5b5;*/
+    color: #f57d14 !important;
 }
 
 .btn-1 {
@@ -269,7 +285,7 @@ input[type="text"]{
 .features p{
 
     font-size: 14px;
-    min-height: 120px;
+    min-height: 90px;
 }
 
 
@@ -494,7 +510,7 @@ color:#f37022 !important;
 }
 
 .slick-overlay img {
-    opacity: .5;
+    opacity: .8;
     transition: all 0.5s;
 
 }
@@ -505,6 +521,9 @@ color:#f37022 !important;
 .slick-overlay{
    background-color: rgba(0, 0, 0, 0.31);
    width: 200px;
+}
+.slick-dots{
+    bottom: -60px !important;
 }
 .slick-dots li.slick-active button:before {
     color: #f57d14 !important;
@@ -667,7 +686,7 @@ color:#f37022 !important;
 /*-------------------*/
 /* О нас*/
 .about-us{
-    padding: 40px 40px 0 40px;
+   margin: 33px 0;
 }
 .team-foto{
    padding: 40px 40px 0 40px;
@@ -800,7 +819,7 @@ color:#f37022 !important;
 }
 .seo-features h4{
     font-size: 16px;
-    font-family: "SF UI Display Bold";
+    font-family: "SF UI Regular";
     margin: 45px 0 27px 0;
 }
 
