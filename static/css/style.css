@@ -86,6 +86,16 @@ body{
 /*.container{*/
     /*padding: 0 !important;*/
 /*}*/
+
+.logo img {
+    width: 56px;
+}
+.logo span{
+    font-family: "SF UI Display Bold";
+    font-size: 16px;
+}
+
+
 .color-blue{
     color: #00b4e7;
 }
