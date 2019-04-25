@@ -43,13 +43,17 @@
 <p style="color: #fff; font-size: x-large; display: none;" id="callBackHome_done">Ваш запрос отправлен. Ожидайте звонка.</p>
     </div>
 </div>
- {% if active_home %}
- {% include 'staticPages/home_quiz.html' %}
-  {% elif  active_target %}
+{% if active_home %}
+    {% include 'staticPages/home_quiz.html' %}
+{% elif  active_target %}
     {% include 'staticPages/target_quiz.html' %}
-     {% elif active_context  %}
-     {% include 'staticPages/context_quiz.html' %}
-     {% endif %}
+{% elif active_context  %}
+    {% include 'staticPages/context_quiz.html' %}
+{% elif active_seo  %}
+    {% include 'staticPages/seo_quiz.html' %}
+{% elif active_sites  %}
+    {% include 'staticPages/sites_quiz.html' %}
+{% endif %}
 
 
 

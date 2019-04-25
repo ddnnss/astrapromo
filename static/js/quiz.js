@@ -108,7 +108,7 @@ $('#step-4-name').on('input', function  () {
     step_4_name = false;
     }
 })
-$('#step-4-phone').on('input', function  () {
+$('#step-4-phone').on('change', function  () {
     if (step_4_phone ){
         discount = parseInt($('#discount').html());
   //  $('#discount').html(discount + 2);

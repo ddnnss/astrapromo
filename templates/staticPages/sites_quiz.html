@@ -1,0 +1,153 @@
+{% load static %}
+<div class="modal" id="quizModal">
+    <div style="top: 20%;" class="modal-dialog modal-xl">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+
+
+
+        <div class="modal-body">
+            <div class="row">
+                    <div style="background-color: #F7F7F7" class="col-md-3 quiz-info">
+                    <a href="#"  class="btn btn-1">ваша скидка <span id="discount">0</span> %</a>
+
+                    <p class="quiz-small-txt">За каждый ответ вы получаете скидку в размере <strong>6%</strong> <br><br>
+                        Ответьте на все вопросы и получите скидку в <strong>30%</strong> попутно подобрав наилучий пакет услуг для себя</p>
+
+                </div>
+                <div class="col-md-8">
+                    <h3>Ответьте на 5 вопросов и получите скидку 30% </h3>
+
+                    <div class="quiz-slider">
+                        <div class="slider-inner">
+
+                        </div>
+
+                    </div>
+
+                    <form id="step-0">
+
+                        <div class="step-0">
+                          <p class="question">Укажите, пожалуйста, сферу/нишу Вашей деятельности?</p>
+                             <div class="">
+                                <input id="radio1" name="radio" value="Рестораны и кафе"  type="radio"/>
+                                <label for="radio1"><span></span>Рестораны и кафе</label>
+                              </div>
+                              <div class="">
+                                <input id="radio2" name="radio" value="Реклама и дизайн"  type="radio"/>
+                                <label for="radio2"><span></span>Реклама и дизайн</label>
+                              </div>
+                             <div class="">
+                                <input id="radio3" name="radio" value="Строительство и ремонт"  type="radio"/>
+                                <label for="radio3"><span></span>Строительство и ремонт</label>
+                              </div>
+                              <div class="">
+                                <input id="radio4" name="radio" value="Розничная торговля и интернет-магазин"  type="radio"/>
+                                <label for="radio4"><span></span>Розничная торговля (интернет-магазин)</label>
+                              </div>
+                        </div>
+                    </form>
+                    <form style="display: none" id="step-1">
+                          <div  class="step-1">
+                             <p class="question">Какой бюджет Вы планируете выделить на создание сайта?</p>
+                             <div class="">
+                                <input id="radio5" name="radio"  value="до 10 000"  type="radio"/>
+                                <label for="radio5"><span></span>до 10 000</label>
+                              </div>
+                              <div class="">
+                                <input id="radio6" name="radio" value="до 20 000"  type="radio"/>
+                                <label for="radio6"><span></span>до 20 000</label>
+                              </div>
+                             <div class="">
+                                <input id="radio7" name="radio" value="до 30 000"  type="radio"/>
+                                <label for="radio7"><span></span>до 30 000</label>
+                              </div>
+                              <div class="">
+                                <input id="radio8" name="radio" value="от 50 000"  type="radio"/>
+                                <label for="radio8"><span></span>от 50 000</label>
+                              </div>
+
+                        </div>
+
+
+                    </form>
+                     <form style="display: none" id="step-2">
+                          <div  class="step-2">
+                             <p class="question">Напишите, конкретный вид Вашей деятельности</p>
+                              <input id="site-name" class="quiz-input" name="site-name" value=""  type="text"/>
+                          </div>
+
+
+                    </form>
+                     <form style="display: none" id="step-3">
+                          <div  class="step-3">
+                             <p class="question">Какие услуги Вам еще могут быть интересны?</p>
+                              <div class="">
+                                <input id="radio9" name="radio"  value="мобильная версия сайта"  type="radio"/>
+                                <label for="radio9"><span></span>Мобильная версия сайта</label>
+                              </div>
+                              <div class="">
+                                <input id="radio10" name="radio" value="дизайн сайта/группы"  type="radio"/>
+                                <label for="radio10"><span></span>Дизайн сайта/группы</label>
+                              </div>
+                             <div class="">
+                                <input id="radio11" name="radio" value="техническая поддержка сайта"  type="radio"/>
+                                <label for="radio11"><span></span>Техническая поддержка сайта</label>
+                              </div>
+                              <div class="">
+                                <input id="radio12" name="radio" value="Наполнение сайта: картинки, тексты и пр."  type="radio"/>
+
+                                <label for="radio12"><span></span>Наполнение сайта: картинки, тексты и пр.</label>
+                              </div>
+                               <div class="">
+                                <input id="radio13" name="radio" value="Разработка логотипа"  type="radio"/>
+
+                                <label for="radio13"><span></span>Разработка логотипа</label>
+                              </div>
+
+                        </div>
+
+
+                    </form>
+                      <form style="display: none" id="step-4">
+                          <div  class="step-4">
+                             <p class="question">Укажите, пожалуйста, свои данные: </p>
+                              <input id="step-4-name" class="quiz-input" name="step-4-name" required value="" placeholder="Ваше имя"  type="text"/>
+                               <input id="step-4-phone" class="quiz-input" name="step-4-phone" required value="" placeholder="Ваш телефон"  type="text"/>
+                               <input id="step-4-email" class="quiz-input" name="step-4-email" required value="" placeholder="Ваш E-Mail" type="text"/>
+
+                        </div>
+
+
+                    </form>
+                       <form style="display: none" id="step-5">
+                          <div  class="step-4">
+                             <p class="question">Спасибо за ответы!</p>
+                              <p id ="quiz-complete-txt" style="display: none" class="question">Информация отправлена</p>
+                               <a href="#" id="quiz-complete"  class="btn btn-1">ОТПРАВИТЬ</a>
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+                <div style="padding: 0;" class="col-md-1 ">
+                    <div class="quiz-arrows">
+                         <a  href="#"  id="prev_btn" style="margin-right: 10px;" ><img id="prev_img"  src="{% static '/images/arrow-right.png' %}"></a>
+                    <a href="#" data-step="0" id="next_btn" ><img id="next_img" src="{% static '/images/arrow-left.png' %}"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
