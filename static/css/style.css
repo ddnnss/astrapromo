@@ -652,11 +652,38 @@ color:#f37022 !important;
 
 /*модальное окно*/
 .callBackModal {
-    background: #f57d14;
+    background: #fff;
+}
+
+.callBackModal h2{
+    font-family: "SF UI Display Semibold", sans-serif;
+    font-size: 24px;
+    color: #3e454b;
+    text-align: center;
+}
+
+.callBackModal input{
+    background: #fff;
+    width: 80%;
+    color: #3e454b;
+}
+.modalInput{
+    width: auto !important;
+    margin-right: 15px;
+}
+
+.callBackModal input::placeholder{
+    color: #3e454b;
 }
 #callBack_done{
     text-align: center;
     padding: 39px;
+}
+
+#callBack_send{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .input-error {
