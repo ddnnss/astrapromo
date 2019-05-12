@@ -74,7 +74,7 @@
                     </form>
                      <form style="display: none" id="step-2">
                           <div  class="step-2">
-                             <p class="question">Напишите, конкретный вид Вашей деятельности</p>
+                             <p class="question">Укажите, пожалуйста, свои пожелания по своему будущему сайту</p>
                               <input id="site-name" class="quiz-input" name="site-name" value=""  type="text"/>
                           </div>
 
@@ -105,6 +105,12 @@
 
                                 <label for="radio13"><span></span>Разработка логотипа</label>
                               </div>
+                                  <div class="">
+                                <input id="own-answer-radio" name="radio" value="свой вариант"  type="radio"/>
+
+                                <label for="own-answer-radio"><span></span>Другое/Напишите свой вариант</label>
+                                 <input style="display: none; margin-bottom: 30px;" id="own-answer"  class="quiz-input" name="own-answer" required value="" placeholder="Напишите свой вариант"  type="text"/>
+                              </div>
 
                         </div>
 
@@ -123,8 +129,8 @@
                     </form>
                        <form style="display: none" id="step-5">
                           <div  class="step-4">
-                             <p class="question">Спасибо за ответы!</p>
-                              <p id ="quiz-complete-txt" style="display: none" class="question">Информация отправлена</p>
+                               <p class="question">Спасибо, что приняли участие в опросе!</p>
+                              <p id ="quiz-complete-txt" style="display: none" class="question">Информация нам отправлена! В ближайшее время специалист по проектам свяжется с Вами!</p>
                                <a href="#" id="quiz-complete"  class="btn btn-1">ОТПРАВИТЬ</a>
 
                         </div>

@@ -1,8 +1,8 @@
 {% extends 'basic.html' %}
 {% load static %}
 {% block content %}
-
-    <div class="row contacts py-4 mb-4">
+<div class="container">
+<div class="row contacts py-4 mb-4">
         <div class="col-md-5 col-sm-12 contacts-part1">
             <div>
                <h3>Мы на связи!</h3>
@@ -21,11 +21,11 @@
         <form  id="callBackForm" onsubmit="callBack_home(event);" autocomplete="off" class="py-2" >
         <div class="row">
 
-                <div class="col-md-3 col-sm-1 mb-4"> <input type="text" id="callBackHome_name" required="required" placeholder="Ваше имя"></div>
+                <div class="col-md-4 col-sm-1 mb-4"> <input type="text" id="callBackHome_name" required="required" placeholder="Ваше имя"></div>
 
-                <div class="col-md-3 col-sm-1  mb-4"><input type="text" id="callBackHome_email" required="required" placeholder="Email"></div>
+                <div class="col-md-4 col-sm-1  mb-4"><input type="text" id="callBackHome_email" required="required" placeholder="Email"></div>
 
-                <div class="col-md-3 col-sm-1 mb-4"><input type="text" id="callBackHome_phone" required="required" placeholder="Сотовый номер"></div>
+                <div class="col-md-4 col-sm-1 mb-4"><input type="text" id="callBackHome_phone" required="required" placeholder="Сотовый номер"></div>
 
 
         </div>
@@ -34,6 +34,8 @@
 <p style="color: #fff; font-size: x-large; display: none;" id="callBackHome_done">Ваш запрос отправлен. Ожидайте звонка.</p>
         </div>
     </div>
+</div>
+
 <div class="container map py-4">
     <div class="row">
         <div class="col-md-12 col-sm-12">

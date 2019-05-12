@@ -447,7 +447,7 @@ input[type="text"]{
     /*font-size: 16px;*/
     /*text-align: center;*/
     color: white;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     /*font-family: 'SF UI Display Semibold';*/
 }
 
@@ -801,8 +801,8 @@ color:#f37022 !important;
 }
 
  .contacts-part1 div{
-     position: relative;
-     left: 400px;
+
+
 
      padding-top: 80px;
  }

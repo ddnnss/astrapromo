@@ -82,7 +82,25 @@ $('.step-1').click(function () {
 
 })
 
+
+
+$('#own-answer-radio').on('change', function(e) {
+    if ($('#own-answer').css('display') === 'none'){
+        console.log($('#own-answer').css('display'));
+        $('#own-answer').css('display','block');
+    }else{
+        $('#own-answer').css('display','none');
+    }
+});
+
+
+
 $('.step-3').click(function () {
+    if (!$("#own-answer-radio").prop("checked")){
+      $('#own-answer').css('display','none');
+    }
+
+
     if (step_3){
         discount = parseInt($('#discount').html());
     $('#discount').html(discount + 6);
@@ -127,7 +145,13 @@ $('#quiz-complete').click(function (e) {
   step0 = $("#step-0").find("input[name=radio]:checked").attr('value');
   step1 = $("#step-1").find("input[name=radio]:checked").attr('value');
   step2 = $("#step-2").find("input").val();
-  step3 = $("#step-3").find("input[name=radio]:checked").attr('value');
+  if ($("#own-answer-radio").prop("checked")){
+      step3 = $("#own-answer").val();
+
+    }else{
+   step3 = $("#step-3").find("input[name=radio]:checked").attr('value');
+  }
+  console.log(step3);
   step4 = $("#step-4-name").val() + ' ' + $("#step-4-phone").val() + ' ' + $("#step-4-email").val();
   csrfmiddlewaretoken = document.getElementsByName("csrfmiddlewaretoken")[0].value;
   console.log(step0,step1,step2,step3,step4);
