@@ -402,14 +402,16 @@ input[type="text"]{
 }
 .button-form-long-div span{
     color: #fff;
+    font-family: "SF UI Regular", sans-serif;
 
 
 }
 
 .button-form-long-div p{
-    font-family: 'SF UI Display Bold';
-    font-size: 26px;
+    font-family: 'SF UI Display Bold', sans-serif;
+    font-size: 30px;
     margin-top: 20px;
+    line-height: 30px;
 }
 
 .form_container{
@@ -447,7 +449,7 @@ input[type="text"]{
     /*font-size: 16px;*/
     /*text-align: center;*/
     color: white;
-    margin-bottom: 40px;
+    margin-bottom: 95px;
     /*font-family: 'SF UI Display Semibold';*/
 }
 
