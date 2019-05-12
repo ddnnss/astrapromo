@@ -394,7 +394,7 @@ input[type="text"]{
 }
 
 .button-form-long-div{
-    padding: 50px 70px 70px 50px;
+    padding: 50px 50px 70px 50px;
     height: 530px;
     background-color: #f57d14;
     position: relative;
@@ -415,8 +415,8 @@ input[type="text"]{
 }
 
 .form_container{
-
-    background-color: #85d3f5;
+    /*#85d3f5;*/
+    background-color:#2cb3e5;
     height: 470px;
 
 }
