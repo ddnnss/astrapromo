@@ -845,22 +845,24 @@ color:#f37022 !important;
 /*contacts*/
 .contacts{
     height: 510px;
+    display: flex;
+    flex-wrap: wrap;
 }
  .contacts-part1{
-    background-color: #33B3DF;
-
-    color: #fff;
+     background-color: #33B3DF;
+     flex-basis: 40%;
+     flex-grow: 1;
+     color: #fff;
 }
 
  .contacts-part1 div{
-
-
-
+     text-align: end;
+     padding-right: 60px;
      padding-top: 80px;
  }
 .contacts-part1 span{
     font-size: 25px;
-    font-family: "SF UI Display Bold";
+    font-family: "SF UI Display Bold",sans-serif;
 
 
 }
@@ -879,6 +881,8 @@ color:#f37022 !important;
     background-color: #f57d14;
     color: #fff;
     padding-left: 60px;
+    flex-basis: 60%;
+    flex-grow: 1;
 }
 .contacts-part2 h3{
     padding: 80px 0 10px 0;
