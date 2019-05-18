@@ -18,7 +18,7 @@ def index(request):
     keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     showCases = showCase.objects.filter(is_active=True, showInHomePage=True)
     reviews = review.objects.filter(showHomePage=True)
-    return render(request, 'staticPages/index.html', locals())
+    return render(request, 'staticPages/new/index.html', locals())
 
 def about(request):
     active_about ='item-active'
