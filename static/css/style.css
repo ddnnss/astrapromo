@@ -67,7 +67,7 @@ src: local('SF UI Display Black'), url('../fonts/sf-ui-display-black-58646a6b80d
 font-family: 'SF UI Regular';
 font-style: normal;
 font-weight: normal;
-src: local('SF UI Regular '), url('../fonts/SFUIDisplay-Regular.ttf');
+src: local('SF UI Regular '), url('../fonts/SF-UI-Text-Regular.woff') format('woff');
 }
 
 .btn:focus,.btn:active {
