@@ -1096,8 +1096,108 @@ color:#f37022 !important;
     margin: 5px 10px 0 0;;
 }
 
+.context-bottom h4{
+     color: #f57d14;
+    font-family: "SF UI Display Bold",sans-serif;
+    font-size: 21px;
+}
+
+.big-circle{
+    height: 525px;
+    width: 525px;
+    border: 2px solid #eaecef;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.super-1{
+    position: relative;
+    top: -4%;
+    left: 14%;
+}
+
+.super-2{
+    position: relative;
+    top: -4%;
+    left: 40%;
+}
+
+.super-3{
+    position: relative;
+    top: 39%;
+    left: 44%;
+}
+
+.super-4{
+    position: relative;
+    top: 83%;
+    left: -5%;
+}
+
+.super-5{
+    position: relative;
+    top: 61%;
+    left: 14%;
+}
+
+.super-6{
+    position: relative;
+    top: 17%;
+    left: -34%;
+}
+
+.inner-text{
+    position: absolute;
+    width: 300px;
+    left: 42%;
+    text-align: center;
+}
+
+
+.inner-circle{
+    height: 112px;
+    width: 112px;
+    border: 2px solid #ebf6ff;
+    border-radius: 50%;
+    background: #eaecef;
+    display: inline-block;
+}
+
+.inner-circle:hover{
+     border: 2px solid #919394;
+}
+.inner-circle img{
+    position: relative;
+    top: 32%;
+    left: 32%;
+}
+
+.garantii-list{
+    list-style: url("../images/big-dot.png");
+}
+
+.garantii-list li{
+      font-family: "SF UI Display Medium",sans-serif;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.prices{
+    text-align: center;
+
+}
+.prices td{
+   font-family: "SF UI Display",sans-serif;
+    font-size: 14px;
+}
+
+.prices td a{
+   width: 180px !important;
+}
+
 .block-border span{
-    font-family: "SF UI Display Medium";
+    font-family: "SF UI Display Medium",sans-serif;
     font-size: 30px;
     color: #f57d14;
 }
