@@ -46,7 +46,7 @@ def showcase(request):
 def context(request):
     active_uslug = 'item-active'
     active_context = 'drop-item-active'
-
+    showCases = showCase.objects.filter(is_active=True, showInHomePage=True)
     return render(request, 'staticPages/context1.html', locals())
 
 def target(request):

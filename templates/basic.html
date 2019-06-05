@@ -33,6 +33,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 <script src="https://mreq.github.io/slick-lightbox/dist/slick-lightbox.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"> </script>
     <script src="{% static 'js/forms.js' %}"></script>
       <script src="{% static 'js/inputMask.js' %}"></script>
     <script src="{% static 'js/showCase.js' %}"></script>
@@ -89,7 +90,9 @@ jQuery(function($){
    $("#step-4-phone").mask("+7 (999) 999-99-99");
     });
 
-
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 
 </script>
 

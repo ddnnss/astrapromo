@@ -1484,3 +1484,136 @@ form label{
     }
 }
 
+.b-price-box{
+    background-color: #FFF;
+    border: 1px solid #F3F3F3;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+.b-price-box__header{
+    height: 120px;
+    background-color: #0F2B52;
+    background-image: -moz-linear-gradient(196deg, #0B8793 0%, #0F2B52 100%);
+    background-image: -o-linear-gradient(196deg, #0B8793 0%, #0F2B52 100%);
+    background-image: -webkit-linear-gradient(196deg, #0B8793 0%, #0F2B52 100%);
+    background-image: linear-gradient(254deg, #0B8793 0%, #0F2B52 100%);
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 24px;
+    font-family: "Segoe UI",serif;
+    font-weight: 300;
+    padding: 10px;
+    line-height: 1.2;
+}
+.b-price-box_business .b-price-box__header{
+    background-color: #5B005B;
+    background-image: -moz-linear-gradient(39deg, #5B005B 0%, #D13662 100%);
+    background-image: -o-linear-gradient(39deg, #5B005B 0%, #D13662 100%);
+    background-image: -webkit-linear-gradient(39deg, #5B005B 0%, #D13662 100%);
+    background-image: linear-gradient(51deg, #5B005B 0%, #D13662 100%);
+}
+.b-price-box_pro .b-price-box__header{
+    background-color: #9A5BFD;
+    background-image: -moz-linear-gradient(left, #2F5ECE 0%, #9A5BFD 100%);
+    background-image: -o-linear-gradient(left, #2F5ECE 0%, #9A5BFD 100%);
+    background-image: -webkit-linear-gradient(left, #2F5ECE 0%, #9A5BFD 100%);
+    background-image: linear-gradient(to right, #2F5ECE 0%, #9A5BFD 100%);
+}
+.b-price-box__header .price{
+    width: 100%;
+    padding: 5px 0 0 0;
+    font-size: 36px;
+    text-align: center;
+}
+.b-price-box__header .opisanie{
+    width: 100%;
+    padding: 5px 0 5px 0;
+    font-size: 15px;
+    opacity: 0.7;
+    text-align: center;
+}
+.b-price-box__header .oldprice{
+    width: 100%;
+    padding: 8px 0 0 0;
+    font-size: 17px;
+    text-align: center;
+}
+.b-price-box__content{
+    padding: 25px 5px 25px 5px;
+}
+.b-price-box__content ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.b-price-box__content ul li{
+    font-family: "SF UI Regular",sans-serif;
+    padding: 5px;
+    margin: 0 0 5px 0;
+    text-align: center;
+    font-size: 17px;
+    border-radius: 2px;
+    position: relative;
+}
+.b-price-box__content ul li.tarif2{
+    padding: 5px;
+    margin: 0 0 5px 0;
+    text-align: center;
+    font-size: 17px;
+    border-radius: 2px;
+    position: relative;
+    color:#b9005d;
+}
+.b-price-box__content ul li.tarif3{
+    padding: 5px;
+    margin: 0 0 5px 0;
+    text-align: center;
+    font-size: 17px;
+    border-radius: 2px;
+    position: relative;
+    color:#5a5de1;
+}
+.b-price-box__content ul li .popover-info{
+    display: none;
+}
+.b-price-box__content ul li:hover{
+    background-color: #F7F7F7;
+    cursor: pointer;
+}
+.b-price-box__footer{
+    padding: 20px 10px 25px 10px;
+    border-top: 1px solid #ebebeb;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.b-price-box__footer .ibutton{
+    min-width: 150px;
+    width: auto;
+}
+.b-price-box__footer .price1{
+    font-size: 28px;
+	margin-bottom: 20px;
+	color:#385972;
+}
+.b-price-box__footer .price2{
+    font-size: 28px;
+	margin-bottom: 20px;
+	color:#b9005d;
+}
+.b-price-box__footer .price3{
+    font-size: 28px;
+	margin-bottom: 20px;
+	color:#5a5de1;
+}
