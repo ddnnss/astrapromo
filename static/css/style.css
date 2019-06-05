@@ -1177,7 +1177,7 @@ color:#f37022 !important;
 }
 
 .garantii-list li{
-      font-family: "SF UI Display Medium",sans-serif;
+      font-family: "SF UI Display Regular",sans-serif;
     font-size: 16px;
     color: black;
     margin-bottom: 30px;
@@ -1496,11 +1496,11 @@ form label{
 }
 .b-price-box__header{
     height: 120px;
-    background-color: #0F2B52;
-    background-image: -moz-linear-gradient(196deg, #0B8793 0%, #0F2B52 100%);
-    background-image: -o-linear-gradient(196deg, #0B8793 0%, #0F2B52 100%);
-    background-image: -webkit-linear-gradient(196deg, #0B8793 0%, #0F2B52 100%);
-    background-image: linear-gradient(254deg, #0B8793 0%, #0F2B52 100%);
+    background-color: #1a54a5;
+    background-image: -moz-linear-gradient(196deg, #2cb3e5 0%, #1a54a5  100%);
+    background-image: -o-linear-gradient(196deg, #2cb3e5 0%, #1a54a5  100%);
+    background-image: -webkit-linear-gradient(196deg, #1a54a5  0%, #0F2B52 100%);
+    background-image: linear-gradient(254deg, #2cb3e5 0%, #1a54a5  100%);
     border-radius: 5px 5px 0 0;
     display: flex;
     flex-flow: row wrap;
@@ -1515,11 +1515,11 @@ form label{
     line-height: 1.2;
 }
 .b-price-box_business .b-price-box__header{
-    background-color: #5B005B;
-    background-image: -moz-linear-gradient(39deg, #5B005B 0%, #D13662 100%);
-    background-image: -o-linear-gradient(39deg, #5B005B 0%, #D13662 100%);
-    background-image: -webkit-linear-gradient(39deg, #5B005B 0%, #D13662 100%);
-    background-image: linear-gradient(51deg, #5B005B 0%, #D13662 100%);
+    background-color: #f57d14 ;
+    background-image: -moz-linear-gradient(39deg, #c35b00  0%, #f57d14  100%);
+    background-image: -o-linear-gradient(39deg, #c35b00  0%, #f57d14  100%);
+    background-image: -webkit-linear-gradient(39deg, #c35b00  0%, #f57d14  100%);
+    background-image: linear-gradient(51deg, #c35b00  0%, #f57d14  100%);
 }
 .b-price-box_pro .b-price-box__header{
     background-color: #9A5BFD;
