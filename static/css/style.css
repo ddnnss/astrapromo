@@ -64,10 +64,10 @@ src: local('SF UI Display Black'), url('../fonts/sf-ui-display-black-58646a6b80d
 }
 
 @font-face {
-font-family: 'SF UI Regular';
+font-family: 'SF UI Display Regular';
 font-style: normal;
 font-weight: normal;
-src: local('SF UI Regular '), url('../fonts/SF-UI-Text-Regular.woff') format('woff');
+src: local('SF UI Display Regular '), url('../fonts/SF-UI-Text-Regular.woff') format('woff');
 }
 
 .btn:focus,.btn:active {
@@ -76,7 +76,7 @@ src: local('SF UI Regular '), url('../fonts/SF-UI-Text-Regular.woff') format('wo
 }
 
 body{
-    font-family: 'SF UI Regular';
+    font-family: 'SF UI Display Regular';
     -webkit-font-smoothing: subpixel-antialiased !important;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility:    hidden;
@@ -163,6 +163,10 @@ input[type="text"]{
     color: #DB7C26;
 }
 
+.m-b-50{
+    margin-bottom: 50px;
+}
+
 .btn {
     width: 278px;
     padding: 15px;
@@ -176,7 +180,7 @@ input[type="text"]{
     /*font-weight: bold;*/
     font-size: 16px;
     letter-spacing: 1px;
-    /*font-family: "SF UI Display Medium";*/
+    font-family: "SF UI Display Medium",sans-serif;
      /*-webkit-transition-duration: 0.3s;*/
   /*transition-duration: 0.3s;*/
   /*-webkit-transition-property: transform;*/
@@ -332,7 +336,7 @@ input[type="text"]{
 }
 .features_target p{
 
-    font-size: 13px;
+    font-size: 15px;
     min-height: 120px;
 }
 
@@ -340,14 +344,14 @@ input[type="text"]{
 /*главное меню*/
 .navbar{
     padding: 0;
-    font-family: 'SF UI Regular';
+    font-family: 'SF UI Display Regular';
 }
 
 .navbar ul li a{
     color: #3e454b;
     font-size: 16px;
     transition: all 0.5s;
-    font-family: 'SF UI Regular';
+    font-family: 'SF UI Display Regular';
 
 }
 
@@ -436,7 +440,7 @@ input[type="text"]{
     line-height: 40px;
    font-family: 'SF UI Display Thin',sans-serif;
     margin-bottom: 70px;
-    font-size: 36px;
+    font-size: 35px;
 }
 
 .cool-text{
@@ -452,7 +456,7 @@ input[type="text"]{
 }
 .button-form-long-div span{
     color: #fff;
-    font-family: "SF UI Regular", sans-serif;
+    font-family: "SF UI Display Regular", sans-serif;
 
 
 }
@@ -505,7 +509,7 @@ input[type="text"]{
 
 .form_buttons_inner_container h4{
     font-size: 16px;
-    font-family: "SF UI Regular";
+    font-family: "SF UI Display Regular";
     color: #dff3ff;
     margin-bottom: 55px;
 }
@@ -912,13 +916,13 @@ color:#f37022 !important;
 }
 .seo-features h4{
     font-size: 16px;
-    font-family: "SF UI Regular",sans-serif;
+    font-family: "SF UI Display Regular",sans-serif;
     margin: 45px 0 27px 0;
 }
 
 .seo-features p{
     font-size: 14px;
-    font-family: "SF UI Regular",sans-serif;
+    font-family: "SF UI Display Regular",sans-serif;
 }
 .seo-work-plan img{
     display: block;
@@ -1027,13 +1031,13 @@ color:#f37022 !important;
 }
 .sites-for-all span:last-child{
     font-size: 16px;
-    font-family: "SF UI Regular";
+    font-family: "SF UI Display Regular";
 }
 
 /*context*/
 .context-head p{
-    font-size: 18px;
-    font-family: "SF UI Regular";
+    font-size: 16px;
+    font-family: "SF UI Display Regular",sans-serif;
 
 }
 
@@ -1049,7 +1053,7 @@ color:#f37022 !important;
 }
 
 .context-feature p:nth-child(2){
-    font-family: "SF UI Regular";
+    font-family: "SF UI Display Regular";
     font-size: 14px;
 }
 
@@ -1178,7 +1182,7 @@ color:#f37022 !important;
 
 .garantii-list li{
       font-family: "SF UI Display Regular",sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     color: black;
     margin-bottom: 30px;
 }
@@ -1188,7 +1192,7 @@ color:#f37022 !important;
 
 }
 .prices td{
-   font-family: "SF UI Display",sans-serif;
+   font-family: "SF UI Display Regular",sans-serif;
     font-size: 14px;
 }
 
@@ -1203,13 +1207,13 @@ color:#f37022 !important;
 }
 
 .block-border p{
-    font-family: "SF UI Regular";
+    font-family: "SF UI Display Regular";
     font-size: 14px;
     min-height: 124px;
 }
 
 .block-border span:nth-child(2){
-    font-family: "SF UI Regular";
+    font-family: "SF UI Display Regular";
     font-size: 14px;
 
     color: #3e454b;
@@ -1278,7 +1282,7 @@ transition: all .1s ease;
     /*font-weight: 700;*/
     /*text-align: center;*/
 
-    font-family: "SF UI Regular";
+    font-family: "SF UI Display Regular";
 }
 [class^='imghvr-'] figcaption p{
     font-size: 14px;
@@ -1556,11 +1560,11 @@ form label{
     margin: 0;
 }
 .b-price-box__content ul li{
-    font-family: "SF UI Regular",sans-serif;
+    font-family: "SF UI Display Regular",sans-serif;
     padding: 5px;
     margin: 0 0 5px 0;
     text-align: center;
-    font-size: 17px;
+    font-size: 15px;
     border-radius: 2px;
     position: relative;
 }

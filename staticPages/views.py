@@ -27,11 +27,13 @@ def about(request):
 def seo(request):
     active_uslug='item-active'
     active_seo ='drop-item-active'
+    showCases = showCase.objects.filter(is_active=True, showInHomePage=True)
     return render(request, 'staticPages/seo.html', locals())
 
 def sites(request):
     active_uslug='item-active'
     active_sites ='drop-item-active'
+    showCases = showCase.objects.filter(is_active=True, showInHomePage=True)
     return render(request, 'staticPages/sites.html', locals())
 
 def contacts(request):

@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row align-items-center context-head">
             <div class="col-md-6 order-md-1 mb-4 ">
-                <h1 class="home-h1">Комплексное SEO продвижение сайтов любой сложности</h1>
+                <h1 class="home-h1">Комплексное <span class="color-orange cool-text">SEO продвижение</span> сайтов любой сложности</h1>
                 <p class="mb-4">Сейчас, чтобы продвижение было успешным, важно<br> работать по всем направлениям развития сайта</p>
                 <a style="" class="btn btn-1 " data-toggle="modal" data-target="#callBackModal" href="#">Заказать продвижение</a>
             </div>
@@ -16,43 +16,58 @@
         <div class="gap-60"></div>
         <h3 class="context-h1">Зачем нужно SEO продвижение сайтов?</h3>
         <div class="gap-40"></div>
-        <div class="row seo-why">
-            <div class="col-md-3 mb-4">
-                <div class="block-border ">
-                    <h3>Бюджет</h3>
-                    <p >
-                        Если у Вас не большой бюджет на привлечение клиентов, но очень нужны заявки с сайта/группы в соцсетях на услуги/товары
-                    </p>
+          <div class="row align-items-center ">
+            <div class="col-md-6  context-bottom m-b-50 ">
+                <div class="row">
+                    <div class="col-md-1 ">
+                        <img  src="{% static 'images/context-icon-1.png' %}">
+                    </div>
+                    <div class="col-md-10 offset-md-1">
+                        <h4>Бюджет</h4>
+                        <p>Если у Вас не большой бюджет на привлечение клиентов, но очень нужны заявки с сайта/группы в соцсетях на услуги/товары</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-md-3 mb-4 ">
-                <div class="block-border ">
-                   <h3>Экономия</h3>
-                    <p >
-                        Если Вы хотите существенно сократить бюджет на контекстную рекламу, особенно если у Вас интернет-магазин
-                    </p>
+            <div class="col-md-6  context-bottom m-b-50 ">
+                <div class="row">
+                    <div class="col-md-1 ">
+                        <img  src="{% static 'images/context-icon-2.png' %}">
+                    </div>
+                    <div class="col-md-10 offset-md-1">
+                        <h4>Экономия</h4>
+                        <p>Если Вы хотите существенно сократить бюджет на контекстную рекламу, особенно если у Вас интернет-магазин</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-md-3 mb-4 ">
-                <div class="block-border ">
-                    <h3>Онлайн</h3>
-                    <p >
-                        Если нужны продажи в других регионах, но там нет Вашего физического присутствия
-                    </p>
+            <div class="col-md-6  context-bottom m-b-50 ">
+                <div class="row">
+                    <div class="col-md-1 ">
+                        <img  src="{% static 'images/context-icon-3.png' %}">
+                    </div>
+                    <div class="col-md-10 offset-md-1">
+                        <h4>Онлайн</h4>
+                        <p>Если нужны продажи в других регионах, но там нет Вашего физического присутствия</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-3  mb-4 ">
-                <div class="block-border ">
-                    <h3>Клиенты</h3>
-                    <p >
-                        Если нужны клиенты, которые не доверяют контекстной рекламе, а ищут информацию только в поисковой выдаче Яндекса и Google
-                    </p>
+
+            <div class="col-md-6  context-bottom m-b-50 ">
+                <div class="row">
+                    <div class="col-md-1 ">
+                        <img  src="{% static 'images/context-icon-4.png' %}">
+                    </div>
+                    <div class="col-md-10 offset-md-1">
+                        <h4>Клиенты</h4>
+                        <p>Если нужны клиенты, которые не доверяют контекстной рекламе, а ищут информацию только в поисковой выдаче Яндекса и Google</p>
+                    </div>
                 </div>
             </div>
+
 
         </div>
+
              <div class="gap-60"></div>
          <div class="gap-60"></div>
          <div class="gap-40"></div>
@@ -324,10 +339,40 @@
     </div>
 
 
+   <div class="gap-60"></div>
+     <div class="gap-60"></div>
+    <div class="container">
+        <h3 class="context-h1 ">Наши кейсы</h3>
+
+         <div class="gap-60"></div>
+         <div class="gap-40"></div>
+        <div class="row">
+
+
+            {% for case in showCases %}
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
+                    <figure class="imghvr-blur"><img src="{{ case.image.url }}" alt="example-image">
+                        <figcaption>
+                            <h3>{{ case.caseName }}</h3>
+                            <p>{{ case.showcaseInfo }}</p>
+                            <a class="btn btn-3" href="javascript:void(0);" onclick="getCaseInfo({{ case.id }})">СМОТРЕТЬ ПРОЕКТ</a>
+                        </figcaption><a href="javascript:;"></a>
+                    </figure>
+
+
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
+      <div class="gap-60"></div>
+
+         <div class="gap-40"></div>
     <div class="gap-60"></div>
     {% include 'staticPages/big_form_buttons.html' %}
     <div class="gap-60"></div>
     {% include 'staticPages/callBack_modal.html' %}
+
 {% endblock %}
 
 
@@ -335,4 +380,3 @@
 {% block js %}
 
 {% endblock %}
-
