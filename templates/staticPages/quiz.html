@@ -60,11 +60,14 @@
             margin-bottom: 60px;
         }
         .quiz{
-            display: flex;
+
+           display: flex;
             max-width: 1025px;
             border: 1px solid;
             border-radius: 4px;
             justify-content: space-between;
+            background: #ffffff;
+            margin: 0 auto;
         }
         .quiz-questions{
             flex-basis: 765px ;
@@ -99,6 +102,7 @@
             background: #2e76b2;
             color: #FFFFFF;
             cursor: pointer;
+            text-decoration: none;
         }
         .button-disabled{
             background: none;
@@ -106,7 +110,7 @@
             cursor: wait;
         }
         .quiz-questions__form{
-            height: 400px;
+            height: 300px;
         }
         .quiz-questions__form-input{
           padding: 10px;
@@ -164,16 +168,113 @@
         .custom-hr{
             border: none; background-color:#e5e5e5; height: 1px;   position: relative;  color: #e5e5e5;
         }
+
+        .quiz-open{
+            width: 100%;
+            background: #38548b;
+            height: 70px;
+            display: flex;
+
+        }
+        .quiz-open__container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1170px;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+        .quiz-open__container p{
+            font-size: 24px;
+            color: #FFFFFF;
+        }
+
+        .quiz-open__container a{
+            border-radius: 28px;
+            padding: 3px 18px;
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 16px;
+            display: flex;
+            background: #fb4234;
+            align-items: center;
+             position: relative;
+            overflow: hidden;
+            -webkit-transition: ease 0.5s;
+            transition: ease 0.5s;
+        }
+        .quiz-open__container a:after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 300px;
+        margin-left: 60px;
+        background: #fff;
+        position: absolute;
+        left: -40px;
+        top: -150px;
+        z-index: 1;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transition: all 0.1s;
+        transition: all 0.1s;
+        -webkit-animation-name: slideme;
+        animation-name: slideme;
+        -webkit-animation-duration: 3s;
+        animation-duration: 3s;
+        -webkit-animation-delay: 0.05s;
+        animation-delay: 0.05s;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
+
+    @-webkit-keyframes slideme {
+      0% { left: -30px; margin-left: 0px; }
+      30% { left: 110%; margin-left: 80px; }
+      100% { left: 110%; margin-left: 80px; }
+    }
+
+        .quiz-modal-wrapper{
+            display: none;
+          position: fixed;
+          z-index: 1;
+          padding-top: 12%;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          background-color: rgb(0,0,0);
+          background-color: rgba(0,0,0,0.4);
+        }
+    .quiz-input{
+        background: #f5f5f5;
+        border: 1px solid #cccccc;
+        padding: 10px 10px;
+        display: block;
+        margin-bottom: 20px;
+        width: 50%;
+    }
     </style>
 
 
 </head>
 <body>
+<div class="quiz-open">
+    <div class="quiz-open__container">
+      <p>Ответьте на 6 простых вопросов и подберите подходящую модель лодки</p>
+    <a href="#" onclick="showmodal()">Получить скидку <span style="font-size: 28px;margin-left: 20px">&#8594;</span></a>
+    </div>
 
-<div class="quiz">
+
+</div>
+<div id="quizModal" class="quiz-modal-wrapper">
+    <div class="quiz">
     <div class="start-question">
          <p class="quiz-questions__header">Ответьте на несколько простых вопросов, это поможет вам подобрать модель</p>
-                <hr class="custom-hr" style="top: 20px;">
+                <hr class="custom-hr" style="top: 20px;margin-bottom: 50px;">
          <div class="quiz-questions__form">
 
                         <p class="question">Какую продукцию вы подбираете?</p>
@@ -364,22 +465,22 @@
                     </form>
                     <form style="display: none" id="step-6">
                          <p class="question">Укажите, пожалуйста, свои данные: </p>
-                          <div  class="step-6 grid">
+                         <div  class="step-6">
 
-                              <input id="step-6-name" class="quiz-input" name="step-6-name" required value="" placeholder="Ваше имя"  type="text"/>
-                               <input id="step-6-phone" class="quiz-input" name="step-6-phone" required value="" placeholder="Ваш телефон"  type="text"/>
-                               <input id="step-6-email" class="quiz-input" name="step-6-email" required value="" placeholder="Ваш E-Mail" type="text"/>
+                              <input  class="step-6-name quiz-input" name="step-6-name" required value="" placeholder="Ваше имя"  type="text"/>
+                               <input  class="step-6-phone quiz-input" name="step-6-phone" required value="" placeholder="Ваш телефон"  type="text"/>
+                               <input  class="step-6-email quiz-input" name="step-6-email" required value="" placeholder="Ваш E-Mail" type="text"/>
 
                         </div>
 
 
                     </form>
                     <form style="display: none" id="step-7">
-                        <p class="question">Спасибо, что приняли участие в опросе!</p>
+                        <p class="question" style="margin-bottom: 100px">Спасибо, что приняли участие в опросе!</p>
                           <div  class="step-7">
 
                               <p id ="quiz-complete-txt" style="display: none" class="question">Информация нам отправлена! В ближайшее время специалист по проектам свяжется с Вами!</p>
-                               <a href="#" id="quiz-complete"  class="btn btn-1">ОТПРАВИТЬ</a>
+                               <a href="#"   class="quiz-complete quiz-questions__button">ОТПРАВИТЬ</a>
 
                         </div>
 
@@ -387,13 +488,13 @@
                     </form>
         </div>
         <div class="quiz-questions__buttons">
-            <button id="prev_btn" class="quiz-questions__button button-disabled">Назад</button>
-             <button id="next_btn" data-step="0" class="quiz-questions__button">Далее</button>
+            <button id="prev_btn" class="prev_btn quiz-questions__button button-disabled">Назад</button>
+            <button id="next_btn" data-step="0" class="next_btn quiz-questions__button">Далее </button>
         </div>
 
     </div>
     <div class="quiz-questions motor-choice">
-        <p class="quiz-questions__header">Ответьте на несколько простых вопросов, эт22о поможет вам подобрать модель</p>
+        <p class="quiz-questions__header">Ответьте на несколько простых вопросов, это поможет вам подобрать модель</p>
         <hr class="custom-hr" style="top: 20px;">
         <p class="total-progress">Готово: <span id="total-progress-value">0</span>%</p>
          <div class="quiz-slider">
@@ -403,54 +504,30 @@
                     </div>
         <div class="quiz-questions__form">
             <form id="step-0">
-                        <p class="question">Какая лодка вам необходима?</p>
+                        <p class="question">Какая страна-производитель моторов Вас интересует?</p>
                         <div class="step-0 grid">
 
                              <div class="quiz-questions__form-input">
-                                <input id="radio1" name="radio" value="Надувное дно (НДНД)"  type="radio"/>
-                                <label for="radio1"><span></span>Надувное дно (НДНД)</label>
+                                <input id="radio1" name="radio" value="Китай"  type="radio"/>
+                                <label for="radio1"><span></span>Китай</label>
                               </div>
                               <div class="quiz-questions__form-input">
-                                <input id="radio2" name="radio" value="Твёрдое дно (Пайолы)"  type="radio"/>
-                                <label for="radio2"><span></span>Твёрдое дно (Пайолы)</label>
+                                <input id="radio2" name="radio" value="Япония"  type="radio"/>
+                                <label for="radio2"><span></span>Япония</label>
                               </div>
-                             <div class="quiz-questions__form-input">
-                                <input id="radio3" name="radio" value="РИБ"  type="radio"/>
-                                <label for="radio3"><span></span>РИБ</label>
-                              </div>
-                              <div class="quiz-questions__form-input">
-                                <input id="radio4" name="radio" value="Катер (алюминий, пластик)"  type="radio"/>
-                                <label for="radio4"><span></span>Катер (алюминий, пластик)</label>
-                              </div>
+
                         </div>
                     </form>
                     <form style="display: none" id="step-1">
-                        <p class="question">На сколько человек планируете приобрести лодку?</p>
+                        <p class="question">Какой вид двигателя Вас интересует?</p>
                           <div  class="step-1 grid">
-
-                             <div class="quiz-questions__form-input">
-                                <input id="radio5" name="radio"  value="1"  type="radio"/>
-                                <label for="radio5"><span></span>1</label>
+                              <div class="quiz-questions__form-input">
+                                <input id="radio3" name="radio" value="2-х тактный"  type="radio"/>
+                                <label for="radio3"><span></span>2-х тактный</label>
                               </div>
                               <div class="quiz-questions__form-input">
-                                <input id="radio6" name="radio" value="2"  type="radio"/>
-                                <label for="radio6"><span></span>2</label>
-                              </div>
-                             <div class="quiz-questions__form-input">
-                                <input id="radio7" name="radio" value="3"  type="radio"/>
-                                <label for="radio7"><span></span>3</label>
-                              </div>
-                              <div class="quiz-questions__form-input">
-                                <input id="radio8" name="radio" value="4"  type="radio"/>
-                                <label for="radio8"><span></span>4</label>
-                              </div>
-                              <div class="quiz-questions__form-input">
-                                <input id="radio9" name="radio" value="5"  type="radio"/>
-                                <label for="radio9"><span></span>5</label>
-                              </div>
-                               <div class="quiz-questions__form-input">
-                                <input id="radio10" name="radio" value="6 и более"  type="radio"/>
-                                <label for="radio10"><span></span>6 и более</label>
+                                <input id="radio4" name="radio" value="4-х тактный, электро"  type="radio"/>
+                                <label for="radio4"><span></span>4-х тактный, электро</label>
                               </div>
 
                         </div>
@@ -458,72 +535,72 @@
 
                     </form>
                     <form style="display: none" id="step-2">
-                          <p class="question">На каких водоемах планируете эксплуатировать?</p>
+                          <p class="question">Какая необходима мощность мотора?</p>
                           <div  class="step-2 grid">
-
-                             <div class="quiz-questions__form-input">
-                                <input id="radio11" name="radio"  value="Небольшие водоемы / озёра / прибрежные зоны"  type="radio"/>
-                                <label for="radio11"><span></span>Небольшие водоемы / озёра / прибрежные зоны</label>
+                              <div class="quiz-questions__form-input">
+                                <input id="radio5" name="radio"  value="До 5 л.c."  type="radio"/>
+                                <label for="radio5"><span></span>До 5 л.c.</label>
                               </div>
                               <div class="quiz-questions__form-input">
-                                <input id="radio12" name="radio" value="Крупные реки / каналы / море"  type="radio"/>
-                                <label for="radio12"><span></span>Крупные реки / каналы / море</label>
+                                <input id="radio6" name="radio" value="До 15 л.c."  type="radio"/>
+                                <label for="radio6"><span></span>До 15 л.c.</label>
                               </div>
+                             <div class="quiz-questions__form-input">
+                                <input id="radio7" name="radio" value="До 60 л.c."  type="radio"/>
+                                <label for="radio7"><span></span>До 60 л.c.</label>
+                              </div>
+                              <div class="quiz-questions__form-input">
+                                <input id="radio8" name="radio" value="Свыше 60 л.c."  type="radio"/>
+                                <label for="radio8"><span></span>Свыше 60 л.c.</label>
+                              </div>
+                              <div class="quiz-questions__form-input">
+                                <input id="radio9" name="radio" value="электромотор"  type="radio"/>
+                                <label for="radio9"><span></span>электромотор</label>
+                              </div>
+
                           </div>
 
 
                     </form>
                     <form style="display: none" id="step-3">
-                         <p class="question">Какой вес лодки был бы для вас оптимален?</p>
+                         <p class="question">Под какую длину ноги должен быть транец на лодке?</p>
                           <div  class="step-3 grid">
+                            <div class="quiz-questions__form-input">
+                                <input id="radio10" name="radio" value="S - короткий дейдвуд (стандартный), длина ноги подвесного лодочного мотора составляет 381, или 454 мм"  type="radio"/>
+                                <label for="radio10"><span></span>S - короткий дейдвуд (стандартный), длина ноги подвесного лодочного мотора составляет 381, или 454 мм</label>
+                              </div>
 
                              <div class="quiz-questions__form-input">
-                                <input id="radio13" name="radio"  value="0-16 кг"  type="radio"/>
-                                <label for="radio13"><span></span>0-16 кг</label>
+                                <input id="radio11" name="radio"  value="L – длинный дейдвуд, длина ноги составляет 508, или 572 мм"  type="radio"/>
+                                <label for="radio11"><span></span>L – длинный дейдвуд, длина ноги составляет 508, или 572 мм</label>
                               </div>
                               <div class="quiz-questions__form-input">
-                                <input id="radio14" name="radio" value="16-27 кг"  type="radio"/>
-                                <label for="radio14"><span></span>16-27 кг</label>
+                                <input id="radio12" name="radio" value="Х – экстра длинный дейдвуд, длина ноги составляет 605 мм"  type="radio"/>
+                                <label for="radio12"><span></span>Х – экстра длинный дейдвуд, длина ноги составляет 605 мм</label>
                               </div>
-                               <div class="quiz-questions__form-input">
-                                <input id="radio15" name="radio" value="27-38 кг"  type="radio"/>
-                                <label for="radio15"><span></span>27-38 кг</label>
+                             <div class="quiz-questions__form-input">
+                                <input id="radio13" name="radio"  value="Затрудняюсь ответить"  type="radio"/>
+                                <label for="radio13"><span></span>Затрудняюсь ответить</label>
                               </div>
-                               <div class="quiz-questions__form-input">
-                                <input id="radio16" name="radio" value="38-57 кг"  type="radio"/>
-                                <label for="radio16"><span></span>38-57 кг</label>
-                              </div>
-                               <div class="quiz-questions__form-input">
-                                <input id="radio17" name="radio" value="57 кг и выше"  type="radio"/>
-                                <label for="radio17"><span></span>57 кг и выше</label>
-                              </div>
-                               <div class="quiz-questions__form-input">
-                                <input id="radio18" name="radio" value="Не имеет значения"  type="radio"/>
-                                <label for="radio18"><span></span>Не имеет значения</label>
-                              </div>
+
                           </div>
 
 
                     </form>
                     <form style="display: none" id="step-4">
-                         <p class="question">Под какой мотор подбираете лодку?</p>
+                         <p class="question">Мотор с каким управлением Вам необходим?</p>
                           <div  class="step-4 grid">
-
                               <div class="quiz-questions__form-input">
-                                <input id="radio19" name="radio"  value="1-5 л.с."  type="radio"/>
-                                <label for="radio19"><span></span>1-5 л.с.</label>
+                                <input id="radio14" name="radio" value="Дистанционным"  type="radio"/>
+                                <label for="radio14"><span></span>Дистанционным</label>
                               </div>
-                              <div class="quiz-questions__form-input">
-                                <input id="radio20" name="radio" value="5-9.9 л.с."  type="radio"/>
-                                <label for="radio20"><span></span>5-9.9 л.с.</label>
+                               <div class="quiz-questions__form-input">
+                                <input id="radio15" name="radio" value="Ручным"  type="radio"/>
+                                <label for="radio15"><span></span>Ручным</label>
                               </div>
-                             <div class="quiz-questions__form-input">
-                                <input id="radio21" name="radio" value="10-30 л.с."  type="radio"/>
-                                <label for="radio21"><span></span>10-30 л.с.</label>
-                              </div>
-                              <div class="quiz-questions__form-input">
-                                <input id="radio22" name="radio" value="40 л.с. и выше"  type="radio"/>
-                                <label for="radio22"><span></span>40 л.с. и выше</label>
+                               <div class="quiz-questions__form-input">
+                                <input id="radio16" name="radio" value="Затрудняюсь ответить"  type="radio"/>
+                                <label for="radio16"><span></span>Затрудняюсь ответить</label>
                               </div>
 
 
@@ -532,54 +609,42 @@
 
                     </form>
                     <form style="display: none" id="step-5">
-                        <p class="question">Под какую длину ноги должен быть транец на лодке?</p>
+                        <p class="question">Планируете ли Вы осуществлять регистрацию лодочного мотора и лодки в ГИМС?</p>
                           <div  class="step-5 grid">
-
                               <div class="quiz-questions__form-input">
-                                <input id="radio23" name="radio"  value="S - короткий дейдвуд (стандартный), длина ноги подвесного лодочного мотора составляет 381, или 454 мм"  type="radio"/>
-                                <label for="radio23"><span></span>S - короткий дейдвуд (стандартный), длина ноги подвесного лодочного мотора составляет 381, или 454 мм</label>
+                                <input id="radio17" name="radio" value="Да"  type="radio"/>
+                                <label for="radio17"><span></span>Да</label>
                               </div>
-                              <div class="quiz-questions__form-input">
-                                <input id="radio24" name="radio" value="L – длинный дейдвуд, длина ноги составляет 508, или 572 мм"  type="radio"/>
-                                <label for="radio24"><span></span>L – длинный дейдвуд, длина ноги составляет 508, или 572 мм</label>
-                              </div>
-                             <div class="quiz-questions__form-input">
-                                <input id="radio25" name="radio" value="Х – экстра длинный дейдвуд, длина ноги составляет 605 мм"  type="radio"/>
-                                <label for="radio26"><span></span>Х – экстра длинный дейдвуд, длина ноги составляет 605 мм</label>
+                               <div class="quiz-questions__form-input">
+                                <input id="radio18" name="radio" value="Нет"  type="radio"/>
+                                <label for="radio18"><span></span>Нет</label>
                               </div>
                               <div class="quiz-questions__form-input">
-                                <input id="radio26" name="radio" value="Затрудняюсь ответить"  type="radio"/>
-                                <label for="radio26"><span></span>Затрудняюсь ответить</label>
+                                <input id="radio19" name="radio" value="Затрудняюсь ответить"  type="radio"/>
+                                <label for="radio19"><span></span>Затрудняюсь ответить</label>
                               </div>
-                              <div class="quiz-questions__form-input">
-                                <input id="radio27" name="radio" value="Мотора пока нет"  type="radio"/>
-                                <label for="radio27"><span></span>Мотора пока нет</label>
-                              </div>
-
-
-
                         </div>
 
 
                     </form>
                     <form style="display: none" id="step-6">
                          <p class="question">Укажите, пожалуйста, свои данные: </p>
-                          <div  class="step-6 grid">
+                          <div  class="step-6 ">
 
-                              <input id="step-6-name" class="quiz-input" name="step-6-name" required value="" placeholder="Ваше имя"  type="text"/>
-                               <input id="step-6-phone" class="quiz-input" name="step-6-phone" required value="" placeholder="Ваш телефон"  type="text"/>
-                               <input id="step-6-email" class="quiz-input" name="step-6-email" required value="" placeholder="Ваш E-Mail" type="text"/>
+                              <input  class="step-6-name quiz-input" name="step-6-name" required value="" placeholder="Ваше имя"  type="text"/>
+                               <input  class="step-6-phone quiz-input" name="step-6-phone" required value="" placeholder="Ваш телефон"  type="text"/>
+                               <input  class="step-6-email quiz-input" name="step-6-email" required value="" placeholder="Ваш E-Mail" type="text"/>
 
                         </div>
 
 
                     </form>
                     <form style="display: none" id="step-7">
-                        <p class="question">Спасибо, что приняли участие в опросе!</p>
+                        <p class="question" style="margin-bottom: 100px;">Спасибо, что приняли участие в опросе!</p>
                           <div  class="step-7">
 
                               <p id ="quiz-complete-txt" style="display: none" class="question">Информация нам отправлена! В ближайшее время специалист по проектам свяжется с Вами!</p>
-                               <a href="#" id="quiz-complete"  class="btn btn-1">ОТПРАВИТЬ</a>
+                               <a href="#"  class="quiz-complete quiz-questions__button">ОТПРАВИТЬ</a>
 
                         </div>
 
@@ -587,8 +652,8 @@
                     </form>
         </div>
         <div class="quiz-questions__buttons">
-            <button id="prev_btn" class="quiz-questions__button button-disabled">Назад</button>
-             <button id="next_btn" data-step="0" class="quiz-questions__button">Далее</button>
+            <button id="prev_btn" class="prev_btn quiz-questions__button button-disabled">Назад</button>
+             <button id="next_btn" data-step="0" class="next_btn quiz-questions__button">Далее</button>
         </div>
 
     </div>
@@ -597,32 +662,125 @@
         <div class="quiz-info__total-discount">
             <p class="quiz-info__total-discount-header">Ваша скидка</p>
             <hr class="custom-hr">
-            <p class="quiz-info__total-discount-value"><span id="quiz-info__total-discount__value">0</span> %</p>
+            <p class="quiz-info__total-discount-value"><span id="quiz-info__total-discount__value">0</span> Р</p>
         </div>
 
     </div>
 
 </div>
+</div>
+
 
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 <script>
+    let step_val = 0
+    let step_0 = true
+    let step_1 = true
+    let step_2 = true
+    let step_3 = true
+    let step_4 = true
+    let step_5 = true
+    let step_6_name = true
+    let step_6_email = true
+    let step_6_phone = true
+
+     jQuery(function($){
+   $(".step-6-phone").mask("+7 (999) 999-99-99");
+    });
+
+
+    let modal = document.getElementById('quizModal');
+
+    function showmodal(){
+     modal.style.display = "block";
+
+}
+
+
+    $('.step-0').click(function () {
+        if (step_0){
+            discount = parseInt($('#quiz-info__total-discount__value').html());
+        $('#quiz-info__total-discount__value').html(parseInt(discount + 142));
+        step_0 = false;
+        }
+    })
+     $('.step-1').click(function () {
+        if (step_1){
+            discount = parseInt($('#quiz-info__total-discount__value').html());
+        $('#quiz-info__total-discount__value').html(parseInt(discount + 142));
+        step_1 = false;
+        }
+    })
+     $('.step-2').click(function () {
+        if (step_2){
+            discount = parseInt($('#quiz-info__total-discount__value').html());
+        $('#quiz-info__total-discount__value').html(parseInt(discount + 142));
+        step_2 = false;
+        }
+    })
+
+     $('.step-3').click(function () {
+        if (step_3){
+            discount = parseInt($('#quiz-info__total-discount__value').html());
+        $('#quiz-info__total-discount__value').html(parseInt(discount + 142));
+        step_3 = false;
+        }
+    })
+
+     $('.step-4').click(function () {
+        if (step_4){
+            discount = parseInt($('#quiz-info__total-discount__value').html());
+        $('#quiz-info__total-discount__value').html(parseInt(discount + 142));
+        step_4 = false;
+        }
+    })
+
+      $('.step-5').click(function () {
+        if (step_5){
+            discount = parseInt($('#quiz-info__total-discount__value').html());
+        $('#quiz-info__total-discount__value').html(parseInt(discount + 142));
+        step_5 = false;
+        }
+    })
+
+    $('.step-6-name').on('input', function  () {
+    if (step_6_name ){
+    //    discount = parseInt($('#discount').html());
+  //  $('#discount').html(discount + 2);
+        console.log('6name')
+    step_6_name = false;
+    }
+    })
+
+    $('.step-6-email').on('input', function  () {
+        if (step_6_email && !step_6_name){
+              console.log('6mail')
+            discount = parseInt($('#quiz-info__total-discount__value').html());
+        $('#quiz-info__total-discount__value').html(parseInt(discount + 148));
+        step_6_email = false;
+        }
+    })
 
   function start_question(choice) {
       console.log(choice)
       if (choice === 'boat'){
           $('.start-question').css('display','none')
+          $('.motor-choice').remove()
           $('.boat-choice').css('display','block')
       }
        if (choice === 'motor'){
           $('.start-question').css('display','none')
+           $('.boat-choice').remove()
           $('.motor-choice').css('display','block')
       }
 
   }
 
-    let step_val = 0
-$('#next_btn').click(function(e) {
+
+$('.next_btn').click(function(e) {
+    console.log('next click')
     e.preventDefault();
     step_val =$(this).data('step');
      if (step_val + 1 == 7){
@@ -646,7 +804,7 @@ if (step_val != 7) {
   });
 
 
-$('#prev_btn').click(function(e) {
+$('.prev_btn').click(function(e) {
     console.log('perv click')
     step_val = parseInt($('#next_btn').data('step'));
     console.log('step val=', step_val);
@@ -681,6 +839,47 @@ $('#prev_btn').click(function(e) {
 
 
   });
+
+
+
+$('.quiz-complete').click(function (e) {
+  e.preventDefault();
+  step0 = $("#step-0").find("input[name=radio]:checked").attr('value');
+  step1 = $("#step-1").find("input[name=radio]:checked").attr('value');
+  step2 = $("#step-2").find("input[name=radio]:checked").attr('value');
+  step3 = $("#step-3").find("input[name=radio]:checked").attr('value');
+  step4 = $("#step-4").find("input[name=radio]:checked").attr('value');
+  step5 = $("#step-5").find("input[name=radio]:checked").attr('value');
+
+  step6 = $(".step-6-name").val() + ' ' + $(".step-6-phone").val() + ' ' + $(".step-6-email").val();
+
+  console.log(step0,step1,step2,step3,step4,step5,step6);
+
+
+
+        $.ajax({
+            type:"POST",
+            url:'quiz-form.php',
+            data:{
+                'step0':step0,
+                'step1':step1,
+                'step2':step2,
+                'step3':step3,
+                'step4':step4,
+                'step5':step5,
+                'step6':step6,
+
+            },
+            success : function(data){
+                console.log(data);
+                $('#quiz-complete-txt').css('display','block')
+                $('#quiz-complete').css('display','none')
+                $('.quiz-arrows').css('display','none')
+
+            }
+        });
+
+})
 
 </script>
 </body>
