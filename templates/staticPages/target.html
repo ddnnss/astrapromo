@@ -19,53 +19,35 @@
         <div class="gap-40"></div>
      <div class="row  align-items-center">
          <div class="col-md-3 what-block mb-4">
-
-                        <span class="circle1">
-                            <span class="circle2">
-                                <span class="circle-number">1</span>
-                            </span>
-                        </span>
-                        <p>
-                        Если у Вас нет сайта, но уже сейчас нужны клиенты
-                        </p>
-
-
-
-
+            <span class="circle1">
+                <span class="circle2">
+                    <span class="circle-number">1</span>
+                </span>
+            </span>
+            <p>
+            Если у Вас нет сайта, но уже сейчас нужны клиенты
+            </p>
          </div>
             <div class="col-md-3 offset-md-1 what-block mb-4">
-
-                        <span class="circle1">
-                            <span class="circle2">
-                                <span class="circle-number">2</span>
-                            </span>
-                        </span>
-                        <p>
-                        Если Вам уже не хватает клиентов из поисковых систем
-                        </p>
-
-
+            <span class="circle1">
+                <span class="circle2">
+                    <span class="circle-number">2</span>
+                </span>
+            </span>
+            <p>
+            Если Вам уже не хватает клиентов из поисковых систем
+            </p>
          </div>
           <div class="col-md-3 offset-md-1 what-block mb-4">
-
-                         <span class="circle1">
-                            <span class="circle2">
-                                <span class="circle-number">3</span>
-                            </span>
-                        </span>
-                        <p>
-                        Если Вам нужно повысить узнаваемость и лояльность к бренду
-                        </p>
-
-
-
+             <span class="circle1">
+                <span class="circle2">
+                    <span class="circle-number">3</span>
+                </span>
+            </span>
+            <p>
+            Если Вам нужно повысить узнаваемость и лояльность к бренду
+            </p>
          </div>
-
-
-
-
-
-
         </div>
 <!-- блок что будет конец-->
 
@@ -372,8 +354,6 @@
          <div class="gap-60"></div>
          <div class="gap-40"></div>
         <div class="row">
-
-
             {% for case in showCases %}
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
                     <figure class="imghvr-blur"><img src="{{ case.image.url }}" alt="example-image">
@@ -383,15 +363,11 @@
                             <a class="btn btn-3" href="javascript:void(0);" onclick="getCaseInfo({{ case.id }})">СМОТРЕТЬ ПРОЕКТ</a>
                         </figcaption><a href="javascript:;"></a>
                     </figure>
-
-
                 </div>
-
             {% endfor %}
         </div>
     </div>
       <div class="gap-60"></div>
-
          <div class="gap-40"></div>
     <div class="gap-60"></div>
     {% include 'staticPages/big_form_buttons.html' %}

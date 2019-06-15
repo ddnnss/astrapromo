@@ -99,6 +99,11 @@ body{
     margin-bottom: 10px;
 }
 
+.text-underline{
+    border-bottom: 3px solid #f57d14;
+    width: 447px;
+}
+
 .color-blue{
     color: #00b4e7;
 }
@@ -811,6 +816,16 @@ color:#f37022 !important;
     /*line-height: 0px;*/
     margin-bottom: 40px;
 
+}
+
+.team-name{
+    font-family: "SF UI Display Bold",sans-serif;
+     border-bottom: 1px solid #f57d14;
+    width: 155px;
+}
+.team-work{
+    font-family: "SF UI Display",sans-serif;
+    font-size: 14px;
 }
 .about-us h3 {
     font-family: "SF UI Display Bold";
