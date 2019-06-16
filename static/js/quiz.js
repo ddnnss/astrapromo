@@ -65,7 +65,7 @@ $('#prev_btn').click(function(e) {
 $('.step-0').click(function () {
     if (step_0){
         discount = parseInt($('#discount').html());
-    $('#discount').html(discount + 6);
+    $('#discount').html(discount + 2);
     step_0 = false;
     }
 
@@ -75,7 +75,7 @@ $('.step-0').click(function () {
 $('.step-1').click(function () {
     if (step_1){
         discount = parseInt($('#discount').html());
-    $('#discount').html(discount + 6);
+    $('#discount').html(discount + 2);
     step_1 = false;
     }
 
@@ -103,7 +103,7 @@ $('.step-3').click(function () {
 
     if (step_3){
         discount = parseInt($('#discount').html());
-    $('#discount').html(discount + 6);
+    $('#discount').html(discount + 2);
     step_3 = false;
     }
 
@@ -113,7 +113,7 @@ $('.step-3').click(function () {
 $('#site-name').on('input', function  () {
     if (step_2){
         discount = parseInt($('#discount').html());
-    $('#discount').html(discount + 6);
+    $('#discount').html(discount + 2);
     step_2 = false;
     }
 
@@ -136,7 +136,7 @@ $('#step-4-phone').on('change', function  () {
 $('#step-4-email').on('input', function  () {
     if (step_4_email && !step_4_name && !step_4_phone){
         discount = parseInt($('#discount').html());
-    $('#discount').html(discount + 6);
+    $('#discount').html(discount + 2);
     step_4_email = false;
     }
 })
