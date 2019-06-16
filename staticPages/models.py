@@ -4,6 +4,17 @@ from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class showCase(models.Model):
+    CONTEXT = 'CO'
+    SEO = 'SE'
+    TARGET = 'TA'
+    SITES = 'SI'
+    CASETYPES = [
+        (CONTEXT, 'Контекстная реклама'),
+        (SEO, 'СЕО продвижение'),
+        (TARGET, 'Таргетированная релама'),
+        (SITES, 'Создание сайтов'),
+    ]
+
     caseName = models.CharField('Заголовок кейса', max_length=255, blank=False)
     caseNameSlug = models.CharField('Заголовок кейса', max_length=255, blank=True)
     siteUrl = models.CharField('Адрес сайта', max_length=255, blank=False)
@@ -12,6 +23,7 @@ class showCase(models.Model):
     showcaseFullInfo = RichTextUploadingField ('Полное описание ', blank=True, null=True)
     showInHomePage = models.BooleanField('Отображать на главной', default=False)
     is_active = models.BooleanField('Активный кейс?', default=False)
+    caseType = models.CharField('Тип кейса', max_length=2, choices=CASETYPES, default=CONTEXT)
 
     def save(self, *args, **kwargs):
         self.caseNameSlug = slugify(self.caseName)

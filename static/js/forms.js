@@ -12,10 +12,13 @@ for (let div in divs) {
 function modalCallback() {
     client_name = document.getElementById("callBack_name").value;
     client_phone = document.getElementById("callBack_phone").value;
-    $('#modalSubmit').addClass('is-loading');
+    $('#modalSubmit').attr('disabled','disabled');
+    $('#modalSubmit').html('Отправка...');
     $('.nameError').css('display','none');
     $('.phoneError').css('display','none');
     if (client_name == ''){
+         $('#modalSubmit').html('ОТПРАВИТЬ');
+        $('#modalSubmit').removeAttr('disabled');
         console.log('name empty');
         $('#callBackModal').removeClass('input-error');
         $('.nameError').css('display','block');
@@ -26,6 +29,8 @@ function modalCallback() {
         return;
     }
      if (client_phone == ''){
+         $('#modalSubmit').html('ОТПРАВИТЬ');
+        $('#modalSubmit').removeAttr('disabled');
         console.log('phone empty');
         $('#callBackModal').removeClass('input-error');
         $('.phoneError').css('display','block');
@@ -46,6 +51,8 @@ function modalCallback() {
             },
             success : function(data){
                 console.log(data);
+                 $('#modalSubmit').html('ОТПРАВИТЬ');
+                $('#modalSubmit').removeAttr('disabled');
                 $('#callBack_send').css('display','none');
                 $('#callBack_done').css('display','block');
             }

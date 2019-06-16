@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from customUser.models import callBack, quizForm
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 
 # Create your views here.
 def callback(request):
@@ -17,6 +19,9 @@ def callback(request):
             callBack.objects.create(clientName=client_name,
                                     clientPhone=client_phone)
         return_dict['result'] = 'ok'
+        msg_html = render_to_string('email/callback.html')
+        send_mail('Заполнена форма обратной связи', None, 'admin@astrapromo.ru', ['dmitry@astrapromo.ru'],
+                  fail_silently=False, html_message=msg_html)
         return JsonResponse(return_dict)
 
 
@@ -34,4 +39,7 @@ def quiz(request):
                                 step3=step3,
                                 step4=step4)
         return_dict['result'] = 'ok'
+        msg_html = render_to_string('email/quiz.html')
+        send_mail('Заполнен квиз', None, 'admin@astrapromo.ru', ['dmitry@astrapromo.ru'],
+                  fail_silently=False, html_message=msg_html)
         return JsonResponse(return_dict)

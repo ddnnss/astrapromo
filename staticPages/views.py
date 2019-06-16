@@ -27,13 +27,13 @@ def about(request):
 def seo(request):
     active_uslug='item-active'
     active_seo ='drop-item-active'
-    showCases = showCase.objects.filter(is_active=True, showInHomePage=True)
+    showCases = showCase.objects.filter(is_active=True, caseType='SE')
     return render(request, 'staticPages/seo.html', locals())
 
 def sites(request):
     active_uslug='item-active'
     active_sites ='drop-item-active'
-    showCases = showCase.objects.filter(is_active=True, showInHomePage=True)
+    showCases = showCase.objects.filter(is_active=True, caseType='SI')
     return render(request, 'staticPages/sites.html', locals())
 
 def contacts(request):
@@ -48,13 +48,13 @@ def showcase(request):
 def context(request):
     active_uslug = 'item-active'
     active_context = 'drop-item-active'
-    showCases = showCase.objects.filter(is_active=True, showInHomePage=True)
+    showCases = showCase.objects.filter(is_active=True, caseType='CO')
     return render(request, 'staticPages/context1.html', locals())
 
 def target(request):
     active_uslug = 'item-active'
     active_target = 'drop-item-active'
-    showCases = showCase.objects.filter(is_active=True, showInHomePage=True)
+    showCases = showCase.objects.filter(is_active=True, caseType='TA')
 
     return render(request, 'staticPages/target.html', locals())
 
