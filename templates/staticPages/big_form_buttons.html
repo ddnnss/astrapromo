@@ -5,54 +5,57 @@
 
         <div class="row">
 
-                <div class="col-md-8 col-sm-12 mb-4 button-form">
-                    <h3 >Возник вопрос или вы готовы работать?</h3>
-        <h4>Выберите удобный для вас способ, и мы свяжемся с вами!</h4>
-                        <a  class="btn btn-outline-white" style="    width: 545px; padding: 15px 60px 15px 60px;" href="mailto:igor@astrapromo.ru">Получить коммерческое предложение по почте</a>
-                       <a  class="btn btn-outline-white" style="    width: 361px; padding: 15px 60px 15px 60px;" data-toggle="modal" data-target="#callBackModal" href="#">Заказать обратный звонок</a>
-
-                </div>
-
-{#                <div class="col-md-3 col-sm-12  mb-4">#}
-{#                          <a  class="btn btn-2" href="mailto:igor@astrapromo.ru">Направить письмо</a>#}
-{##}
-{#                </div>#}
-
-{#                <div class="col-md-6 col-sm-12 text-center">#}
-{#                        <a style="width: auto;" class="btn btn-2" data-toggle="modal" data-target="#quizModal"  href="#">Получить коммерческое предложение</a>#}
-{##}
-{#                </div>#}
-               <div style="display: none" class="col-md-4 col-sm-12 ">
-                    <div class="button-form-long-div">
-                       <span >Пройдите опрос!</span>
-                        <p>Получите скидку 30%</p>
-                        <span style="font-size: 14px;">Ответьте на несколько простых вопросов о Вашем проекте, чтобы мы подобрали для Вас оптимальный пакет услуг и предоставили скидку 30% на любую из наших услуг</span>
-
-                        <a  class="btn btn-outline-orange" style="    width: 249px; " data-toggle="modal" data-target="#quizModal"  href="#">пройти опрос</a>
-
-
-
+            <div class="col-md-12 col-sm-12 mb-4 button-form">
+                <h3 >Возник вопрос или вы готовы работать?</h3>
+                <h4>Мы сами вам перезвоним, просто оставьте свой номер</h4>
+                <form  id="callBackForm" onsubmit="callBack_home(event);" autocomplete="off" class="py-2" >
+                    <div class="row" style="align-items: center;">
+                        <div class="col-md-4 col-sm-1 mb-4"> <input style="background-color: #2cb3e5;" type="text" id="callBackHome_name" required="required" placeholder="Ваше имя"></div>
+                        <div class="col-md-4 col-sm-1 mb-4"><input style="background-color: #2cb3e5;" type="text" id="callBackHome_phone" required="required" placeholder="Сотовый номер"></div>
+                        <div class="col-md-4 col-sm-1 mb-4">  <button id="homeSubmit"  type="submit" class="btn btn-outline-white">Отправить</button></div>
                     </div>
+                </form>
+                <p style="color: #fff; font-size: x-large; display: none;" id="callBackHome_done">Ваш запрос отправлен. Ожидайте звонка.</p>
+                {#                        <a  class="btn btn-outline-white" style="    width: 545px; padding: 15px 60px 15px 60px;" href="mailto:igor@astrapromo.ru">Получить коммерческое предложение по почте</a>#}
+                {#                       <a  class="btn btn-outline-white" style="    width: 361px; padding: 15px 60px 15px 60px;" data-toggle="modal" data-target="#callBackModal" href="#">Заказать обратный звонок</a>#}
 
-                </div>
+            </div>
+            {#                <div class="col-md-3 col-sm-12  mb-4">#}
+            {#                          <a  class="btn btn-2" href="mailto:igor@astrapromo.ru">Направить письмо</a>#}
+            {##}
+            {#                </div>#}
 
-
+            {#                <div class="col-md-6 col-sm-12 text-center">#}
+            {#                        <a style="width: auto;" class="btn btn-2" data-toggle="modal" data-target="#quizModal"  href="#">Получить коммерческое предложение</a>#}
+            {##}
+            {#                </div>#}
+            {#               <div style="display: none" class="col-md-4 col-sm-12 ">#}
+            {#                    <div class="button-form-long-div">#}
+            {#                       <span >Пройдите опрос!</span>#}
+            {#                        <p>Получите скидку 30%</p>#}
+            {#                        <span style="font-size: 14px;">Ответьте на несколько простых вопросов о Вашем проекте, чтобы мы подобрали для Вас оптимальный пакет услуг и предоставили скидку 30% на любую из наших услуг</span>#}
+            {##}
+            {#                        <a  class="btn btn-outline-orange" style="    width: 249px; " data-toggle="modal" data-target="#quizModal"  href="#">пройти опрос</a>#}
+            {##}
+            {##}
+            {##}
+            {#                    </div>#}
+            {##}
+            {#                </div>#}
         </div>
-
-
-<p style="color: #fff; font-size: x-large; display: none;" id="callBackHome_done">Ваш запрос отправлен. Ожидайте звонка.</p>
+        <p style="color: #fff; font-size: x-large; display: none;" id="callBackHome_done">Ваш запрос отправлен. Ожидайте звонка.</p>
     </div>
 </div>
 {% if active_home %}
     {% include 'staticPages/home_quiz.html' %}
-{% elif  active_target %}
-    {% include 'staticPages/target_quiz.html' %}
-{% elif active_context  %}
-    {% include 'staticPages/context_quiz.html' %}
-{% elif active_seo  %}
-    {% include 'staticPages/seo_quiz.html' %}
-{% elif active_sites  %}
-    {% include 'staticPages/sites_quiz.html' %}
+    {#{% elif  active_target %}#}
+    {#    {% include 'staticPages/target_quiz.html' %}#}
+    {#{% elif active_context  %}#}
+    {#    {% include 'staticPages/context_quiz.html' %}#}
+    {#{% elif active_seo  %}#}
+    {#    {% include 'staticPages/seo_quiz.html' %}#}
+    {#{% elif active_sites  %}#}
+    {#    {% include 'staticPages/sites_quiz.html' %}#}
 {% endif %}
 
 

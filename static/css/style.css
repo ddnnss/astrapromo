@@ -101,9 +101,12 @@ body{
 
 .text-underline{
     border-bottom: 3px solid #f57d14;
-    width: 447px;
+    width: 650px;
 }
-
+.text-underline-1{
+    border-bottom: 3px solid #f57d14;
+    width: 350px;
+}
 .color-blue{
     color: #00b4e7;
 }
@@ -476,7 +479,7 @@ input[type="text"]{
 .form_container{
     /*#85d3f5;*/
     background-color:#2cb3e5;
-    height: 470px;
+    height: 383px;
 
 }
 .form_inner_container{
