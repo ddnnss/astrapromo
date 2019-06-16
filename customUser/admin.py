@@ -11,8 +11,7 @@ class UserAdmin(DjangoUserAdmin):
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
         (_('Personal info'), {'fields': ('clientFio', 'clientCompany', 'clientSite', 'country',
-                                         'city', 'post_code', 'phone', 'passport',
-                                         'address', 'comment', 'is_allow_email')}),
+                                         'city', 'post_code', 'phone', 'address', 'comment', 'is_allow_email')}),
         (_('Permissions'), {'fields': ('is_active', 'is_staff', 'is_superuser',
                                        'groups', 'user_permissions')}),
         (_('Important dates'), {'fields': ('last_login', 'date_joined')}),
