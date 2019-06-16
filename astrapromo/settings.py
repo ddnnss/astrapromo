@@ -29,9 +29,9 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 CKEDITOR_UPLOAD_PATH = "uploads/"
-EMAIL_HOST = settings.SERVER
-EMAIL_HOST_USER = settings.USER
-EMAIL_HOST_PASSWORD = settings.API
+EMAIL_HOST = mailsetup.SERVER
+EMAIL_HOST_USER = mailsetup.USER
+EMAIL_HOST_PASSWORD = mailsetup.API
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 CKEDITOR_CONFIGS = {
@@ -195,10 +195,10 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+# ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
