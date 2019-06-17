@@ -1,14 +1,16 @@
-let divs = document.getElementsByClassName('inner-circle')
+jQuery(function($){
+    $("#callBackHome_phone").mask("+7 (999) 999-99-99");
+});
+jQuery(function($){
+    $("#callBack_phone").mask("+7 (999) 999-99-99");
+});
+jQuery(function($){
+    $("#step-4-phone").mask("+7 (999) 999-99-99");
+});
 
-for (let div in divs) {
-    divs[div].addEventListener('mouseover', function () {
-    let text = this.getElementsByClassName('super-text')[0].innerHTML
-    $('.inner-text').html(text)
-    })
-
-}
-
-
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
 function modalCallback() {
     client_name = document.getElementById("callBack_name").value;
     client_phone = document.getElementById("callBack_phone").value;
@@ -17,19 +19,19 @@ function modalCallback() {
     $('.nameError').css('display','none');
     $('.phoneError').css('display','none');
     if (client_name == ''){
-         $('#modalSubmit').html('ОТПРАВИТЬ');
+        $('#modalSubmit').html('ОТПРАВИТЬ');
         $('#modalSubmit').removeAttr('disabled');
         console.log('name empty');
         $('#callBackModal').removeClass('input-error');
         $('.nameError').css('display','block');
         setTimeout(function(){
-          $('#callBackModal').addClass('input-error');
+            $('#callBackModal').addClass('input-error');
         },500);
 
         return;
     }
-     if (client_phone == ''){
-         $('#modalSubmit').html('ОТПРАВИТЬ');
+    if (client_phone == ''){
+        $('#modalSubmit').html('ОТПРАВИТЬ');
         $('#modalSubmit').removeAttr('disabled');
         console.log('phone empty');
         $('#callBackModal').removeClass('input-error');
@@ -41,22 +43,22 @@ function modalCallback() {
     }
     csrfmiddlewaretoken = document.getElementsByName("csrfmiddlewaretoken")[0].value;
 
-        $.ajax({
-            type:"POST",
-            url:'/user/callback/',
-            data:{
-                'csrfmiddlewaretoken': csrfmiddlewaretoken,
-                'client_name':client_name,
-                'client_phone':client_phone,
-            },
-            success : function(data){
-                console.log(data);
-                 $('#modalSubmit').html('ОТПРАВИТЬ');
-                $('#modalSubmit').removeAttr('disabled');
-                $('#callBack_send').css('display','none');
-                $('#callBack_done').css('display','block');
-            }
-        });
+    $.ajax({
+        type:"POST",
+        url:'/user/callback/',
+        data:{
+            'csrfmiddlewaretoken': csrfmiddlewaretoken,
+            'client_name':client_name,
+            'client_phone':client_phone,
+        },
+        success : function(data){
+            console.log(data);
+            $('#modalSubmit').html('ОТПРАВИТЬ');
+            $('#modalSubmit').removeAttr('disabled');
+            $('#callBack_send').css('display','none');
+            $('#callBack_done').css('display','block');
+        }
+    });
 }
 
 function callBack_home(e) {
@@ -64,24 +66,25 @@ function callBack_home(e) {
     client_name = document.getElementById("callBackHome_name").value;
     client_phone = document.getElementById("callBackHome_phone").value;
     client_email = document.getElementById("callBackHome_email").value;
-    $('#homeSubmit').addClass('is-loading');
+    $('#homeSubmit').attr('disabled','disabled');
+    $('#homeSubmit').html('Отправка...');
     csrfmiddlewaretoken = document.getElementsByName("csrfmiddlewaretoken")[0].value;
 
-        $.ajax({
-            type:"POST",
-            url:'/user/callback/',
-            data:{
-                'csrfmiddlewaretoken': csrfmiddlewaretoken,
-                'client_name':client_name,
-                'client_phone':client_phone,
-                'client_email':client_email,
-            },
-            success : function(data){
-                console.log(data);
-                $('#callBackForm').css('display','none');
-                $('#callBackHome_done').css('display','block');
-            }
-        });
+    $.ajax({
+        type:"POST",
+        url:'/user/callback/',
+        data:{
+            'csrfmiddlewaretoken': csrfmiddlewaretoken,
+            'client_name':client_name,
+            'client_phone':client_phone,
+            'client_email':client_email,
+        },
+        success : function(data){
+            console.log(data);
+            $('#callBackForm').css('display','none');
+            $('#callBackHome_done').css('display','block');
+        }
+    });
 
 }
 

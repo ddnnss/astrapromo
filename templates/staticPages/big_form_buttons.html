@@ -7,9 +7,16 @@
                 <h4>Мы сами вам перезвоним, просто оставьте свой номер</h4>
                 <form  id="callBackForm" onsubmit="callBack_home(event);" autocomplete="off" class="py-2" >
                     <div class="row" style="align-items: center;">
-                        <div class="col-md-4 col-sm-1 mb-4"> <input style="background-color: #2cb3e5;" type="text" id="callBackHome_name" required="required" placeholder="Ваше имя"></div>
-                        <div class="col-md-4 col-sm-1 mb-4"><input style="background-color: #2cb3e5;" type="text" id="callBackHome_phone" required="required" placeholder="Сотовый номер"></div>
-                        <div class="col-md-4 col-sm-1 mb-4">  <button id="homeSubmit"  type="submit" class="btn btn-outline-white">Отправить</button></div>
+                        <div class="col-md-4 col-sm-1 mb-4">
+                            <input style="background-color: #2cb3e5;" type="text" id="callBackHome_name" required="required" placeholder="Ваше имя">
+                        </div>
+                        <div class="col-md-4 col-sm-1 mb-4">
+                            <input style="background-color: #2cb3e5;" type="text" id="callBackHome_phone" required="required" placeholder="Сотовый номер">
+                            <input type="hidden" id="callBackHome_email" value="none" >
+                        </div>
+                        <div class="col-md-4 col-sm-1 mb-4">
+                            <button id="homeSubmit"  type="submit" class="btn btn-outline-white">Отправить</button>
+                        </div>
                     </div>
                 </form>
                 <p style="color: #fff; font-size: x-large; display: none;" id="callBackHome_done">Ваш запрос отправлен. Ожидайте звонка.</p>

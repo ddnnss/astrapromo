@@ -155,6 +155,8 @@ $('#quiz-complete').click(function (e) {
   step4 = $("#step-4-name").val() + ' ' + $("#step-4-phone").val() + ' ' + $("#step-4-email").val();
   csrfmiddlewaretoken = document.getElementsByName("csrfmiddlewaretoken")[0].value;
   console.log(step0,step1,step2,step3,step4);
+  $('#quiz-complete').attr('disabled','disabled');
+  $('#quiz-complete').html('Отправка...');
 
 
 
