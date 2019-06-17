@@ -2,37 +2,26 @@
 {% load static %}
 {% block content %}
     <div class="container">
-    <div class="row">
-    {% for service in services %}
-         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
-         <figure class="imghvr-blur"><img src="{{ service.serviceImage.url }}" alt="example-image">
-            <figcaption>
-                <div>
-                    <h3>{{ service.serviceName }}<span style=" position: relative; left: 30%;">{{ service.servicePrice }}</span></h3>
-                    <h4>{{ service.serviceNameSmall }}</h4>
+        <div class="row">
+            {% for service in services %}
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
+                    <figure class="imghvr-blur"><img src="{{ service.serviceImage.url }}" alt="{{ service.serviceName }} в AstraPromo">
+                        <figcaption>
+                            <div>
+                                <h3>{{ service.serviceName }}<span style=" position: relative; left: 30%;">{{ service.servicePrice }}</span></h3>
+                                <h4>{{ service.serviceNameSmall }}</h4>
+                            </div>
+                            <p>{{ service.serviceInfo }}</p>
+                            <a class="btn btn-3" href="#" data-toggle="modal" data-target="#callBackModal" >ЗАКАЗАТЬ УСЛУГУ</a>
+                        </figcaption>
+                    </figure>
                 </div>
-
-
-              <p>{{ service.serviceInfo }}</p>
-                 <a class="btn btn-3" href="#" data-toggle="modal" data-target="#callBackModal" >ЗАКАЗАТЬ УСЛУГУ</a>
-            </figcaption>
-          </figure>
-
-
+            {% endfor %}
         </div>
-
-         {% endfor %}
-</div>
     </div>
-
-
-<div class="gap-60"></div>
+    <div class="gap-60"></div>
     {% include 'staticPages/big_form_buttons.html' %}
     <div class="gap-60"></div>
-
-
-
-
 {% endblock %}
 
 

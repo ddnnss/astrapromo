@@ -1,36 +1,33 @@
- <div class="modal fade" id="callBackModal" tabindex="-1" role="dialog" aria-labelledby="callBackModal" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content callBackModal">
-        <div class="modal-body">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            <h2 class="mb-4">Заказать звонок</h2>
-            <hr>
-            <div id="callBack_send">
-                <input style="margin-top: 20px" id="callBack_name" type="text" placeholder="Ваше имя" required>
-                <div style="display: none;" class="nameError">
-                    <small  class="validation-error">Это поле обязательно</small>
+<div class="modal fade" id="callBackModal" tabindex="-1" role="dialog" aria-labelledby="callBackModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content callBackModal">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h2 class="mb-4">Заказать звонок</h2>
+                <hr>
+                <div id="callBack_send">
+                    <input style="margin-top: 20px" id="callBack_name" type="text" placeholder="Ваше имя" required>
+                    <div style="display: none;" class="nameError">
+                        <small  class="validation-error">Это поле обязательно</small>
+                    </div>
+                    <div class="gap-20"></div>
+                    <input  style="margin-top: 10px" type="text" id="callBack_phone" placeholder="Ваш телефон" required>
+                    <div style="display: none;"  class="phoneError">
+                        <small class="validation-error">Это поле обязательно</small>
+                    </div>
+                    <div class="gap-20"></div>
+                    <p style="color: #3e454b; font-size: 9px; width: 80%; font-family: 'SF UI Display Light',sans-serif; display: flex;align-items: center;margin: 10px 0 30px 0;">
+                        <input class="modalInput" type="checkbox"  checked="checked">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных
+                    </p>
+                    <button onclick="modalCallback();" id="modalSubmit"  class="btn btn-1">ОТПРАВИТЬ</button>
                 </div>
-                <div class="gap-20"></div>
-                <input  style="margin-top: 10px" type="text" id="callBack_phone" placeholder="Ваш телефон" required>
-                <div style="display: none;"  class="phoneError">
-                    <small class="validation-error">Это поле обязательно</small>
+                <div style="display: none;" id="callBack_done">
+                    <h2  class="title is-3 no-margin">ЗАПРОС ОТПРАВЛЕН!</h2>
+                    <p  class="pt-20">Ожидайте звонка.</p>
                 </div>
-                <div class="gap-20"></div>
-
-
-                <p style="color: #3e454b; font-size: 9px; width: 80%; font-family: 'SF UI Display Light',sans-serif; display: flex;align-items: center;margin: 10px 0 30px 0;">
- <input class="modalInput" type="checkbox"  checked="checked">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных
-                </p>
-
-                <button onclick="modalCallback();" id="modalSubmit"  class="btn btn-1">ОТПРАВИТЬ</button>
-            </div>
-            <div style="display: none;" id="callBack_done">
-                <h2  class="title is-3 no-margin">ЗАПРОС ОТПРАВЛЕН!</h2>
-                <p  class="pt-20">Ожидайте звонка.</p>
             </div>
         </div>
     </div>
-    </div>
-  </div>
+</div>
