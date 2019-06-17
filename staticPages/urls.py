@@ -14,6 +14,8 @@ urlpatterns = [
     path('services/', views.services, name='services'),
     path('robots.txt', views.robots, name='robots'),
     path('sitemap.xml', views.sitemap, name='sitemap'),
+    path('index.html', views.index, name='index.html'),
+    path('index.php', views.index, name='index.php'),
 
 
 
