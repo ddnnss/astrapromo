@@ -12,6 +12,8 @@ urlpatterns = [
     path('target/', views.target, name='target'),
     path('caseinfo/', views.caseinfo, name='caseinfo'),
     path('services/', views.services, name='services'),
+    path('robots.txt', views.robots, name='robots'),
+    path('sitemap.xml', views.sitemap, name='sitemap'),
 
 
 

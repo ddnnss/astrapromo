@@ -20,79 +20,42 @@
 </head>
 {#ondragstart="return false;" ondrop="return false;" oncontextmenu="return false"#}
 <body >
-    <form id="dummy_form">{% csrf_token %}</form>
+<form id="dummy_form">{% csrf_token %}</form>
 
-    {% include 'header.html' %}
-    {% block content %}
-    {% endblock %}
-    {% include 'footer.html' %}
+{% include 'header.html' %}
+{% block content %}
+{% endblock %}
+{% include 'footer.html' %}
 
 
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 <script src="https://mreq.github.io/slick-lightbox/dist/slick-lightbox.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"> </script>
-    <script src="{% static 'js/forms.js' %}"></script>
-      <script src="{% static 'js/inputMask.js' %}"></script>
-    <script src="{% static 'js/showCase.js' %}"></script>
-     <script src="{% static 'js/quiz.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"> </script>
+<script src="{% static 'js/forms.js' %}"></script>
+<script src="{% static 'js/inputMask.js' %}"></script>
+
+
+{% block js %}
+{% endblock %}
 <script>
-    $('.portfolio-slides').slick({
-        infinite        : true,
-        slidesToShow    : 5,
-        slidesToScroll  : 1,
-        mobileFirst     : true,
-        responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 5,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 360,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-    });
 
-
-    $('.portfolio-slides').slickLightbox({
-        itemSelector        : 'a',
-        navigateByKeyboard  : true
-    });
 
     jQuery(function($){
-   $("#callBackHome_phone").mask("+7 (999) 999-99-99");
+        $("#callBackHome_phone").mask("+7 (999) 999-99-99");
     });
- jQuery(function($){
-   $("#callBack_phone").mask("+7 (999) 999-99-99");
+    jQuery(function($){
+        $("#callBack_phone").mask("+7 (999) 999-99-99");
     });
-jQuery(function($){
-   $("#step-4-phone").mask("+7 (999) 999-99-99");
+    jQuery(function($){
+        $("#step-4-phone").mask("+7 (999) 999-99-99");
     });
 
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
 
 </script>
 

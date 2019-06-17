@@ -1,215 +1,239 @@
 {% extends 'basic.html' %}
 {% load static %}
 {% block content %}
-<div class="container">
-    <div class="row align-items-center ">
-        <div class="col-md-6 order-md-1 mb-4 ">
-            <h1 class="home-h1">Приведем клиентов в <span class="cool-text color-orange">Ваш бизнес</span> уже через <span class="cool-text color-orange">14 дней</span></h1>
-            <p style="margin-bottom: 30px; font-size: 16px;">Ответьте на <span class="cool-text color-orange">5 простых</span> вопросов и узнайте,<br> как получать от <span class="cool-text color-orange">300 заявок</span> ежемесячно!</p>
-            <a style="" class="btn btn-1 " data-toggle="modal" data-target="#quizModal" href="#">Получить клиентов</a>
+    <div class="container">
+        <div class="row align-items-center ">
+            <div class="col-md-6 order-md-1 mb-4 ">
+                <h1 class="home-h1">Приведем клиентов в <span class="cool-text color-orange">Ваш бизнес</span> уже через <span class="cool-text color-orange">14 дней</span></h1>
+                <p style="margin-bottom: 30px; font-size: 16px;">Ответьте на <span class="cool-text color-orange">5 простых</span> вопросов и узнайте,<br> как получать от <span class="cool-text color-orange">300 заявок</span> ежемесячно!</p>
+                <a style="" class="btn btn-1 " data-toggle="modal" data-target="#quizModal" href="#">Получить клиентов</a>
+            </div>
+            <div class="col-md-6  order-md-2 mb-4">
+                <img class="img-fluid" src="{% static 'images/home_1.jpg' %}" alt="Продвижение сайтов в Челябинске">
+            </div>
         </div>
-        <div class="col-md-6  order-md-2 mb-4">
-            <img class="img-fluid" src="{% static 'images/home_1.jpg' %}" alt="">
-        </div>
-    </div>
-<div class="gap-60"></div>
-<div class="gap-40"></div>
-
-<h3 class="context-h1 text-underline">Мы те, кто увеличит доход от вашего бизнеса </h3>
-<div class="gap-20"></div>
-<p>Не льем воду, а рассказываем по факту, что для этого нужно и как это делается</p>
-
-<div class="gap-60"></div>
-<div class="gap-40"></div>
-  <div class="row">
-
+        <div class="gap-60"></div>
+        <div class="gap-40"></div>
+        <h3 class="context-h1 text-underline">Мы те, кто увеличит доход от вашего бизнеса </h3>
+        <div class="gap-20"></div>
+        <p>Не льем воду, а рассказываем по факту, что для этого нужно и как это делается</p>
+        <div class="gap-60"></div>
+        <div class="gap-40"></div>
+        <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 m-b-50 ">
-                <figure class="imghvr-blur"><img src="{% static 'images/home-team1.jpg' %}">
+                <figure class="imghvr-blur"><img src="{% static 'images/home-team1.jpg' %}" alt="Продвижение сайтов в Челябинске">
                     <figcaption>
-
-                        <p>Lorem ipsum dolor sit amet.</p>
-
-                    </figcaption></a>
+                        <p class="team-info">С 2005 года в собственном бизнесе (b2b/b2c услуги и товары). Практикующий бизнес-коуч. За плечами несколько десятков успешных отделов продаж в найме и для личного бизнеса. В сфере интернет маркетинга более 3 лет.</p>
+                    </figcaption>
                 </figure>
                 <div>
                     <div class="gap-20"></div>
-                <p class="team-name">Игорь Анатольевич</p>
-                <span class="team-work">UI/UX Дизайнер</span>
-            </div>
-            </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 m-b-50 home-team">
-                <figure class="imghvr-blur"><img src="{% static 'images/home-team1.jpg' %}">
-                    <figcaption>
-
-                        <p>Lorem ipsum dolor sit amet.</p>
-
-                    </figcaption></a>
-                </figure>
-            <div>
-                  <div class="gap-20"></div>
-                 <p class="team-name">Игорь Анатольевич</p>
-                <span class="team-work">UI/UX Дизайнер</span>
-            </div>
-            </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 m-b-50 ">
-                <figure class="imghvr-blur"><img src="{% static 'images/home-team1.jpg' %}">
-                    <figcaption>
-
-                        <p>Lorem ipsum dolor sit amet.</p>
-
-                    </figcaption></a>
-                </figure>
-            <div>
-                  <div class="gap-20"></div>
-               <p class="team-name">Игорь Анатольевич</p>
-                <span class="team-work">UI/UX Дизайнер</span>
-            </div>
-            </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 m-b-50 ">
-                <figure class="imghvr-blur"><img src="{% static 'images/home-team1.jpg' %}">
-                    <figcaption>
-
-                        <p>Lorem ipsum dolor sit amet.</p>
-
-                    </figcaption></a>
-                </figure>
-            <div>
-                  <div class="gap-20"></div>
-                <p class="team-name">Игорь Анатольевич</p>
-                <span class="team-work">UI/UX Дизайнер</span>
-            </div>
-            </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 m-b-50 ">
-                <figure class="imghvr-blur"><img src="{% static 'images/home-team1.jpg' %}">
-                    <figcaption>
-
-                        <p>Lorem ipsum dolor sit amet.</p>
-
-                    </figcaption></a>
-                </figure>
-            <div>
-                  <div class="gap-20"></div>
-               <p class="team-name">Игорь Анатольевич</p>
-                <span class="team-work">UI/UX Дизайнер</span>
-            </div>
-            </div>
-
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 m-b-50 ">
-                <figure class="imghvr-blur"><img src="{% static 'images/home-team1.jpg' %}">
-                    <figcaption>
-
-                        <p>Lorem ipsum dolor sit amet.</p>
-
-                    </figcaption></a>
-                </figure>
-            <div>
-                  <div class="gap-20"></div>
-                <p class="team-name">Игорь Анатольевич</p>
-                <span class="team-work">UI/UX Дизайнер</span>
-            </div>
-            </div>
-
-
-    </div>
-<div class="gap-60"></div>
-<div class="gap-60"></div>
-<h3 class="context-h1 text-underline-1">Вот, как мы это сделаем</h3>
-<div class="gap-20"></div>
-<p style="line-height: 25px;">Полностью погружаясь в ваш бизнес и нишу, анализируем конкурентов, определяем целевую аудиторию, и исходя из этого создаем продающий сайт, качественно настраиваем рекламу и другие каналы, а так же, находим узкие места в отделах продаж и даем рекомендации по их улучшению</p>
-<div class="gap-60"></div>
-<div class="gap-40"></div>
-    <div class="row features ">
-        <div class="col-md-4 mb-4">
-            <div class="row">
-                <div class="col-md-1">
-                    <span>1</span>
+                    <p class="team-name">Игорь</p>
+                    <span class="team-work">Руководитель проектов</span>
                 </div>
-                <div class="col-md-11">
-                    <h3>Контекстная реклама</h3>
-                    <p>Быстрый, но относительно затратный способ привлечения как горячих, так и теплых клиентов из Yandex и Google</p>
-                    <a class="btn  btn-outlinee" href="{% url 'context' %}">узнать подробнее</a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 m-b-50 home-team">
+                <figure class="imghvr-blur"><img src="{% static 'images/home-team1.jpg' %}" alt="Продвижение сайтов в Челябинске">
+                    <figcaption>
+                        <p class="team-info">Успешно реализовано более 40 проектов с бюджетом более 3 млн рублей. Эксперт в нишах: HoReCa, интернет-магазины, медицина, гостиничный бизнес, турагентства, инфобизнес, event мероприятия.</p>
+                    </figcaption>
+                </figure>
+                <div>
+                    <div class="gap-20"></div>
+                    <p class="team-name">Михаил</p>
+                    <span class="team-work">Ведущий таргетолог</span>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 m-b-50 ">
+                <figure class="imghvr-blur"><img src="{% static 'images/home-team1.jpg' %}" alt="Продвижение сайтов в Челябинске">
+                    <figcaption>
+                        <p class="team-info">Успешно разработано и внедрено более 100 индивидуальных решений для автоматизации, CMS систем управления для корпоративных сайтов и интернет-магазинов различной сложности.</p>
+                    </figcaption>
+                </figure>
+                <div>
+                    <div class="gap-20"></div>
+                    <p class="team-name">Дмитрий</p>
+                    <span class="team-work">Ведущий программист</span>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 m-b-50 ">
+                <figure class="imghvr-blur"><img src="{% static 'images/home-team1.jpg' %}" alt="Продвижение сайтов в Челябинске">
+                    <figcaption>
+                        <p class="team-info">Успешно настроено и ведется более 50 различных рекламный кампаний в таких нишах как: интернет-магазины, промышленное оборудование, строительство, клининговые услуги, общественное питание.</p>
+                    </figcaption>
+                </figure>
+                <div>
+                    <div class="gap-20"></div>
+                    <p class="team-name">Мария</p>
+                    <span class="team-work">Ведущий директолог</span>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 m-b-50 ">
+                <figure class="imghvr-blur"><img src="{% static 'images/home-team1.jpg' %}" alt="Продвижение сайтов в Челябинске">
+                    <figcaption>
+
+                        <p class="team-info">Выведено в ТОП-10 более 300 проектов: интернет-магазины, организация праздников, юридические услуги, продажа авто, трубная продукция, общественное питание, клининговые услуги, строительство.</p>
+
+                    </figcaption>
+                </figure>
+                <div>
+                    <div class="gap-20"></div>
+                    <p class="team-name">Иван</p>
+                    <span class="team-work">Ведущий SEO оптимизатор</span>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 m-b-50 ">
+                <figure class="imghvr-blur"><img src="{% static 'images/home-team1.jpg' %}" alt="Продвижение сайтов в Челябинске">
+                    <figcaption>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </figcaption>
+                </figure>
+                <div>
+                    <div class="gap-20"></div>
+                    <p class="team-name">Игорь</p>
+                    <span class="team-work">UI/UX Дизайнер</span>
                 </div>
             </div>
         </div>
-        <div class="col-md-4 mb-4">
-            <div class="row">
-                <div class="col-md-1">
-                    <span>2</span>
-                </div>
-                <div class="col-md-11">
-                    <h3>SEO продвижение</h3>
-                    <p>Очень экономичный, при этом долгосрочный способ привлечения клиентов их поисковых систем Yandex и Google</p>
-                    <a class="btn btn-outlinee"  href="{% url 'seo' %}">узнать подробнее</a>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 mb-4">
-            <div class="row">
-                <div class="col-md-1">
-                    <span>3</span>
-                </div>
-                <div class="col-md-11">
-                    <h3>Таргетированная реклама</h3>
-                    <p>Относительно затратный и быстрый способ привлечения большого количества "холодных" клиентов из социальных сетей</p>
-                    <a class="btn btn-outlinee " href="{% url 'target' %}">узнать подробнее</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="gap-60"></div>
-<div class="gap-20"></div>
-<div class="gap-40"></div>
-    <div class="row">
-        {% for case in showCases %}
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
-                <figure class="imghvr-blur"><img src="{{ case.image.url }}" alt="{{ case.caseName }}">
-                    <figcaption>
-                        <h3>{{ case.caseName }}</h3>
-                        <p>{{ case.showcaseInfo }}</p>
-                        <a class="btn btn-3" href="javascript:void(0);" onclick="getCaseInfo({{ case.id }})">СМОТРЕТЬ ПРОЕКТ</a>
-                    </figcaption></a>
-                </figure>
-            </div>
-        {% endfor %}
-    </div>
-
-
-
-
-    <div class="gap-30"></div>
-
- <a class="btn btn-1 by-center" href="{% url 'showcase' %}">Смотреть все кейсы</a>
-    <div class="gap-60"></div>
-  <div class="gap-60"></div>
-   <div class="">
-        <div class="portfolio-slides ">
-            {% for review in reviews %}
-                <div class="single">
-                    <div class="slick-overlay ">
-                        <a href="{{ review.image.url }}">
-                            <img  width="200" src="{{ review.image.url }}" alt=""/>
-                        </a>
+        <div class="gap-60"></div>
+        <div class="gap-60"></div>
+        <h3 class="context-h1 text-underline-1">Вот, как мы это сделаем</h3>
+        <div class="gap-20"></div>
+        <p style="line-height: 25px;">Полностью погружаясь в ваш бизнес и нишу, анализируем конкурентов, определяем целевую аудиторию, и исходя из этого создаем продающий сайт, качественно настраиваем рекламу и другие каналы, а так же, находим узкие места в отделах продаж и даем рекомендации по их улучшению</p>
+        <div class="gap-60"></div>
+        <div class="gap-40"></div>
+        <div class="row features ">
+            <div class="col-md-4 mb-4">
+                <div class="row">
+                    <div class="col-md-1">
+                        <span>1</span>
                     </div>
+                    <div class="col-md-11">
+                        <h3>Контекстная реклама</h3>
+                        <p>Быстрый, но относительно затратный способ привлечения как горячих, так и теплых клиентов из Yandex и Google</p>
+                        <a class="btn  btn-outlinee" href="{% url 'context' %}">узнать подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="row">
+                    <div class="col-md-1">
+                        <span>2</span>
+                    </div>
+                    <div class="col-md-11">
+                        <h3>SEO продвижение</h3>
+                        <p>Очень экономичный, при этом долгосрочный способ привлечения клиентов их поисковых систем Yandex и Google</p>
+                        <a class="btn btn-outlinee"  href="{% url 'seo' %}">узнать подробнее</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="row">
+                    <div class="col-md-1">
+                        <span>3</span>
+                    </div>
+                    <div class="col-md-11">
+                        <h3>Таргетированная реклама</h3>
+                        <p>Относительно затратный и быстрый способ привлечения большого количества "холодных" клиентов из социальных сетей</p>
+                        <a class="btn btn-outlinee " href="{% url 'target' %}">узнать подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gap-60"></div>
+        <div class="gap-20"></div>
+        <div class="gap-40"></div>
+        <div class="row">
+            {% for case in showCases %}
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
+                    <figure class="imghvr-blur"><img src="{{ case.image.url }}" alt="{{ case.caseName }}">
+                        <figcaption>
+                            <h3>{{ case.caseName }}</h3>
+                            <p>{{ case.showcaseInfo }}</p>
+                            <a class="btn btn-3" href="javascript:void(0);" onclick="getCaseInfo({{ case.id }})">СМОТРЕТЬ ПРОЕКТ</a>
+                        </figcaption></a>
+                    </figure>
                 </div>
             {% endfor %}
         </div>
+        <div class="gap-30"></div>
+        <a class="btn btn-1 by-center" href="{% url 'showcase' %}">Смотреть все кейсы</a>
+        <div class="gap-60"></div>
+        <div class="gap-60"></div>
+        <div class="">
+            <div class="portfolio-slides ">
+                {% for review in reviews %}
+                    <div class="single">
+                        <div class="slick-overlay ">
+                            <a href="{{ review.image.url }}">
+                                <img  width="200" src="{{ review.image.url }}" alt=""/>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="gap-60"></div>
+        <div class="gap-60"></div>
     </div>
-
-<div class="gap-60"></div>
-<div class="gap-60"></div>
-</div>
-{% include 'staticPages/big_form_buttons.html' %}
-<div class="gap-30"></div>
-<div class="gap-40"></div>
-{% include 'staticPages/callBack_modal.html' %}
-{% include 'staticPages/case_modal.html' %}
-
+    {% include 'staticPages/big_form_buttons.html' %}
+    <div class="gap-30"></div>
+    <div class="gap-40"></div>
+    {% include 'staticPages/callBack_modal.html' %}
+    {% include 'staticPages/case_modal.html' %}
+    {% include 'staticPages/home_quiz.html' %}
 {% endblock %}
+ {% block js %}
+     <script src="{% static 'js/showCase.js' %}"></script>
+     <script src="{% static 'js/quiz.js' %}"></script>
+     <script>
+       $('.portfolio-slides').slick({
+        infinite        : true,
+        slidesToShow    : 5,
+        slidesToScroll  : 1,
+        mobileFirst     : true,
+        responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 360,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+    });
 
+
+    $('.portfolio-slides').slickLightbox({
+        itemSelector        : 'a',
+        navigateByKeyboard  : true
+    });
+     </script>
+ {% endblock %}
 
 
 

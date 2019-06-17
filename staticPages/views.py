@@ -1,13 +1,13 @@
 from django.http import JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from .models import showCase, review, allServices
+
+
 def robots(request):
-    pass
-    # return render(request, 'page/robots.txt')
+    return render(request, 'staticPages/robots.txt')
 
 def sitemap(request):
-    pass
-    # return render(request, 'page/sitemap.xml', content_type = "application/xhtml+xml")
+    return render(request, 'staticPages/sitemap.xml', content_type = "application/xhtml+xml")
 
 
 
@@ -22,38 +22,59 @@ def index(request):
 
 def about(request):
     active_about ='item-active'
+    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
+    description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
+    keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     return render(request, 'staticPages/about.html', locals())
 
 def seo(request):
     active_uslug='item-active'
     active_seo ='drop-item-active'
+    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
+    description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
+    keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     showCases = showCase.objects.filter(is_active=True, caseType='SE')
     return render(request, 'staticPages/seo.html', locals())
 
 def sites(request):
     active_uslug='item-active'
     active_sites ='drop-item-active'
+    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
+    description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
+    keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     showCases = showCase.objects.filter(is_active=True, caseType='SI')
     return render(request, 'staticPages/sites.html', locals())
 
 def contacts(request):
     active_contacts ='item-active'
+    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
+    description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
+    keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     return render(request, 'staticPages/contacts.html', locals())
 
 def showcase(request):
     active_showcase ='item-active'
+    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
+    description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
+    keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     showCases = showCase.objects.filter(is_active=True)
     return render(request, 'staticPages/showcase.html', locals())
 
 def context(request):
     active_uslug = 'item-active'
     active_context = 'drop-item-active'
+    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
+    description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
+    keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     showCases = showCase.objects.filter(is_active=True, caseType='CO')
     return render(request, 'staticPages/context1.html', locals())
 
 def target(request):
     active_uslug = 'item-active'
     active_target = 'drop-item-active'
+    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
+    description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
+    keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     showCases = showCase.objects.filter(is_active=True, caseType='TA')
 
     return render(request, 'staticPages/target.html', locals())
@@ -61,6 +82,9 @@ def target(request):
 def services(request):
     active_uslug = 'item-active'
     active_services = 'drop-item-active'
+    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
+    description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
+    keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     services = allServices.objects.filter(is_active=True)
     return render(request, 'staticPages/other_services.html', locals())
 
@@ -72,3 +96,10 @@ def caseinfo(request):
     return_dict['caseName'] = case.caseName
     return_dict['caseInfo'] = case.showcaseFullInfo
     return JsonResponse(return_dict)
+
+
+
+def customhandler404(request, exception, template_name='404.html'):
+    response = render_to_response("404.html")
+    response.status_code = 404
+    return response

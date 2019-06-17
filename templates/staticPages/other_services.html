@@ -14,7 +14,7 @@
 
 
               <p>{{ service.serviceInfo }}</p>
-                 <a class="btn btn-3" href="javascript:void(0);" onclick="getCaseInfo({{ service.id }})" >ЗАКАЗАТЬ УСЛУГУ</a>
+                 <a class="btn btn-3" href="#" data-toggle="modal" data-target="#callBackModal" >ЗАКАЗАТЬ УСЛУГУ</a>
             </figcaption>
           </figure>
 
@@ -30,7 +30,7 @@
     {% include 'staticPages/big_form_buttons.html' %}
     <div class="gap-60"></div>
 
-{% include 'staticPages/case_modal.html' %}
+
 
 
 {% endblock %}

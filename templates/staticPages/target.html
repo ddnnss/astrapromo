@@ -1,154 +1,140 @@
 {% extends 'basic.html' %}
 {% load static %}
 {% block content %}
-<div class="container context-main">
-       <div class="row align-items-center context-head">
-        <div class="col-md-6 order-md-1 mb-4 ">
-            <h1 class="home-h1">Настраиваем и ведем <span class="color-orange cool-text">таргетированную рекламу</span></h1>
-            <p class="mb-4">Приведем клиентов из социальных сетей</p>
-{#            <img style="display: block; margin-bottom: 20px" src="{% static 'images/icons.png' %}">#}
-            <a style="" class="btn btn-1 " data-toggle="modal" data-target="#callBackModal" href="#">получить клиентов</a>
+    <div class="container context-main">
+        <div class="row align-items-center context-head">
+            <div class="col-md-6 order-md-1 mb-4 ">
+                <h1 class="home-h1">Настраиваем и ведем <span class="color-orange cool-text">таргетированную рекламу</span></h1>
+                <p class="mb-4">Приведем клиентов из социальных сетей</p>
+                {#            <img style="display: block; margin-bottom: 20px" src="{% static 'images/icons.png' %}">#}
+                <a style="" class="btn btn-1 " data-toggle="modal" data-target="#callBackModal" href="#">получить клиентов</a>
+            </div>
+            <div class="col-md-6  order-md-2 mb-4">
+                <img class="img-fluid" src="{% static 'images/target-head.jpg' %}" alt="">
+            </div>
         </div>
-        <div class="col-md-6  order-md-2 mb-4">
-            <img class="img-fluid" src="{% static 'images/target-head.jpg' %}" alt="">
-        </div>
-    </div>
-    <div class="gap-60"></div>
-<!--  блок что будет начало-->
-  <h3 class="context-h1 ">Зачем нужна таргетированная реклама?</h3>
+        <div class="gap-60"></div>
+        <!--  блок что будет начало-->
+        <h3 class="context-h1 ">Зачем нужна таргетированная реклама?</h3>
         <div class="gap-40"></div>
-     <div class="row  align-items-center">
-         <div class="col-md-3 what-block mb-4">
+        <div class="row  align-items-center">
+            <div class="col-md-3 what-block mb-4">
             <span class="circle1">
                 <span class="circle2">
                     <span class="circle-number">1</span>
                 </span>
             </span>
-            <p>
-            Если у Вас нет сайта, но уже сейчас нужны клиенты
-            </p>
-         </div>
+                <p>
+                    Если у Вас нет сайта, но уже сейчас нужны клиенты
+                </p>
+            </div>
             <div class="col-md-3 offset-md-1 what-block mb-4">
             <span class="circle1">
                 <span class="circle2">
                     <span class="circle-number">2</span>
                 </span>
             </span>
-            <p>
-            Если Вам уже не хватает клиентов из поисковых систем
-            </p>
-         </div>
-          <div class="col-md-3 offset-md-1 what-block mb-4">
+                <p>
+                    Если Вам уже не хватает клиентов из поисковых систем
+                </p>
+            </div>
+            <div class="col-md-3 offset-md-1 what-block mb-4">
              <span class="circle1">
                 <span class="circle2">
                     <span class="circle-number">3</span>
                 </span>
             </span>
-            <p>
-            Если Вам нужно повысить узнаваемость и лояльность к бренду
-            </p>
-         </div>
+                <p>
+                    Если Вам нужно повысить узнаваемость и лояльность к бренду
+                </p>
+            </div>
         </div>
-<!-- блок что будет конец-->
-
-      <div class="gap-60"></div>
-         <div class="gap-60"></div>
-         <div class="gap-40"></div>
-        <h3 class="context-h1 text-center ">Преимущества таргетированной рекламы</h3>
+        <div class="gap-60"></div>
         <div class="gap-60"></div>
         <div class="gap-40"></div>
-        <div class="seo-supermacy">
-            <div class="big-circle">
-                <div class="inner-circle super-1">
-                    <img src="{% static 'images/target_icon1.png' %}">
-                    <span style="display: none" class="super-text">Относительно невысокая конкуренция среди рекламодателей в социальных сетях, по сравнению с поисковыми системами Яндекс и Google</span>
-                </div>
-                <div class="inner-circle super-2">
-                    <img src="{% static 'images/target_icon2.png' %}">
-                    <span style="display: none" class="super-text">Уникальные возможности настройки точечной рекламы</span>
-                </div>
-                <div class="inner-circle super-3">
-                    <img src="{% static 'images/target_icon3.png' %}">
-                    <span style="display: none" class="super-text">Не исключает, а скорее эффективно дополняет каналы продвижения: контекстная реклама + seo продвижение</span>
-                </div>
-                <div class="inner-circle super-4">
-                    <img src="{% static 'images/target_icon4.png' %}">
-                    <span style="display: none" class="super-text">Возможность быть в более «плотном» контакте с потенциальным клиентом</span>
-                </div>
-                <div class="inner-circle super-5">
-                    <img src="{% static 'images/target_icon5.png' %}">
-                    <span style="display: none" class="super-text">Возможность получать быструю обратную связь по степени эффективности рекламы</span>
-                </div>
-                <div class="inner-circle super-6">
-                    <img src="{% static 'images/target_icon6.png' %}">
-                    <span style="display: none" class="super-text">Возможность снизить текущие расходы на рекламный бюджет до 30-50%</span>
-                </div>
+        <div class='seo-supermacy-wrapper'>
+            <h3 class="context-h1 text-center ">Преимущества таргетированной рекламы</h3>
+            <div class="gap-60"></div>
+            <div class="gap-40"></div>
+            <div class="seo-supermacy">
+                <div class="big-circle">
+                    <div class="inner-circle super-1">
+                        <img src="{% static 'images/target_icon1.png' %}" alt="Преимущества таргетированной рекламы">
+                        <span style="display: none" class="super-text">Относительно невысокая конкуренция среди рекламодателей в социальных сетях, по сравнению с поисковыми системами Яндекс и Google</span>
+                    </div>
+                    <div class="inner-circle super-2">
+                        <img src="{% static 'images/target_icon2.png' %}" alt="Преимущества таргетированной рекламы">
+                        <span style="display: none" class="super-text">Уникальные возможности настройки точечной рекламы</span>
+                    </div>
+                    <div class="inner-circle super-3">
+                        <img src="{% static 'images/target_icon3.png' %}" alt="Преимущества таргетированной рекламы">
+                        <span style="display: none" class="super-text">Не исключает, а скорее эффективно дополняет каналы продвижения: контекстная реклама + seo продвижение</span>
+                    </div>
+                    <div class="inner-circle super-4">
+                        <img src="{% static 'images/target_icon4.png' %}" alt="Преимущества таргетированной рекламы">
+                        <span style="display: none" class="super-text">Возможность быть в более «плотном» контакте с потенциальным клиентом</span>
+                    </div>
+                    <div class="inner-circle super-5">
+                        <img src="{% static 'images/target_icon5.png' %}" alt="Преимущества таргетированной рекламы">
+                        <span style="display: none" class="super-text">Возможность получать быструю обратную связь по степени эффективности рекламы</span>
+                    </div>
+                    <div class="inner-circle super-6">
+                        <img src="{% static 'images/target_icon6.png' %}" alt="Преимущества таргетированной рекламы">
+                        <span style="display: none" class="super-text">Возможность снизить текущие расходы на рекламный бюджет до 30-50%</span>
+                    </div>
 
-                <div class="inner-text">Относительно невысокая конкуренция среди рекламодателей в социальных сетях, по сравнению с поисковыми системами Яндекс и Google</div>
+                    <div class="inner-text">Относительно невысокая конкуренция среди рекламодателей в социальных сетях, по сравнению с поисковыми системами Яндекс и Google</div>
+                </div>
             </div>
-
+            <div class="gap-60"></div>
+            <div class="gap-60"></div>
+            <div class="gap-60"></div>
         </div>
-
-
-         <div class="gap-60"></div>
-         <div class="gap-60"></div>
-         <div class="gap-60"></div>
-
-     <h3 class="context-h1 ">Этапы работ по настройке и ведению таргетированной рекламы</h3>
-    <div class="gap-60"></div>
-     <div class="gap-20"></div>
-<div class="row features_target ">
-    <div class="col-md-1 mb-4">
-        <span>1</span>
-    </div>
-     <div class="col-md-3 mb-4">
-        <h3>Разработка стратегии</h3>
-         <p>Определение стратегии: продаем в «лоб» или работа «в долгую»</p>
-
-    </div>
-     <div class="col-md-1 mb-4">
-       <span>2</span>
-    </div>
-     <div class="col-md-3 mb-4">
-         <h3>Подготовка и запуск</h3>
-         <p>Выбор целевой аудитории и ее настройка (для детального таргетинга)</p>
-
-
-     </div>
-     <div class="col-md-1 mb-4">
-        <span>3</span>
-    </div>
-     <div class="col-md-3 mb-4">
-         <h3>Контроль</h3>
-         <p>Непосредственная настройка таргетированной рекламы (выбор плейсментов, и внутренних стратегий</p>
-
-     </div>
-
-</div>
-<div class="row features_target ">
-    <div class="col-md-1 offset-md-2 mb-2">
-        <span>4</span>
-    </div>
-     <div class="col-md-4 mb-2">
-        <h3>Ведение и оптимизация</h3>
-         <p>Постоянная разработка и тестирование новых рекламных объявлений для уменьшения расходов на рекламу и получения максимального количества потенциальных клиентов</p>
-
-    </div>
-     <div class="col-md-1 mb-2">
-       <span>5</span>
-    </div>
-     <div class="col-md-3 mb-2">
-         <h3>Отчетность</h3>
-         <p>Предоставляем полные отчеты о проделанной работе</p>
-
-
-     </div>
-
-
-</div>
- <!-- гарантии начало-->
+        <h3 class="context-h1 ">Этапы работ по настройке и ведению таргетированной рекламы</h3>
         <div class="gap-60"></div>
-         <div class="gap-60"></div>
+        <div class="gap-20"></div>
+        <div class="row features_target ">
+            <div class="col-md-1 mb-4">
+                <span>1</span>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h3>Разработка стратегии</h3>
+                <p>Определение стратегии: продаем в «лоб» или работа «в долгую»</p>
+            </div>
+            <div class="col-md-1 mb-4">
+                <span>2</span>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h3>Подготовка и запуск</h3>
+                <p>Выбор целевой аудитории и ее настройка (для детального таргетинга)</p>
+            </div>
+            <div class="col-md-1 mb-4">
+                <span>3</span>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h3>Контроль</h3>
+                <p>Непосредственная настройка таргетированной рекламы (выбор плейсментов, и внутренних стратегий</p>
+            </div>
+        </div>
+        <div class="row features_target ">
+            <div class="col-md-1 offset-md-2 mb-2">
+                <span>4</span>
+            </div>
+            <div class="col-md-4 mb-2">
+                <h3>Ведение и оптимизация</h3>
+                <p>Постоянная разработка и тестирование новых рекламных объявлений для уменьшения расходов на рекламу и получения максимального количества потенциальных клиентов</p>
+            </div>
+            <div class="col-md-1 mb-2">
+                <span>5</span>
+            </div>
+            <div class="col-md-3 mb-2">
+                <h3>Отчетность</h3>
+                <p>Предоставляем полные отчеты о проделанной работе</p>
+            </div>
+        </div>
+        <!-- гарантии начало-->
+        <div class="gap-60"></div>
+        <div class="gap-60"></div>
 
 
         <h3 class="context-h1 ">Гарантии</h3>
@@ -168,13 +154,13 @@
 
             </div>
             <div class="col-md-5 offset-md-1">
-                <img src="{% static 'images/section_our_team_01.png' %}" alt="">
+                <img style="max-width: 100%" src="{% static 'images/section_our_team_01.png' %}" alt="">
             </div>
         </div>
         <div class="gap-60"></div>
 
 
-<!-- гарантии конец-->
+        <!-- гарантии конец-->
 
 
         <div class="row">
@@ -182,31 +168,31 @@
                 <div class="b-price-box">
                     <div class="b-price-box__header">
                         <div class="price">Базовый</div>
-{#                        <div class="opisanie">Небольшой лендинг</div>#}
+                        {#                        <div class="opisanie">Небольшой лендинг</div>#}
                     </div>
                     <div class="b-price-box__content">
                         <ul>
 
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Выбираем плейсменты и внутренние стратегии">
-                            Настройка рекламного кабинета
+                                Настройка рекламного кабинета
 
 
                             </li>
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Проводим анализ ниши и опреляем стратегию подачи рекламы">
-                            Определение стратегии
+                                Определение стратегии
                             </li>
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Создание и разработка индивидуальных рекламных изображений">
                                 Работа с изображениями 3-5 шт
 
                             </li>
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Создание и разработка продающих текстов">
-                            Работа с текстами 3-5 шт
+                                Работа с текстами 3-5 шт
                             </li>
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Корректировка на основе тестового запуска изображений, текстов, плейсментов и внутренних стратегий">
-                            Ведение таргетированной рекламы
+                                Ведение таргетированной рекламы
                             </li>
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Предоставляем полный ежемесячный отчет о проделанной работе">
-                            Отчеты
+                                Отчеты
                             </li>
 
 
@@ -224,46 +210,46 @@
                 <div class="b-price-box b-price-box_business">
                     <div class="b-price-box__header">
                         <div class="price">Оптимальный</div>
-{#                        <div class="opisanie">Стандартный лендинг со всем нужным</div>#}
+                        {#                        <div class="opisanie">Стандартный лендинг со всем нужным</div>#}
                     </div>
                     <div class="b-price-box__content">
                         <ul>
 
 
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Выбираем плейсменты и внутренние стратегии">
-                            Настройка рекламного кабинета
+                                Настройка рекламного кабинета
 
 
                             </li>
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Проводим анализ ниши и опреляем стратегию подачи рекламы">
-                            Определение стратегии
+                                Определение стратегии
                             </li>
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Создание и разработка индивидуальных рекламных изображений">
                                 Работа с изображениями 8-12 шт
 
                             </li>
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Создание и разработка продающих текстов">
-                            Работа с текстами 8-12 шт
+                                Работа с текстами 8-12 шт
                             </li>
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Корректировка на основе тестового запуска изображений, текстов, плейсментов и внутренних стратегий">
-                            Ведение таргетированной рекламы
+                                Ведение таргетированной рекламы
                             </li>
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Предоставляем полный ежемесячный отчет о проделанной работе">
-                            Отчеты
+                                Отчеты
                             </li>
-                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "В т.ч. работа с фид-файлом данных">
-                            Ретаргетинг
+                            <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "В т.ч. работа с фид-файлом данных">
+                                Ретаргетинг
                             </li>
-                                 <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Установка целей на сайте и в Яндекс Метрике/Google Analytics">
-                            Установка целей
+                            <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Установка целей на сайте и в Яндекс Метрике/Google Analytics">
+                                Установка целей
                             </li>
 
-                                 <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Подключение сервисов для повышения заявок с сайта">
+                            <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Подключение сервисов для повышения заявок с сайта">
                                 Подключение сервисов
                             </li>
 
-                                 <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Работы по дизайну, верстке, программированию">
-                            Работа с юзабилити
+                            <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Работы по дизайну, верстке, программированию">
+                                Работа с юзабилити
                             </li>
 
 
@@ -280,7 +266,7 @@
                 <div class="b-price-box b-price-box_pro">
                     <div class="b-price-box__header">
                         <div class="price">Продвинутый</div>
-{#                        <div class="opisanie">Для тех, кто хочет выжать с сайта всё</div>#}
+                        {#                        <div class="opisanie">Для тех, кто хочет выжать с сайта всё</div>#}
                     </div>
                     <div class="b-price-box__content">
                         <ul>
@@ -288,50 +274,50 @@
 
 
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Выбираем плейсменты и внутренние стратегии">
-                            Настройка рекламного кабинета
+                                Настройка рекламного кабинета
 
 
                             </li>
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Проводим анализ ниши и опреляем стратегию подачи рекламы">
-                            Определение стратегии
+                                Определение стратегии
                             </li>
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Создание и разработка индивидуальных рекламных изображений">
                                 Работа с изображениями 8-12 шт
 
                             </li>
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Создание и разработка продающих текстов">
-                            Работа с текстами 8-12 шт
+                                Работа с текстами 8-12 шт
                             </li>
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Корректировка на основе тестового запуска изображений, текстов, плейсментов и внутренних стратегий">
-                            Ведение таргетированной рекламы
+                                Ведение таргетированной рекламы
                             </li>
                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Предоставляем полный ежемесячный отчет о проделанной работе">
-                            Отчеты
+                                Отчеты
                             </li>
-                             <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "В т.ч. работа с фид-файлом данных">
-                            Ретаргетинг
+                            <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "В т.ч. работа с фид-файлом данных">
+                                Ретаргетинг
                             </li>
-                                 <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Установка целей на сайте и в Яндекс Метрике/Google Analytics">
-                            Установка целей
+                            <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Установка целей на сайте и в Яндекс Метрике/Google Analytics">
+                                Установка целей
                             </li>
 
-                                 <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Подключение сервисов для повышения заявок с сайта">
+                            <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Подключение сервисов для повышения заявок с сайта">
                                 Подключение сервисов
                             </li>
 
-                                 <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Работы по дизайну, верстке, программированию">
-                            Работа с юзабилити
+                            <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "Работы по дизайну, верстке, программированию">
+                                Работа с юзабилити
                             </li>
-                                   <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "">
+                            <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "">
                                 E-mail рассылка
                             </li>
 
 
-                          <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "">
-                            Оформление групп в социальных сетях
-                          </li>
-                                     <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "">
-                            SEO продвижение сайта
+                            <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "">
+                                Оформление групп в социальных сетях
+                            </li>
+                            <li data-toggle="tooltip" data-placement="top" data-original-title=""  title= "">
+                                SEO продвижение сайта
                             </li>
 
 
@@ -345,14 +331,14 @@
             </div>
         </div>
 
-</div><!-- конец контейнер-->
-      <div class="gap-60"></div>
-     <div class="gap-60"></div>
+    </div><!-- конец контейнер-->
+    <div class="gap-60"></div>
+    <div class="gap-60"></div>
     <div class="container">
         <h3 class="context-h1 ">Наши кейсы</h3>
 
-         <div class="gap-60"></div>
-         <div class="gap-40"></div>
+        <div class="gap-60"></div>
+        <div class="gap-40"></div>
         <div class="row">
             {% for case in showCases %}
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
@@ -361,18 +347,18 @@
                             <h3>{{ case.caseName }}</h3>
                             <p>{{ case.showcaseInfo }}</p>
                             <a class="btn btn-3" href="javascript:void(0);" onclick="getCaseInfo({{ case.id }})">СМОТРЕТЬ ПРОЕКТ</a>
-                        </figcaption><a href="javascript:;"></a>
+                        </figcaption>
                     </figure>
                 </div>
             {% endfor %}
         </div>
     </div>
-      <div class="gap-60"></div>
-         <div class="gap-40"></div>
+    <div class="gap-60"></div>
+    <div class="gap-40"></div>
     <div class="gap-60"></div>
     {% include 'staticPages/big_form_buttons.html' %}
     <div class="gap-60"></div>
-    {% include 'staticPages/callBack_modal.html' %}
+
 
 {% endblock %}
 

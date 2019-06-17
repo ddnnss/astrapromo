@@ -126,7 +126,11 @@ body{
 p{
     margin-bottom: 0;
 }
-
+.logo{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
 
 input[type="text"]{
     /*font: 15px/24px 'Open Sans', sans-serif;*/
@@ -174,7 +178,11 @@ input[type="text"]{
 .m-b-50{
     margin-bottom: 50px;
 }
-
+.team-info{
+    padding: 0 !important;
+    width: 90% !important;
+    font-size: 13px !important;
+}
 .btn {
     width: 278px;
     padding: 15px;
@@ -1480,6 +1488,33 @@ form label{
 
 /*-------------quizModal*/
 
+
+
+@media (max-width: 1440px) {
+    .inner-text{
+        left: 38%;
+    }
+}
+@media (max-width: 1024px) {
+    .inner-text{
+        left: 35%;
+    }
+     .logo{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    .seo-supermacy-wrapper{
+        display: none;
+    }
+    .phone{
+         display: none;
+    }
+
+}
+
 @media (max-width: 544px) {
     .form_container{
         height: 600px;
@@ -1503,6 +1538,11 @@ form label{
     }
     .map{
             padding-top: 30px;
+    }
+     .logo{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
     }
 }
 
