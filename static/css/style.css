@@ -1516,6 +1516,9 @@ form label{
 }
 
 @media (max-width: 544px) {
+    .context-h1{
+        max-width: 320px;
+    }
     .form_container{
         height: 600px;
     }
