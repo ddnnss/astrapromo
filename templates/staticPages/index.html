@@ -89,7 +89,7 @@
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 m-b-50 ">
                 <figure class="imghvr-blur"><img src="{% static 'images/igor-diz.jpg' %}" alt="Продвижение сайтов в Челябинске">
                     <figcaption>
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Найду для вас именно тех клиентов, которые платят и не заваливают глупыми вопросами. Напишу текст, прочитав который, они купят ваш продукт, расположу на сайте все необходимое и упакую все это в современный и стильный дизайн</p>
                     </figcaption>
                 </figure>
                 <div>
@@ -151,7 +151,7 @@
         <div class="row">
             {% for case in showCases %}
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
-                    <figure class="imghvr-blur"><img src="{{ case.image.url }}" alt="{{ case.caseName }}">
+                    <figure class="imghvr-blur"><img height="350px" src="{{ case.image.url }}" alt="{{ case.caseName }}">
                         <figcaption>
                             <h3>{{ case.caseName }}</h3>
                             <p>{{ case.showcaseInfo }}</p>
@@ -171,7 +171,7 @@
                     <div class="single">
                         <div class="slick-overlay ">
                             <a href="{{ review.image.url }}">
-                                <img  width="200" src="{{ review.image.url }}" alt=""/>
+                                <img  width="200" height="280px" src="{{ review.image.url }}" alt=""/>
                             </a>
                         </div>
                     </div>
