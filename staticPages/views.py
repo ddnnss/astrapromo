@@ -13,7 +13,7 @@ def sitemap(request):
 
 def index(request):
     active_home ='item-active'
-    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
+    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске | DIGITAL-АГЕНТСТВО ASTRA PROMO'
     description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
     keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     showCases = showCase.objects.filter(is_active=True, showInHomePage=True)
@@ -22,7 +22,7 @@ def index(request):
 
 def about(request):
     active_about ='item-active'
-    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
+    title = 'О КОМПАНИИ | DIGITAL-АГЕНТСТВО ASTRA PROMO'
     description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
     keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     return render(request, 'staticPages/about.html', locals())
@@ -30,7 +30,7 @@ def about(request):
 def seo(request):
     active_uslug='item-active'
     active_seo ='drop-item-active'
-    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
+    title = 'Комплексное продвижение сайтов от 14 900 рублей в месяц | DIGITAL-АГЕНТСТВО ASTRA PROMO'
     description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
     keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     showCases = showCase.objects.filter(is_active=True, caseType='SE')
@@ -39,7 +39,7 @@ def seo(request):
 def sites(request):
     active_uslug='item-active'
     active_sites ='drop-item-active'
-    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
+    title = 'СОЗДАНИЕ САЙТОВ | DIGITAL-АГЕНТСТВО ASTRA PROMO'
     description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
     keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     showCases = showCase.objects.filter(is_active=True, caseType='SI')
@@ -47,14 +47,14 @@ def sites(request):
 
 def contacts(request):
     active_contacts ='item-active'
-    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
+    title = 'КОНТАКТЫ | DIGITAL-АГЕНТСТВО ASTRA PROMO'
     description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
     keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     return render(request, 'staticPages/contacts.html', locals())
 
 def showcase(request):
     active_showcase ='item-active'
-    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
+    title = 'НАШИ КЕЙСЫ | DIGITAL-АГЕНТСТВО ASTRA PROMO'
     description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
     keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     showCases = showCase.objects.filter(is_active=True)
@@ -63,7 +63,7 @@ def showcase(request):
 def context(request):
     active_uslug = 'item-active'
     active_context = 'drop-item-active'
-    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
+    title = 'КОНТЕКСТНАЯ РЕКЛАМА | DIGITAL-АГЕНТСТВО ASTRA PROMO'
     description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
     keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     showCases = showCase.objects.filter(is_active=True, caseType='CO')
@@ -72,7 +72,7 @@ def context(request):
 def target(request):
     active_uslug = 'item-active'
     active_target = 'drop-item-active'
-    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
+    title = 'ТАРГЕТИРОВАННАЯ РЕКЛАМА | DIGITAL-АГЕНТСТВО ASTRA PROMO'
     description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
     keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     showCases = showCase.objects.filter(is_active=True, caseType='TA')
@@ -82,7 +82,7 @@ def target(request):
 def services(request):
     active_uslug = 'item-active'
     active_services = 'drop-item-active'
-    title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске'
+    title = 'ПРОЧИЕ УСЛУГИ | DIGITAL-АГЕНТСТВО ASTRA PROMO'
     description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
     keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     services = allServices.objects.filter(is_active=True)
