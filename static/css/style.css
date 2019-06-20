@@ -1516,7 +1516,7 @@ form label{
 }
 
 @media (max-width: 544px) {
-    .slick-arrow{
+    .portfolio-slides-wrapper{
         display: none;
     }
     .context-h1{

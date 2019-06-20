@@ -165,7 +165,7 @@
         <a class="btn btn-1 by-center" href="{% url 'showcase' %}">Смотреть все кейсы</a>
         <div class="gap-60"></div>
         <div class="gap-60"></div>
-        <div class="">
+        <div class="portfolio-slides-wrapper">
             <div class="portfolio-slides ">
                 {% for review in reviews %}
                     <div class="single">
@@ -177,9 +177,10 @@
                     </div>
                 {% endfor %}
             </div>
+
+        <div class="gap-60"></div>
+        <div class="gap-60"></div>
         </div>
-        <div class="gap-60"></div>
-        <div class="gap-60"></div>
     </div>
     {% include 'staticPages/big_form_buttons.html' %}
     <div class="gap-30"></div>
