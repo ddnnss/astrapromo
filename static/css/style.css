@@ -1516,6 +1516,9 @@ form label{
 }
 
 @media (max-width: 544px) {
+    .slick-arrow{
+        display: none;
+    }
     .context-h1{
         max-width: 320px;
     }
