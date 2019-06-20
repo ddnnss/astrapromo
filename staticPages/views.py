@@ -12,6 +12,7 @@ def sitemap(request):
 
 
 def index(request):
+    pixel_code = '<script>fbq("track", "ViewContent");</script>'
     active_home ='item-active'
     title = 'Продвижение сайтов в ТОП-10 – заказать поисковое продвижение в Челябинске | DIGITAL-АГЕНТСТВО ASTRA PROMO'
     description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
@@ -21,6 +22,7 @@ def index(request):
     return render(request, 'staticPages/index.html', locals())
 
 def about(request):
+    pixel_code = '<script>fbq("track", "ViewContent");</script>'
     active_about ='item-active'
     title = 'О КОМПАНИИ | DIGITAL-АГЕНТСТВО ASTRA PROMO'
     description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
@@ -28,6 +30,7 @@ def about(request):
     return render(request, 'staticPages/about.html', locals())
 
 def seo(request):
+    pixel_code = '<script>fbq("track", "ViewContent");</script>'
     active_uslug='item-active'
     active_seo ='drop-item-active'
     title = 'Комплексное продвижение сайтов от 14 900 рублей в месяц | DIGITAL-АГЕНТСТВО ASTRA PROMO'
@@ -37,6 +40,7 @@ def seo(request):
     return render(request, 'staticPages/seo.html', locals())
 
 def sites(request):
+    pixel_code = '<script>fbq("track", "ViewContent");</script>'
     active_uslug='item-active'
     active_sites ='drop-item-active'
     title = 'СОЗДАНИЕ САЙТОВ | DIGITAL-АГЕНТСТВО ASTRA PROMO'
@@ -46,6 +50,7 @@ def sites(request):
     return render(request, 'staticPages/sites.html', locals())
 
 def contacts(request):
+    pixel_code = '<script>fbq("track", "Contact");</script>'
     active_contacts ='item-active'
     title = 'КОНТАКТЫ | DIGITAL-АГЕНТСТВО ASTRA PROMO'
     description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
@@ -53,6 +58,7 @@ def contacts(request):
     return render(request, 'staticPages/contacts.html', locals())
 
 def showcase(request):
+    pixel_code = '<script>fbq("track", "ViewContent");</script>'
     active_showcase ='item-active'
     title = 'НАШИ КЕЙСЫ | DIGITAL-АГЕНТСТВО ASTRA PROMO'
     description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
@@ -61,6 +67,7 @@ def showcase(request):
     return render(request, 'staticPages/showcase.html', locals())
 
 def context(request):
+    pixel_code = '<script>fbq("track", "ViewContent");</script>'
     active_uslug = 'item-active'
     active_context = 'drop-item-active'
     title = 'КОНТЕКСТНАЯ РЕКЛАМА | DIGITAL-АГЕНТСТВО ASTRA PROMO'
@@ -70,6 +77,7 @@ def context(request):
     return render(request, 'staticPages/context1.html', locals())
 
 def target(request):
+    pixel_code = '<script>fbq("track", "ViewContent");</script>'
     active_uslug = 'item-active'
     active_target = 'drop-item-active'
     title = 'ТАРГЕТИРОВАННАЯ РЕКЛАМА | DIGITAL-АГЕНТСТВО ASTRA PROMO'
@@ -80,6 +88,7 @@ def target(request):
     return render(request, 'staticPages/target.html', locals())
 
 def services(request):
+    pixel_code = '<script>fbq("track", "ViewContent");</script>'
     active_uslug = 'item-active'
     active_services = 'drop-item-active'
     title = 'ПРОЧИЕ УСЛУГИ | DIGITAL-АГЕНТСТВО ASTRA PROMO'

@@ -300,6 +300,12 @@ input[type="text"]{
 
 }
 
+.home-offer-text{
+    width: 350px;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
 .features span{
     line-height: 25px;
     font-size: 30px;
@@ -1516,6 +1522,32 @@ form label{
 }
 
 @media (max-width: 544px) {
+    .quiz-arrows-wrapper{
+    text-align: center;
+    }
+    .quiz-arrows img{
+        width: 30px;
+    }
+    .quiz-slider{
+        display: none;
+    }
+
+    .quiz-arrows a:first-child{
+        margin-right: 30px !important;
+    }
+
+    #quizModal .modal-content{
+        min-height: 640px;
+    }
+
+   .home-quiz-h3{
+       display: none;
+
+   }
+    .quiz-small-txt{
+        margin: 0 !important;
+        font-size: 14px !important;
+    }
     .service-name{
         font-size: 16px !important;
         padding-top: 10px !important;
