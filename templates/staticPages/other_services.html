@@ -8,12 +8,12 @@
                     <figure class="imghvr-blur"><img src="{{ service.serviceImage.url }}" alt="{{ service.serviceName }} в AstraPromo">
                         <figcaption>
                             <div>
-                                <h3>{{ service.serviceName }}</h3>
+                                <h3 class="service-name">{{ service.serviceName }}</h3>
 {#                                    <span style=" position: relative; left: 30%;">{{ service.servicePrice }}</span>#}
 {#                                <h4>{{ service.serviceNameSmall }}</h4>#}
                             </div>
-                            <p>{{ service.serviceInfo }}</p>
-                            <a class="btn btn-3" href="#" data-toggle="modal" data-target="#callBackModal" >ЗАКАЗАТЬ УСЛУГУ</a>
+                            <p class="service-info">{{ service.serviceInfo }}</p>
+                            <a class="btn btn-3 service-btn" href="#" data-toggle="modal" data-target="#callBackModal" >ЗАКАЗАТЬ УСЛУГУ</a>
                         </figcaption>
                     </figure>
                 </div>

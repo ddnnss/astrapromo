@@ -1516,6 +1516,17 @@ form label{
 }
 
 @media (max-width: 544px) {
+    .service-name{
+        font-size: 16px !important;
+        padding-top: 10px !important;
+        width: 280px !important;
+    }
+    .service-info{
+        font-size: 13px !important;
+        padding: 10px 0 10px 0 !important;
+        width: 290px !important;
+        min-height: 100px !important;
+    }
     .portfolio-slides-wrapper{
         display: none;
     }
