@@ -18,19 +18,19 @@
                             <div class="step-0">
                                 <p class="question">Сколько заявок (обращений) Вам необходимо ежемесячно?</p>
                                 <div class="">
-                                    <input id="radio1" name="radio" value="до 50"  type="radio"/>
+                                    <input id="radio1" name="radio" value="до 50" onchange="next_step()"  type="radio"/>
                                     <label for="radio1"><span></span>до 50</label>
                                 </div>
                                 <div class="">
-                                    <input id="radio2" name="radio" value="до 200"  type="radio"/>
+                                    <input id="radio2" name="radio" value="до 200" onchange="next_step()" type="radio"/>
                                     <label for="radio2"><span></span>до 200</label>
                                 </div>
                                 <div class="">
-                                    <input id="radio3" name="radio" value="до 300"  type="radio"/>
+                                    <input id="radio3" name="radio" value="до 300" onchange="next_step()" type="radio"/>
                                     <label for="radio3"><span></span>до 300</label>
                                 </div>
                                 <div class="">
-                                    <input id="radio4" name="radio" value="более 300"  type="radio"/>
+                                    <input id="radio4" name="radio" value="более 300" onchange="next_step()" type="radio"/>
                                     <label for="radio4"><span></span>более 300</label>
                                 </div>
                             </div>
@@ -39,19 +39,19 @@
                             <div  class="step-1">
                                 <p class="question">Какой бюджет планируете выделить на привлечение клиентов?</p>
                                 <div class="">
-                                    <input id="radio5" name="radio"  value="до 10 000"  type="radio"/>
+                                    <input id="radio5" name="radio"  value="до 10 000" onchange="next_step()" type="radio"/>
                                     <label for="radio5"><span></span>до 10 000 Р</label>
                                 </div>
                                 <div class="">
-                                    <input id="radio6" name="radio" value="до 20 000"  type="radio"/>
+                                    <input id="radio6" name="radio" value="до 20 000" onchange="next_step()" type="radio"/>
                                     <label for="radio6"><span></span>до 20 000 Р</label>
                                 </div>
                                 <div class="">
-                                    <input id="radio7" name="radio" value="до 30 000"  type="radio"/>
+                                    <input id="radio7" name="radio" value="до 30 000" onchange="next_step()" type="radio"/>
                                     <label for="radio7"><span></span>до 30 000 Р</label>
                                 </div>
                                 <div class="">
-                                    <input id="radio8" name="radio" value="от 50 000"  type="radio"/>
+                                    <input id="radio8" name="radio" value="от 50 000" onchange="next_step()" type="radio"/>
                                     <label for="radio8"><span></span>от 50 000 Р</label>
                                 </div>
                             </div>
@@ -59,22 +59,22 @@
                         <form style="display: none" id="step-2">
                             <div  class="step-2">
                                 <p class="question">Напишите, пожалуйста, название своей ниши / сферы деятельности</p>
-                                <input id="site-name" class="quiz-input" name="site-name" value=""  type="text"/>
+                                <input id="site-name" class="quiz-input" name="site-name" onblur="next_step()" value=""  type="text"/>
                             </div>
                         </form>
                         <form style="display: none" id="step-3">
                             <div  class="step-3">
                                 <p class="question">У Вас уже есть сайт / группа в соц. сетях?</p>
                                 <div class="">
-                                    <input id="radio9" name="radio"  value="Да"  type="radio"/>
+                                    <input id="radio9" name="radio"  value="Да" onchange="next_step()" type="radio"/>
                                     <label for="radio9"><span></span>Да</label>
                                 </div>
                                 <div class="">
-                                    <input id="radio10" name="radio" value="Нет"  type="radio"/>
+                                    <input id="radio10" name="radio" value="Нет" onchange="next_step()" type="radio"/>
                                     <label for="radio10"><span></span>Нет</label>
                                 </div>
                                 <div class="">
-                                    <input id="radio11" name="radio" value="В разработке"  type="radio"/>
+                                    <input id="radio11" name="radio" value="В разработке" onchange="next_step()" type="radio"/>
                                     <label for="radio11"><span></span>В разработке</label>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@
                                 <p class="question">Укажите, пожалуйста, свои данные: </p>
                                 <input id="step-4-name" class="quiz-input" name="step-4-name" required value="" placeholder="Ваше имя"  type="text"/>
                                 <input id="step-4-phone" class="quiz-input" name="step-4-phone" required value="" placeholder="Ваш телефон"  type="text"/>
-                                <input id="step-4-email" class="quiz-input" name="step-4-email" required value="" placeholder="Ваш E-Mail" type="text"/>
+                                <input id="step-4-email" class="quiz-input" name="step-4-email" onblur="next_step()" required value="" placeholder="Ваш E-Mail" type="text"/>
                             </div>
                         </form>
                         <form style="display: none" id="step-5">

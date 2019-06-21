@@ -7,6 +7,28 @@ var step_4_email = true
 var step_4_phone = true
 
 
+
+function next_step(){
+       step_val =$('#next_btn').data('step');
+     if (step_val + 1 == 5){
+          console.log('asdsad');
+     //  $('#next_img').css('opacity','.5');
+
+    }
+if (step_val != 5) {
+
+         $('.slider-inner').css('width',(step_val + 1) * 150)
+
+    console.log('step val=', step_val);
+    $('#step-' + $('#next_btn').data('step')).css('display', 'none');
+    $('#next_btn').data('step', parseInt($('#next_btn').data('step')) + 1);
+    console.log($('#next_btn').data('step'));
+    $('#step-' + $('#next_btn').data('step')).css('display', 'block');
+ //   $('#prev_img').css('opacity', '1');
+
+}
+}
+
 $('#next_btn').click(function(e) {
     e.preventDefault();
     step_val =$(this).data('step');
