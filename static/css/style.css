@@ -87,6 +87,9 @@ body{
     /*padding: 0 !important;*/
 /*}*/
 
+.our-cases{
+    width: 174px !important;
+}
 .logo img {
     width: 56px;
 }

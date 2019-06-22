@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 from django.shortcuts import render, render_to_response
-from .models import showCase, review, allServices
+from .models import *
 
 
 def robots(request):
@@ -47,6 +47,7 @@ def sites(request):
     description = 'Основное направление нашей компании – это комплекс услуг по продвижению сайтов в Челябинске.'
     keywords = 'продвижение сайта в топ 10, заказать поисковое продвижение в Челябинске, продвижение сайтов в Челябинске, раскрутка сайтов в Челябинске'
     showCases = showCase.objects.filter(is_active=True, caseType='SI')
+    sites = ourSites.objects.all()
     return render(request, 'staticPages/sites.html', locals())
 
 def contacts(request):

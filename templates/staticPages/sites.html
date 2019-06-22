@@ -114,7 +114,7 @@
                     <li>Мы гарантируем профессиональный подход ко всем этапам разработки Вашего будущего, продающего сайта</li>
                     <li>Мы гарантируем организацию переходов и обращений потенциальных клиентов Ваш сайт от 20 до 80% (в зависимости от специфики Вашего бизнеса)</li>
                     <li>Мы гарантируем предоставление рекомендаций не только по привлечению клиентов на сайт/группу, но и по увеличению конверсий (продаж)</li>
-                    <li>Мы гарантируем предоставление всех закрывающих отчетных документов в срок, для Вашей бухгалтерии</li>
+                    <li>Мы гарантируем предоставление в срок всех закрывающих отчетных документов для Вашей бухгалтерии</li>
                 </ul>
             </div>
             <div class="col-md-5 offset-md-1">
@@ -281,35 +281,75 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="gap-60"></div>
-    <div class="gap-60"></div>
-    <div class="container">
-        <h3 class="context-h1 ">Наши кейсы</h3>
+     <div class="gap-60"></div>
         <div class="gap-60"></div>
-        <div class="gap-40"></div>
-        <div class="row">
-            {% for case in showCases %}
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
-                    <figure class="imghvr-blur"><img src="{{ case.image.url }}" alt="{{ case.caseName }}">
-                        <figcaption>
-                            <h3>{{ case.caseName }}</h3>
-                            <p>{{ case.showcaseInfo }}</p>
-                            <a class="btn btn-3" href="javascript:void(0);" onclick="getCaseInfo({{ case.id }})">СМОТРЕТЬ ПРОЕКТ</a>
-                        </figcaption>
-                    </figure>
-                </div>
-            {% endfor %}
+        <div class="portfolio-slides-wrapper">
+            <div class="portfolio-slides ">
+                {% for site in sites %}
+                    <div class="single">
+                        <div class="slick-overlay ">
+                            <a href="{{ site.image.url }}">
+                                <img  width="200" height="280px" src="{{ site.image.url }}" alt=""/>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+        <div class="gap-60"></div>
+        <div class="gap-60"></div>
         </div>
     </div>
-    <div class="gap-60"></div>
-    <div class="gap-40"></div>
-    <div class="gap-60"></div>
+
+
     {% include 'staticPages/big_form_buttons.html' %}
     <div class="gap-60"></div>
 {% endblock %}
 
 {% block js %}
 <script src="{% static 'js/circle.js' %}"></script>
+     <script>
+       $('.portfolio-slides').slick({
+        infinite        : true,
+        slidesToShow    : 5,
+        slidesToScroll  : 1,
+        mobileFirst     : true,
+        responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 425,
+      settings: {
+          arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+    });
+
+
+    $('.portfolio-slides').slickLightbox({
+        itemSelector        : 'a',
+        navigateByKeyboard  : true
+    });
+     </script>
 {% endblock %}
 
