@@ -1525,6 +1525,9 @@ form label{
 }
 
 @media (max-width: 544px) {
+    [class^='imghvr-'] > img, [class*=' imghvr-'] > img {
+        transform: translateX(-90px);
+    }
     [class^='imghvr-'] figcaption, [class*=' imghvr-'] figcaption {
         padding: 10px 0 0 10px;
     }
