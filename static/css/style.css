@@ -1279,7 +1279,7 @@ color:#f37022 !important;
 
 [class^='imghvr-'] > img, [class*=' imghvr-'] > img {
     vertical-align: top;
-    max-width: 100%;
+    /*max-width: 100%;*/
 }
 
 [class^='imghvr-'] figcaption, [class*=' imghvr-'] figcaption {
@@ -1525,6 +1525,9 @@ form label{
 }
 
 @media (max-width: 544px) {
+    [class^='imghvr-'] figcaption, [class*=' imghvr-'] figcaption {
+        padding: 10px 0 0 10px;
+    }
     .quiz-arrows-wrapper{
     text-align: center;
     }
