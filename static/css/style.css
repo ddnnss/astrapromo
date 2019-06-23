@@ -1581,6 +1581,7 @@ form label{
     }
     .features p{
         min-height: 0;
+        margin-bottom: 20px;
     }
     .contacts {
     height: 800px;
