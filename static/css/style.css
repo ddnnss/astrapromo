@@ -1534,7 +1534,13 @@ form label{
             height: inherit;
 
     }
-
+    [class^='imghvr-'] figcaption p {
+        min-height: 0;
+        padding: 10px 10px;
+    }
+    [class^='imghvr-'] figcaption h3 {
+        font-size: 16px !important;
+    }
     .quiz-arrows-wrapper{
     text-align: center;
     }
