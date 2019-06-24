@@ -1580,9 +1580,9 @@ form label{
         width: 290px !important;
         min-height: 100px !important;
     }
-    .portfolio-slides-wrapper{
-        display: none;
-    }
+    /*.portfolio-slides-wrapper{*/
+        /*display: none;*/
+    /*}*/
     .context-h1{
         max-width: 320px;
     }
