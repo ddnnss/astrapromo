@@ -16,7 +16,7 @@
     <link href="https://mreq.github.io/slick-lightbox/dist/slick-lightbox.css" rel="stylesheet" />
     <link href="https://mreq.github.io/slick-lightbox/gh-pages/bower_components/slick-carousel/slick/slick-theme.css" rel="stylesheet" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    {{ pixel_code | safe }}
+
     <!-- Facebook Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -34,7 +34,7 @@
                    src="https://www.facebook.com/tr?id=2151849998234619&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
-
+        {{ pixel_code | safe }}
 </head>
 {#ondragstart="return false;" ondrop="return false;" oncontextmenu="return false"#}
 <body >

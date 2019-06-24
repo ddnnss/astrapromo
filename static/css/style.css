@@ -87,6 +87,9 @@ body{
     /*padding: 0 !important;*/
 /*}*/
 
+.our-cases{
+    width: 174px !important;
+}
 .logo img {
     width: 56px;
 }
@@ -1276,7 +1279,7 @@ color:#f37022 !important;
 
 [class^='imghvr-'] > img, [class*=' imghvr-'] > img {
     vertical-align: top;
-    max-width: 100%;
+    /*max-width: 100%;*/
 }
 
 [class^='imghvr-'] figcaption, [class*=' imghvr-'] figcaption {
@@ -1522,6 +1525,10 @@ form label{
 }
 
 @media (max-width: 544px) {
+
+    [class^='imghvr-'] figcaption, [class*=' imghvr-'] figcaption {
+        padding: 10px 0 0 10px;
+    }
     .quiz-arrows-wrapper{
     text-align: center;
     }
@@ -1572,6 +1579,7 @@ form label{
     }
     .features p{
         min-height: 0;
+        margin-bottom: 20px;
     }
     .contacts {
     height: 800px;

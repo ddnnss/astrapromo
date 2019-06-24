@@ -51,6 +51,14 @@ class review(models.Model):
         verbose_name = "Отзыв"
         verbose_name_plural = "Отзывы"
 
+
+class ourSites(models.Model):
+    image = models.ImageField('Картинка сайта', upload_to='sites/', blank=False)
+
+    class Meta:
+        verbose_name = "Сайт"
+        verbose_name_plural = "Сайты"
+
 class allServices(models.Model):
     serviceName = models.CharField('Заголовок услуги', max_length=255, blank=False)
     serviceNameSmall = models.CharField('Подзаголовок услуги', max_length=255, blank=False)
