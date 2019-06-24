@@ -1529,6 +1529,12 @@ form label{
     [class^='imghvr-'] figcaption, [class*=' imghvr-'] figcaption {
         padding: 10px 0 0 10px;
     }
+    [class^='imghvr-'] > img, [class*=' imghvr-'] > img {
+            width: 100%;
+            height: inherit;
+
+    }
+
     .quiz-arrows-wrapper{
     text-align: center;
     }
