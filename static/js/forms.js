@@ -53,6 +53,8 @@ function modalCallback() {
         },
         success : function(data){
             console.log(data);
+            yaCounter25221497.reachGoal('yspex');
+            yaCounter25221497.reachGoal('forma_prod_send');
             $('#modalSubmit').html('ОТПРАВИТЬ');
             $('#modalSubmit').removeAttr('disabled');
             $('#callBack_send').css('display','none');
@@ -61,8 +63,9 @@ function modalCallback() {
     });
 }
 
-function callBack_home(e) {
+function callBack_home(e,t) {
     e.preventDefault();
+    console.log(t);
     client_name = document.getElementById("callBackHome_name").value;
     client_phone = document.getElementById("callBackHome_phone").value;
     client_email = document.getElementById("callBackHome_email").value;
@@ -81,6 +84,13 @@ function callBack_home(e) {
         },
         success : function(data){
             console.log(data);
+            yaCounter25221497.reachGoal('yspex');
+            if (t==='contact'){
+                yaCounter25221497.reachGoal('zakaz_contacts');
+            }
+             if (t==='big_form'){
+                yaCounter25221497.reachGoal('form_footer');
+            }
             $('#callBackForm').css('display','none');
             $('#callBackHome_done').css('display','block');
         }

@@ -195,6 +195,7 @@ $('#quiz-complete').click(function (e) {
             },
             success : function(data){
                 console.log(data);
+                yaCounter25221497.reachGoal('yspex');
                 $('#quiz-complete-txt').css('display','block')
                 $('#quiz-complete').css('display','none')
                 $('.quiz-arrows').css('display','none')

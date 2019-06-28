@@ -66,6 +66,7 @@ class allServices(models.Model):
     serviceImage = models.ImageField('Картинка', upload_to='services/', blank=False)
     serviceInfo = models.CharField('Краткое описание', max_length=255, blank=False)
     servicePrice = models.CharField('Стоимость', max_length=255, blank=False, default='')
+    serviceTarget = models.CharField('Код цели яндекс', max_length=255, blank=True)
 
     is_active = models.BooleanField('Показывать услугу?', default=False)
 

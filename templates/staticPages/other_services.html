@@ -13,7 +13,7 @@
 {#                                <h4>{{ service.serviceNameSmall }}</h4>#}
                             </div>
                             <p class="service-info">{{ service.serviceInfo }}</p>
-                            <a class="btn btn-3 service-btn" href="#" data-toggle="modal" data-target="#callBackModal" >ЗАКАЗАТЬ УСЛУГУ</a>
+                            <a class="btn btn-3 service-btn" {{ service.serviceTarget | safe }} href="#" data-toggle="modal" data-target="#callBackModal" >ЗАКАЗАТЬ УСЛУГУ</a>
                         </figcaption>
                     </figure>
                 </div>
