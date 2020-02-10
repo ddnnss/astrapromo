@@ -2,8 +2,21 @@
 {% load static %}
 {% block content %}
     <div class="container">
+        <div class="breadcrumbs">
+            <ol  itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="/">
+                        <span itemprop="name">Главная</span></a>
+                    <meta itemprop="position" content="1">
+                </li>
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <span itemprop="name">О нас</span>
+                    <meta itemprop="position" content="2">
+                </li>
+            </ol>
+        </div>
         <div class="row">
-            <div class="col-md-9 about-us">
+            <div class="col-md-8 about-us">
                 <h3 class="about-head-1">О компании</h3>
                 <p>
                     Компания АстраПромо была создана в 2009 году с целью предоставления эффективного, дающего результат, SEO продвижения сайтов. Позднее, ситуация в Интернете изменилась, из поисковых систем ушло много трафика в социальные сети, а поисковые системы стали больше уделять внимание контекстной рекламе.
@@ -77,7 +90,7 @@
                     к/с 30101810400000000779
                 </p>
             </div>
-            <div  class="col-md-3 team-foto">
+            <div  style="padding: 40px 40px 0 94px;" class="col-md-4 team-foto">
                 <img src="{% static 'images/about-igor-boss.jpg' %}" alt="Продвижение сайтов в Челябинске">
                 <div>
                     <p class="team-name-1">Игорь</p>
@@ -101,12 +114,12 @@
                     <p class="team-name-4">Мария</p>
                     <span>Ведущий директолог</span>
                 </div>
-                 <img src="{% static 'images/about-ivan.jpg' %}" alt="Продвижение сайтов в Челябинске">
+                <img src="{% static 'images/about-ivan.jpg' %}" alt="Продвижение сайтов в Челябинске">
                 <div>
                     <p class="team-name-4">Иван</p>
                     <span>Ведущий SEO оптимизатор</span>
                 </div>
-                 <img src="{% static 'images/about-igor-diz.jpg' %}" alt="Продвижение сайтов в Челябинске">
+                <img src="{% static 'images/about-igor-diz.jpg' %}" alt="Продвижение сайтов в Челябинске">
                 <div>
                     <p class="team-name-4">Игорь</p>
                     <span>UI/UX Дизайнер</span>

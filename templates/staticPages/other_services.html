@@ -2,6 +2,20 @@
 {% load static %}
 {% block content %}
     <div class="container">
+    <div class="breadcrumbs ">
+            <ol  itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="/">
+                        <span itemprop="name">Главная</span></a>
+                    <meta itemprop="position" content="1">
+                </li>
+
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <span itemprop="name">Услуги</span>
+                    <meta itemprop="position" content="2">
+                </li>
+            </ol>
+        </div>
         <div class="row">
             {% for service in services %}
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">

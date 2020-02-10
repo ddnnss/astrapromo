@@ -37,6 +37,47 @@
     /></noscript>
     <!-- End Facebook Pixel Code -->
         {{ pixel_code | safe }}
+    <style>
+        .breadcrumbs{
+            padding-top: 15px;
+            border-top: 1px solid #dee2e6;
+            border-bottom: 1px solid #dee2e6;
+            margin-bottom: 30px;
+        }
+        .breadcrumbs ol{
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+
+        .breadcrumbs ol li{
+            margin-right: 15px;
+            color: #3e454b;
+        }
+        .breadcrumbs ol li a{
+            color: #3e454b;
+        }
+         .breadcrumbs ol li a:hover{
+            text-decoration: none;
+             border-bottom: 2px solid #f57d14;
+
+        }
+
+        .breadcrumbs ol li:last-child{
+            margin-right: 0;
+        }
+
+        .breadcrumbs ol li::after{
+            content: '/';
+            color: #f57d14;
+            margin-left: 15px;
+        }
+
+        .breadcrumbs ol li:last-child::after{
+            content: none;
+        }
+
+    </style>
 </head>
 {#ondragstart="return false;" ondrop="return false;" oncontextmenu="return false"#}
 <body >

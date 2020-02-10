@@ -2,6 +2,24 @@
 {% load static %}
 {% block content %}
     <div class="container">
+      <div class="breadcrumbs">
+            <ol  itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="/">
+                        <span itemprop="name">Главная</span></a>
+                    <meta itemprop="position" content="1">
+                </li>
+                  <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="{% url 'services' %}">
+                        <span itemprop="name">Услуги</span></a>
+                    <meta itemprop="position" content="2">
+                </li>
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <span itemprop="name">Создание сайтов</span>
+                    <meta itemprop="position" content="3">
+                </li>
+            </ol>
+        </div>
         <div class="row align-items-center context-head">
             <div class="col-md-6 order-md-1 mb-4 ">
                 <h1 class="home-h1">Создание сайтов и лендингов <span class="color-orange cool-text"><strong>любой сложности</strong></span></h1>
