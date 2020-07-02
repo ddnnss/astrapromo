@@ -309,28 +309,28 @@
 {#        </div>#}
 
     </div>
-    <div class="gap-60"></div>
-    <div class="gap-60"></div>
-    <div class="container">
-        <h3 class="context-h1 ">Наши кейсы</h3>
-        <div class="gap-60"></div>
-        <div class="gap-40"></div>
-        <div class="row">
-            {% for case in showCases %}
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
-                    <figure class="imghvr-blur"><img src="{{ case.image.url }}" alt="{{ case.caseName }}">
-                        <figcaption>
-                            <h3>{{ case.caseName }}</h3>
-                            <p>{{ case.showcaseInfo }}</p>
-                            <a class="btn btn-3" href="javascript:void(0);" onclick="getCaseInfo({{ case.id }})">СМОТРЕТЬ ПРОЕКТ</a>
-                        </figcaption>
-                    </figure>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-    <div class="gap-60"></div>
-    <div class="gap-40"></div>
+{#    <div class="gap-60"></div>#}
+{#    <div class="gap-60"></div>#}
+{#    <div class="container">#}
+{#        <h3 class="context-h1 ">Наши кейсы</h3>#}
+{#        <div class="gap-60"></div>#}
+{#        <div class="gap-40"></div>#}
+{#        <div class="row">#}
+{#            {% for case in showCases %}#}
+{#                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">#}
+{#                    <figure class="imghvr-blur"><img src="{{ case.image.url }}" alt="{{ case.caseName }}">#}
+{#                        <figcaption>#}
+{#                            <h3>{{ case.caseName }}</h3>#}
+{#                            <p>{{ case.showcaseInfo }}</p>#}
+{#                            <a class="btn btn-3" href="javascript:void(0);" onclick="getCaseInfo({{ case.id }})">СМОТРЕТЬ ПРОЕКТ</a>#}
+{#                        </figcaption>#}
+{#                    </figure>#}
+{#                </div>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="gap-60"></div>#}
+{#    <div class="gap-40"></div>#}
     <div class="gap-60"></div>
     {% include 'staticPages/big_form_buttons.html' %}
     <div class="gap-60"></div>
