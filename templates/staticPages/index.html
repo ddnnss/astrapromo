@@ -150,42 +150,74 @@
             </div>
         </div>
         <div class="gap-60"></div>
-{#        <div class="gap-60"></div>#}
-{#        <h3 class="context-h1 text-underline our-cases">Наши кейсы</h3>#}
-{#        <div class="gap-20"></div>#}
-{#        <div class="row">#}
-{#            {% for case in showCases %}#}
-{#                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">#}
-{#                    <figure class="imghvr-blur"><img height="350px" src="{{ case.image.url }}" alt="{{ case.caseName }}">#}
-{#                        <figcaption>#}
-{#                            <h3>{{ case.caseName }}</h3>#}
-{#                            <p>{{ case.showcaseInfo }}</p>#}
-{#                            <a class="btn btn-3" href="javascript:void(0);" onclick="getCaseInfo({{ case.id }})">СМОТРЕТЬ ПРОЕКТ</a>#}
-{#                        </figcaption></a>#}
-{#                    </figure>#}
-{#                </div>#}
-{#            {% endfor %}#}
-{#        </div>#}
-{#        <div class="gap-30"></div>#}
-{#        <a class="btn btn-1 by-center" href="{% url 'showcase' %}">Смотреть все кейсы</a>#}
-{#        <div class="gap-60"></div>#}
-{#        <div class="gap-60"></div>#}
-{#        <div class="portfolio-slides-wrapper">#}
-{#            <div class="portfolio-slides ">#}
-{#                {% for review in reviews %}#}
-{#                    <div class="single">#}
-{#                        <div class="slick-overlay ">#}
-{#                            <a href="{{ review.image.url }}">#}
-{#                                <img  width="200" height="280px" src="{{ review.image.url }}" alt="{{ review.reviewFromCompany }}"/>#}
-{#                            </a>#}
-{#                        </div>#}
-{#                    </div>#}
-{#                {% endfor %}#}
-{#            </div>#}
-{##}
-{#        <div class="gap-60"></div>#}
-{#        <div class="gap-60"></div>#}
-{#        </div>#}
+        <div class="gap-60"></div>
+        <h3 class="context-h1 text-underline our-cases">Наши кейсы</h3>
+        <div class="gap-20"></div>
+        <div class="row">
+            {% for case in showCases %}
+                <div  class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
+                    <figure style="position: relative;" class="imghvr-blur"><img height="350px" src="{{ case.image.url }}" alt="{{ case.caseName }}">
+                       <span style="    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 18px;
+    background: #f25c19;
+    text-transform: uppercase;" class="badge badge-primary">{{ case.type_verbose }}</span>
+                        <figcaption>
+                            <h3>{{ case.caseName }}</h3>
+                            <p>{{ case.showcaseInfo }}</p>
+                            <a class="btn btn-3" href="javascript:void(0);" onclick="getCaseInfo({{ case.id }})">СМОТРЕТЬ ПРОЕКТ</a>
+                        </figcaption></a>
+                    </figure>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="gap-30"></div>
+        <a class="btn btn-1 by-center" href="{% url 'showcase' %}">Смотреть все кейсы</a>
+        <div class="gap-60"></div>
+
+    <h3 class="context-h1 text-underline our-cases">Отзывы</h3>
+        <div class="gap-20"></div>
+     <div class="row">
+         <div  class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
+            <iframe style="border: none" width="100%" height="315"
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+        </div>
+     <div  class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
+            <iframe style="border: none" width="100%" height="315"
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+        </div>
+     <div  class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
+            <iframe style="border: none" width="100%" height="315"
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+        </div>
+     <div  class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
+            <iframe style="border: none" width="100%" height="315"
+                    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+        </div>
+    </div>
+     <div class="gap-60"></div>
+        <div class="portfolio-slides-wrapper">
+            <div class="portfolio-slides ">
+                {% for review in reviews %}
+                    <div class="single">
+                        <div class="slick-overlay ">
+                            <a href="{{ review.image.url }}">
+                                <img  width="200" height="280px" src="{{ review.image.url }}" alt="{{ review.reviewFromCompany }}"/>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+
+        </div>
+     <div class="gap-60"></div>
+        <div class="gap-60"></div>
     </div>
     {% include 'staticPages/big_form_buttons.html' %}
     <div class="gap-30"></div>

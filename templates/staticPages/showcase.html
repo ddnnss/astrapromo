@@ -15,19 +15,27 @@
                 </li>
             </ol>
         </div>
-        <div class="row">
+            <div class="row">
             {% for case in showCases %}
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
-                    <figure class="imghvr-blur"><img src="{{ case.image.url }}" alt="{{ case.caseName }}">
+                <div  class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
+                    <figure style="position: relative;" class="imghvr-blur"><img height="350px" src="{{ case.image.url }}" alt="{{ case.caseName }}">
+                       <span style="    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 18px;
+    background: #f25c19;
+    text-transform: uppercase;" class="badge badge-primary">{{ case.type_verbose }}</span>
                         <figcaption>
                             <h3>{{ case.caseName }}</h3>
                             <p>{{ case.showcaseInfo }}</p>
-                            <a class="btn btn-3" href="javascript:void(0);" onclick="getCaseInfo({{ case.id }})" >СМОТРЕТЬ ПРОЕКТ</a>
-                        </figcaption>
+                            <a class="btn btn-3" href="javascript:void(0);" onclick="getCaseInfo({{ case.id }})">СМОТРЕТЬ ПРОЕКТ</a>
+                        </figcaption></a>
                     </figure>
                 </div>
             {% endfor %}
         </div>
+
+
     </div>
     <div class="gap-60"></div>
     {% include 'staticPages/big_form_buttons.html' %}

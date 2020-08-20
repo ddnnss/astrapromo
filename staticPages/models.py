@@ -8,16 +8,18 @@ class showCase(models.Model):
     SEO = 'SE'
     TARGET = 'TA'
     SITES = 'SI'
+    DISIGN = 'DI'
     CASETYPES = [
         (CONTEXT, 'Контекстная реклама'),
-        (SEO, 'СЕО продвижение'),
+        (SEO, 'SEO продвижение'),
         (TARGET, 'Таргетированная релама'),
         (SITES, 'Создание сайтов'),
+        (DISIGN, 'WEB дизайн'),
     ]
 
     caseName = models.CharField('Заголовок кейса', max_length=255, blank=False)
     caseNameSlug = models.CharField('Заголовок кейса', max_length=255, blank=True)
-    siteUrl = models.CharField('Адрес сайта', max_length=255, blank=False)
+    siteUrl = models.CharField('Адрес сайта', max_length=255, blank=True)
     image = models.ImageField('Картинка', upload_to='showcases/', blank=False)
     showcaseInfo = models.CharField('Краткое описание', max_length=255, blank=False)
     showcaseFullInfo = RichTextUploadingField ('Полное описание ', blank=True, null=True)
@@ -31,6 +33,9 @@ class showCase(models.Model):
 
     def __str__(self):
         return '{}'.format(self.caseName)
+
+    def type_verbose(self):
+        return dict(showCase.CASETYPES)[self.caseType]
 
     class Meta:
         verbose_name = "Кейс"
