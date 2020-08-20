@@ -20,7 +20,7 @@ def callback(request):
                                     clientPhone=client_phone)
         return_dict['result'] = 'ok'
         msg_html = render_to_string('email/callback.html')
-        send_mail('Заполнена форма обратной связи', None, 'admin@astrapromo.ru', ['dmitry@astrapromo.ru'],
+        send_mail('Заполнена форма обратной связи', None, 'asupport@astrapromo.ru', ['igor@astrapromo.ru'],
                   fail_silently=False, html_message=msg_html)
         return JsonResponse(return_dict)
 
@@ -40,6 +40,6 @@ def quiz(request):
                                 step4=step4)
         return_dict['result'] = 'ok'
         msg_html = render_to_string('email/quiz.html')
-        send_mail('Заполнен квиз', None, 'admin@astrapromo.ru', ['dmitry@astrapromo.ru'],
+        send_mail('Заполнен квиз', None, 'asupport@astrapromo.ru', ['igor@astrapromo.ru'],
                   fail_silently=False, html_message=msg_html)
         return JsonResponse(return_dict)

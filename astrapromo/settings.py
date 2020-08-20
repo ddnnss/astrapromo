@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-#import mailsetup
+import mailsetup
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -31,11 +31,11 @@ CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 CKEDITOR_UPLOAD_PATH = "uploads/"
 APPEND_SLASH = True
 PREPEND_WWW = True
-# EMAIL_HOST = mailsetup.SERVER
-# EMAIL_HOST_USER = mailsetup.USER
-# EMAIL_HOST_PASSWORD = mailsetup.API
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_HOST_USER = mailsetup.SMTP_LOGIN
+EMAIL_HOST_PASSWORD = mailsetup.SMTP_PASSWORD
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
 CKEDITOR_CONFIGS = {
     'default': {
         'skin': 'moono',
