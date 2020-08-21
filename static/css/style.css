@@ -1355,7 +1355,7 @@ transition: all .1s ease;
     /*opacity: 0.7;*/
 }
 
-.imghvr-blur:hover figcaption {
+.imghvr-blur figcaption {
     opacity: 1;
     /*transition-delay: 0.1s ;*/
 }
