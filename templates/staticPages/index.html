@@ -107,7 +107,7 @@
                 <div>
                     <div class="gap-20"></div>
                     <p class="team-name">Роман</p>
-                    <span class="team-work">Ведущий таргетолог</span>
+                    <span class="team-work">Ведущий директолог</span>
                 </div>
             </div>
         </div>
@@ -169,12 +169,13 @@
             {% for case in showCases %}
                 <div  class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mb-4">
                     <figure style="position: relative;" class="imghvr-blur"><img height="350px" src="{{ case.image.url }}" alt="{{ case.caseName }}">
-                       <span style="    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-size: 18px;
+                       <span style="position: absolute;
+    left: 50px;
+    bottom: 20px;
+    font-size: 12px;
     background: #f25c19;
-    text-transform: uppercase;" class="badge badge-primary">{{ case.type_verbose }}</span>
+    text-transform: uppercase;
+    z-index: 10;" class="badge badge-primary">{{ case.type_verbose }}</span>
                         <figcaption>
                             <h3>{{ case.caseName }}</h3>
                             <p>{{ case.showcaseInfo }}</p>

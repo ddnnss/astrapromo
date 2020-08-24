@@ -326,10 +326,12 @@
 
     {% include 'staticPages/big_form_buttons.html' %}
     <div class="gap-60"></div>
+     {% include 'staticPages/case_modal.html' %}
 {% endblock %}
 
 {% block js %}
 <script src="{% static 'js/circle.js' %}"></script>
+     <script src="{% static 'js/showCase.js' %}"></script>
      <script>
        $('.portfolio-slides').slick({
         infinite        : true,

@@ -1188,7 +1188,9 @@ color:#f37022 !important;
 .inner-text{
     position: absolute;
     width: 300px;
-    left: 42%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -1503,14 +1505,10 @@ form label{
 
 
 @media (max-width: 1440px) {
-    .inner-text{
-        left: 38%;
-    }
+
 }
 @media (max-width: 1024px) {
-    .inner-text{
-        left: 35%;
-    }
+
      .logo{
         display: flex;
         align-items: center;
