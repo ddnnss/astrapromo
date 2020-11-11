@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'of%(x_3&b(6&x18c(tit_=qr$z7hdo@2u&9-$*vrjb4^gg=66a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
